@@ -1,0 +1,9 @@
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe.config
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.pdb
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Properties.Resources.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormMain.resources
