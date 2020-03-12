@@ -7,3 +7,6 @@ C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\o
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormMain.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormDangNhap.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormDangKy.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormTTCaNhan.resources

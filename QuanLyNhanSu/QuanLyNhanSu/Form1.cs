@@ -36,10 +36,6 @@ namespace QuanLyNhanSu
         }
        
                
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-        }
         private void buttonTaiKhoan_Click(object sender, EventArgs e)
         {
             if (temp == 0)
@@ -64,8 +60,8 @@ namespace QuanLyNhanSu
             {
                 panelDanhMuc.Show();
                 panelDanhMuc.Location = new Point(45, 175);
-                buttonQuanLy.Location = new Point(45, 310);
-                buttonChucNang.Location = new Point(45, 360);
+                buttonQuanLy.Location = new Point(45, 350);
+                buttonChucNang.Location = new Point(45, 400);
                 temp = 1;
             }
             else if (temp == 1)
@@ -81,7 +77,7 @@ namespace QuanLyNhanSu
             {
                 panelQuanLy.Show();
                 panelQuanLy.Location = new Point(45, 225);
-                buttonChucNang.Location = new Point(45, 360);
+                buttonChucNang.Location = new Point(45, 400);
                 temp = 1;
             }
             else if (temp == 1)
@@ -104,6 +100,51 @@ namespace QuanLyNhanSu
                 viTriBanDau();
                 temp = 0;
             }
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+
+        private void buttonDangNhap_Click(object sender, EventArgs e)
+        {
+            FormDangNhap dangNhap = new FormDangNhap();
+            dangNhap.Show();
+        }
+
+
+        private void buttonExit_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonDangKy_Click(object sender, EventArgs e)
+        {
+            FormDangKy dangKy = new FormDangKy();
+            dangKy.Show();
+        }
+
+        private void buttonNhanVien_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonTTCaNhan_Click(object sender, EventArgs e)
+        {
+            FormTTCaNhan ttCaNhan = new FormTTCaNhan();
+            ttCaNhan.Show();
+        }
+
+        private void buttonCheDo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonTienLuong_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
