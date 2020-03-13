@@ -113,18 +113,26 @@ namespace QuanLyNhanSu
             FormDangNhap dangNhap = new FormDangNhap();
             dangNhap.Show();
         }
-
-
-        private void buttonExit_Click_1(object sender, EventArgs e)
+        private void ToolStripMenuItemDN_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            FormDangNhap dangNhap = new FormDangNhap();
+            dangNhap.Show();
         }
+
+        
 
         private void buttonDangKy_Click(object sender, EventArgs e)
         {
             FormDangKy dangKy = new FormDangKy();
             dangKy.Show();
         }
+        private void ToolStripMenuItemDK_Click(object sender, EventArgs e)
+        {
+            FormDangKy dangKy = new FormDangKy();
+            dangKy.Show();
+        }
+
+
 
         private void buttonNhanVien_Click(object sender, EventArgs e)
         {
@@ -132,6 +140,11 @@ namespace QuanLyNhanSu
         }
 
         private void buttonTTCaNhan_Click(object sender, EventArgs e)
+        {
+            FormTTCaNhan ttCaNhan = new FormTTCaNhan();
+            ttCaNhan.Show();
+        }
+        private void ToolStripMenuItemTTCaNhan_Click(object sender, EventArgs e)
         {
             FormTTCaNhan ttCaNhan = new FormTTCaNhan();
             ttCaNhan.Show();
@@ -145,6 +158,24 @@ namespace QuanLyNhanSu
         private void buttonTienLuong_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ToolStripMenuItemDoiMK_Click(object sender, EventArgs e)
+        {
+            FormDoiMatKhau changepass = new FormDoiMatKhau();
+            changepass.Show();
+        }
+
+        private void ToolStripMenuItemSearch_Click(object sender, EventArgs e)
+        {
+            FormTimKiem search = new FormTimKiem();
+            search.Show();
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            FormTimKiem search = new FormTimKiem();
+            search.Show();
         }
     }
 }

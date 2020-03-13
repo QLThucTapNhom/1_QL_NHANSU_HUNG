@@ -26,5 +26,23 @@ namespace QuanLyNhanSu
         {
 
         }
+
+        private void buttonReset_Click(object sender, EventArgs e)
+        {
+            comboBoxMaNV.Text = "";
+            textBoxTenNV.Text = "";
+            textBoxHoNV.Text = "";
+            textBoxDanToc.Text = "";
+            textBoxQuocTich.Text = "";
+            textBoxNguyenQuan.Text = "";
+            textBoxDiaChi.Text = "";
+            textBoxEmail.Text = "";
+            textBoxNgoaiNgu.Text = "";
+            textBoxChucVu.Text = "";
+            textBoxPhongBan.Text = "";
+            textBoxGhiChu.Text = "";
+
+
+        }
     }
 }
