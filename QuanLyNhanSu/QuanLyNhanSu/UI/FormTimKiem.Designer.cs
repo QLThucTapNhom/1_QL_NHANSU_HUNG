@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButtonMaNV = new System.Windows.Forms.RadioButton();
-            this.radioButtonHoTen = new System.Windows.Forms.RadioButton();
             this.radioButtonCMT = new System.Windows.Forms.RadioButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.radioButtonHoTen = new System.Windows.Forms.RadioButton();
+            this.radioButtonMaNV = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -57,6 +57,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::QuanLyNhanSu.Properties.Resources.Icon0019;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(37, 41);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 62);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // textBoxSearch
             // 
@@ -79,16 +89,16 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
-            // radioButtonMaNV
+            // radioButtonCMT
             // 
-            this.radioButtonMaNV.AutoSize = true;
-            this.radioButtonMaNV.Location = new System.Drawing.Point(189, 21);
-            this.radioButtonMaNV.Name = "radioButtonMaNV";
-            this.radioButtonMaNV.Size = new System.Drawing.Size(63, 19);
-            this.radioButtonMaNV.TabIndex = 0;
-            this.radioButtonMaNV.TabStop = true;
-            this.radioButtonMaNV.Text = "Mã NV";
-            this.radioButtonMaNV.UseVisualStyleBackColor = true;
+            this.radioButtonCMT.AutoSize = true;
+            this.radioButtonCMT.Location = new System.Drawing.Point(555, 21);
+            this.radioButtonCMT.Name = "radioButtonCMT";
+            this.radioButtonCMT.Size = new System.Drawing.Size(93, 19);
+            this.radioButtonCMT.TabIndex = 2;
+            this.radioButtonCMT.TabStop = true;
+            this.radioButtonCMT.Text = "CMT/CCCD";
+            this.radioButtonCMT.UseVisualStyleBackColor = true;
             // 
             // radioButtonHoTen
             // 
@@ -101,24 +111,16 @@
             this.radioButtonHoTen.Text = "Họ Tên";
             this.radioButtonHoTen.UseVisualStyleBackColor = true;
             // 
-            // radioButtonCMT
+            // radioButtonMaNV
             // 
-            this.radioButtonCMT.AutoSize = true;
-            this.radioButtonCMT.Location = new System.Drawing.Point(555, 21);
-            this.radioButtonCMT.Name = "radioButtonCMT";
-            this.radioButtonCMT.Size = new System.Drawing.Size(93, 19);
-            this.radioButtonCMT.TabIndex = 2;
-            this.radioButtonCMT.TabStop = true;
-            this.radioButtonCMT.Text = "CMT/CCCD";
-            this.radioButtonCMT.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(39, 209);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(687, 122);
-            this.dataGridView1.TabIndex = 2;
+            this.radioButtonMaNV.AutoSize = true;
+            this.radioButtonMaNV.Location = new System.Drawing.Point(189, 21);
+            this.radioButtonMaNV.Name = "radioButtonMaNV";
+            this.radioButtonMaNV.Size = new System.Drawing.Size(63, 19);
+            this.radioButtonMaNV.TabIndex = 0;
+            this.radioButtonMaNV.TabStop = true;
+            this.radioButtonMaNV.Text = "Mã NV";
+            this.radioButtonMaNV.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -156,34 +158,36 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // dataGridView1
             // 
-            this.pictureBox1.BackgroundImage = global::QuanLyNhanSu.Properties.Resources.Icon0019;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(37, 41);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 62);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(39, 209);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(687, 123);
+            this.dataGridView1.TabIndex = 8;
             // 
             // FormTimKiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(761, 401);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximumSize = new System.Drawing.Size(777, 440);
             this.Name = "FormTimKiem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTimKiem";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,9 +201,9 @@
         private System.Windows.Forms.RadioButton radioButtonCMT;
         private System.Windows.Forms.RadioButton radioButtonHoTen;
         private System.Windows.Forms.RadioButton radioButtonMaNV;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

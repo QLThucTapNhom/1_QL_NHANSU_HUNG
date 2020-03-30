@@ -154,7 +154,9 @@
             this.ClientSize = new System.Drawing.Size(384, 323);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximumSize = new System.Drawing.Size(400, 362);
             this.Name = "FormDangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SIGN IN";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

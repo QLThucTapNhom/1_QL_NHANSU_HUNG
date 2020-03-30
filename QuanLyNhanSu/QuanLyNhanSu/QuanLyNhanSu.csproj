@@ -52,34 +52,64 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDangKy.cs">
+    <Compile Include="UI\FormBacLuong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDangKy.Designer.cs">
+    <Compile Include="UI\FormBacLuong.Designer.cs">
+      <DependentUpon>FormBacLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormBangLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormBangLuong.Designer.cs">
+      <DependentUpon>FormBangLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormCheDo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormCheDo.Designer.cs">
+      <DependentUpon>FormCheDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormDangKy.Designer.cs">
       <DependentUpon>FormDangKy.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDangNhap.cs">
+    <Compile Include="UI\FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDangNhap.Designer.cs">
+    <Compile Include="UI\FormDangNhap.Designer.cs">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDoiMatKhau.cs">
+    <Compile Include="UI\FormDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDoiMatKhau.Designer.cs">
+    <Compile Include="UI\FormDoiMatKhau.Designer.cs">
       <DependentUpon>FormDoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTimKiem.cs">
+    <Compile Include="UI\FormHoSoNV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTimKiem.Designer.cs">
+    <Compile Include="UI\FormHoSoNV.Designer.cs">
+      <DependentUpon>FormHoSoNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormPhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormPhongBan.Designer.cs">
+      <DependentUpon>FormPhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormTimKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormTimKiem.Designer.cs">
       <DependentUpon>FormTimKiem.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTTCaNhan.cs">
+    <Compile Include="UI\FormTTCaNhan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTTCaNhan.Designer.cs">
+    <Compile Include="UI\FormTTCaNhan.Designer.cs">
       <DependentUpon>FormTTCaNhan.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -87,19 +117,34 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDangKy.resx">
+    <EmbeddedResource Include="UI\FormBacLuong.resx">
+      <DependentUpon>FormBacLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormBangLuong.resx">
+      <DependentUpon>FormBangLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormCheDo.resx">
+      <DependentUpon>FormCheDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormDangKy.resx">
       <DependentUpon>FormDangKy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDangNhap.resx">
+    <EmbeddedResource Include="UI\FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDoiMatKhau.resx">
+    <EmbeddedResource Include="UI\FormDoiMatKhau.resx">
       <DependentUpon>FormDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTimKiem.resx">
+    <EmbeddedResource Include="UI\FormHoSoNV.resx">
+      <DependentUpon>FormHoSoNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormPhongBan.resx">
+      <DependentUpon>FormPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormTimKiem.resx">
       <DependentUpon>FormTimKiem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTTCaNhan.resx">
+    <EmbeddedResource Include="UI\FormTTCaNhan.resx">
       <DependentUpon>FormTTCaNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -467,8 +467,10 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
+            this.MaximumSize = new System.Drawing.Size(777, 440);
             this.Name = "FormTTCaNhan";
-            this.Text = "FormTTCaNhan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "TT Ca Nhan";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

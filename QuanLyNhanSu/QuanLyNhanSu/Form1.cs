@@ -77,7 +77,7 @@ namespace QuanLyNhanSu
             {
                 panelQuanLy.Show();
                 panelQuanLy.Location = new Point(45, 225);
-                buttonChucNang.Location = new Point(45, 400);
+                buttonChucNang.Location = new Point(45, 318);
                 temp = 1;
             }
             else if (temp == 1)
@@ -136,7 +136,8 @@ namespace QuanLyNhanSu
 
         private void buttonNhanVien_Click(object sender, EventArgs e)
         {
-
+            FormHoSoNV hs = new FormHoSoNV();
+            hs.Show();
         }
 
         private void buttonTTCaNhan_Click(object sender, EventArgs e)
@@ -152,12 +153,8 @@ namespace QuanLyNhanSu
 
         private void buttonCheDo_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void buttonTienLuong_Click(object sender, EventArgs e)
-        {
-
+            FormCheDo cd = new FormCheDo();
+            cd.Show();
         }
 
         private void ToolStripMenuItemDoiMK_Click(object sender, EventArgs e)
@@ -176,6 +173,54 @@ namespace QuanLyNhanSu
         {
             FormTimKiem search = new FormTimKiem();
             search.Show();
+        }
+
+        private void ToolStripMenuItemPB_Click(object sender, EventArgs e)
+        {
+            FormPhongBan pb = new FormPhongBan();
+            pb.Show();
+        }
+
+        private void buttonPhongBan_Click(object sender, EventArgs e)
+        {
+            FormPhongBan pb = new FormPhongBan();
+            pb.Show();
+        }
+
+        private void ToolStripMenuItemCheDo_Click(object sender, EventArgs e)
+        {
+            FormCheDo cd = new FormCheDo();
+            cd.Show();
+        }
+
+        private void ToolStripMenuItemNhanVien_Click(object sender, EventArgs e)
+        {
+            FormHoSoNV hs = new FormHoSoNV();
+            hs.Show();
+        }
+
+        private void buttonBacLuong_Click(object sender, EventArgs e)
+        {
+            FormBacLuong bl = new FormBacLuong();
+            bl.Show();
+        }
+
+        private void ToolStripMenuItemBacLuong_Click(object sender, EventArgs e)
+        {
+            FormBacLuong bl = new FormBacLuong();
+            bl.Show();
+        }
+
+        private void ToolStripMenuItemBangLuong_Click(object sender, EventArgs e)
+        {
+            FormBangLuong bangluong = new FormBangLuong();
+            bangluong.Show();
+        }
+
+        private void buttonBangLuong_Click(object sender, EventArgs e)
+        {
+            FormBangLuong bangluong = new FormBangLuong();
+            bangluong.Show();
         }
     }
 }
