@@ -17,3 +17,5 @@ C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\o
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormHoSoNV.resources
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormBacLuong.resources
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormBangLuong.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.FormLOGIN.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.FormDangKy2.resources

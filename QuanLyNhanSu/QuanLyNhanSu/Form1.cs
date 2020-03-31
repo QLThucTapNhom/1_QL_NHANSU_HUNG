@@ -12,6 +12,7 @@ namespace QuanLyNhanSu
 {
     public partial class FormMain : Form
     {
+        ConnectDatabase database = new ConnectDatabase();
         public FormMain()
         {
             InitializeComponent();
@@ -19,7 +20,10 @@ namespace QuanLyNhanSu
 
         private void Form1_Load(object sender, EventArgs e)
         {
+           
             viTriBanDau();
+            string query = "SELECT NV.MaNV, NV.HoDemNV, NV.TenNV, TT.GioiTinh,TT.NgaySinh, TT.SDT_Email, NV.ChucVu FROM dbo.HoSoNV NV, dbo.TTNhanVienCoBan TT";
+            database.loadDataGridView(dataGridView, query);
         }
 
         int temp;
@@ -110,8 +114,9 @@ namespace QuanLyNhanSu
 
         private void buttonDangNhap_Click(object sender, EventArgs e)
         {
-            FormDangNhap dangNhap = new FormDangNhap();
+            UI.FormLOGIN dangNhap = new UI.FormLOGIN();
             dangNhap.Show();
+            this.Hide();
         }
         private void ToolStripMenuItemDN_Click(object sender, EventArgs e)
         {
@@ -221,6 +226,18 @@ namespace QuanLyNhanSu
         {
             FormBangLuong bangluong = new FormBangLuong();
             bangluong.Show();
+        }
+
+        private void ToolStripMenuItemLogout_Click(object sender, EventArgs e)
+        {
+            UI.FormLOGIN login = new UI.FormLOGIN();
+            this.Hide();
+            login.Show();
+        }
+
+        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

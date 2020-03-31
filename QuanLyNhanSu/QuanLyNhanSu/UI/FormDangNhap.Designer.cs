@@ -129,7 +129,7 @@
             this.buttonHoanTat.Name = "buttonHoanTat";
             this.buttonHoanTat.Size = new System.Drawing.Size(91, 33);
             this.buttonHoanTat.TabIndex = 1;
-            this.buttonHoanTat.Text = "Đăng Nhâp";
+            this.buttonHoanTat.Text = "Đăng Nhập";
             this.buttonHoanTat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonHoanTat.UseVisualStyleBackColor = true;
             // 

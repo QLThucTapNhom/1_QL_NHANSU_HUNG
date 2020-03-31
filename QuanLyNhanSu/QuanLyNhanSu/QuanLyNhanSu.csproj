@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConnectDatabase.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +77,12 @@
     <Compile Include="UI\FormDangKy.Designer.cs">
       <DependentUpon>FormDangKy.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\FormDangKy2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormDangKy2.Designer.cs">
+      <DependentUpon>FormDangKy2.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +100,12 @@
     </Compile>
     <Compile Include="UI\FormHoSoNV.Designer.cs">
       <DependentUpon>FormHoSoNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormLOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormLOGIN.Designer.cs">
+      <DependentUpon>FormLOGIN.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FormPhongBan.cs">
       <SubType>Form</SubType>
@@ -129,6 +142,9 @@
     <EmbeddedResource Include="UI\FormDangKy.resx">
       <DependentUpon>FormDangKy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormDangKy2.resx">
+      <DependentUpon>FormDangKy2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FormHoSoNV.resx">
       <DependentUpon>FormHoSoNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormLOGIN.resx">
+      <DependentUpon>FormLOGIN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FormPhongBan.resx">
       <DependentUpon>FormPhongBan.cs</DependentUpon>

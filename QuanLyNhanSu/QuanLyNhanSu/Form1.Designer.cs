@@ -30,13 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.panelQuanLy = new System.Windows.Forms.Panel();
             this.panelDanhMuc = new System.Windows.Forms.Panel();
             this.panelChucNang = new System.Windows.Forms.Panel();
             this.panelTaiKhoan = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.buttonBacLuong = new System.Windows.Forms.Button();
             this.buttonCheDo = new System.Windows.Forms.Button();
@@ -68,9 +69,9 @@
             this.chứcNăngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemBangLuong = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemSearch = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ToolStripMenuItemLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.menuStrip2.SuspendLayout();
             this.panelQuanLy.SuspendLayout();
             this.panelDanhMuc.SuspendLayout();
@@ -83,21 +84,22 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel3.Controls.Add(this.dataGridView5);
+            this.panel3.Controls.Add(this.dataGridView);
             this.panel3.Controls.Add(this.menuStrip2);
             this.panel3.Location = new System.Drawing.Point(203, 74);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(646, 438);
             this.panel3.TabIndex = 2;
             // 
-            // dataGridView5
+            // dataGridView
             // 
-            this.dataGridView5.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(0, 26);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(649, 397);
-            this.dataGridView5.TabIndex = 5;
+            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(0, 26);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(649, 397);
+            this.dataGridView.TabIndex = 5;
+            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             // 
             // menuStrip2
             // 
@@ -118,7 +120,7 @@
             this.panelQuanLy.BackColor = System.Drawing.Color.MediumTurquoise;
             this.panelQuanLy.Controls.Add(this.buttonBangLuong);
             this.panelQuanLy.Controls.Add(this.buttonPhongBan);
-            this.panelQuanLy.Location = new System.Drawing.Point(34, 318);
+            this.panelQuanLy.Location = new System.Drawing.Point(33, 391);
             this.panelQuanLy.Name = "panelQuanLy";
             this.panelQuanLy.Size = new System.Drawing.Size(115, 95);
             this.panelQuanLy.TabIndex = 9;
@@ -130,7 +132,7 @@
             this.panelDanhMuc.Controls.Add(this.buttonCheDo);
             this.panelDanhMuc.Controls.Add(this.buttonTTCaNhan);
             this.panelDanhMuc.Controls.Add(this.buttonNhanVien);
-            this.panelDanhMuc.Location = new System.Drawing.Point(13, 321);
+            this.panelDanhMuc.Location = new System.Drawing.Point(-2, 118);
             this.panelDanhMuc.Name = "panelDanhMuc";
             this.panelDanhMuc.Size = new System.Drawing.Size(115, 177);
             this.panelDanhMuc.TabIndex = 6;
@@ -140,7 +142,7 @@
             this.panelChucNang.BackColor = System.Drawing.Color.MediumTurquoise;
             this.panelChucNang.Controls.Add(this.button4);
             this.panelChucNang.Controls.Add(this.buttonSearch);
-            this.panelChucNang.Location = new System.Drawing.Point(54, 301);
+            this.panelChucNang.Location = new System.Drawing.Point(20, 335);
             this.panelChucNang.Name = "panelChucNang";
             this.panelChucNang.Size = new System.Drawing.Size(115, 99);
             this.panelChucNang.TabIndex = 8;
@@ -157,16 +159,28 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel1.BackColor = System.Drawing.Color.SeaGreen;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-2, 2);
+            this.panel1.Location = new System.Drawing.Point(-2, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(854, 72);
+            this.panel1.Size = new System.Drawing.Size(854, 75);
             this.panel1.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.SeaGreen;
+            this.label1.Font = new System.Drawing.Font("UVN Da Lat", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(244, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(336, 49);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Hệ Thống Quản Lý Nhân Sự";
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel4.BackColor = System.Drawing.Color.SeaGreen;
             this.panel4.Controls.Add(this.buttonExit);
             this.panel4.Location = new System.Drawing.Point(-2, 497);
             this.panel4.Name = "panel4";
@@ -211,7 +225,7 @@
             this.buttonTTCaNhan.Name = "buttonTTCaNhan";
             this.buttonTTCaNhan.Size = new System.Drawing.Size(72, 34);
             this.buttonTTCaNhan.TabIndex = 8;
-            this.buttonTTCaNhan.Text = "TT Cá Nhân";
+            this.buttonTTCaNhan.Text = "TT Nhân Viên";
             this.buttonTTCaNhan.UseVisualStyleBackColor = true;
             this.buttonTTCaNhan.Click += new System.EventHandler(this.buttonTTCaNhan_Click);
             // 
@@ -225,7 +239,7 @@
             this.buttonNhanVien.Name = "buttonNhanVien";
             this.buttonNhanVien.Size = new System.Drawing.Size(72, 34);
             this.buttonNhanVien.TabIndex = 1;
-            this.buttonNhanVien.Text = "Nhân Viên";
+            this.buttonNhanVien.Text = "Hồ Sơ";
             this.buttonNhanVien.UseVisualStyleBackColor = true;
             this.buttonNhanVien.Click += new System.EventHandler(this.buttonNhanVien_Click);
             // 
@@ -330,7 +344,7 @@
             this.buttonDangNhap.Name = "buttonDangNhap";
             this.buttonDangNhap.Size = new System.Drawing.Size(72, 34);
             this.buttonDangNhap.TabIndex = 1;
-            this.buttonDangNhap.Text = "Đăng Nhập";
+            this.buttonDangNhap.Text = "Đăng Xuất";
             this.buttonDangNhap.UseVisualStyleBackColor = true;
             this.buttonDangNhap.Click += new System.EventHandler(this.buttonDangNhap_Click);
             // 
@@ -392,10 +406,13 @@
             // 
             // ToolStripMenuItemTaiKhoan
             // 
+            this.ToolStripMenuItemTaiKhoan.Checked = true;
+            this.ToolStripMenuItemTaiKhoan.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ToolStripMenuItemTaiKhoan.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItemDN,
             this.ToolStripMenuItemDK,
-            this.ToolStripMenuItemDoiMK});
+            this.ToolStripMenuItemDoiMK,
+            this.ToolStripMenuItemLogout});
             this.ToolStripMenuItemTaiKhoan.Image = global::QuanLyNhanSu.Properties.Resources.add_user;
             this.ToolStripMenuItemTaiKhoan.Name = "ToolStripMenuItemTaiKhoan";
             this.ToolStripMenuItemTaiKhoan.Size = new System.Drawing.Size(86, 20);
@@ -404,21 +421,21 @@
             // ToolStripMenuItemDN
             // 
             this.ToolStripMenuItemDN.Name = "ToolStripMenuItemDN";
-            this.ToolStripMenuItemDN.Size = new System.Drawing.Size(146, 22);
+            this.ToolStripMenuItemDN.Size = new System.Drawing.Size(152, 22);
             this.ToolStripMenuItemDN.Text = "Đăng Nhập";
             this.ToolStripMenuItemDN.Click += new System.EventHandler(this.ToolStripMenuItemDN_Click);
             // 
             // ToolStripMenuItemDK
             // 
             this.ToolStripMenuItemDK.Name = "ToolStripMenuItemDK";
-            this.ToolStripMenuItemDK.Size = new System.Drawing.Size(146, 22);
+            this.ToolStripMenuItemDK.Size = new System.Drawing.Size(152, 22);
             this.ToolStripMenuItemDK.Text = "Đăng Ký";
             this.ToolStripMenuItemDK.Click += new System.EventHandler(this.ToolStripMenuItemDK_Click);
             // 
             // ToolStripMenuItemDoiMK
             // 
             this.ToolStripMenuItemDoiMK.Name = "ToolStripMenuItemDoiMK";
-            this.ToolStripMenuItemDoiMK.Size = new System.Drawing.Size(146, 22);
+            this.ToolStripMenuItemDoiMK.Size = new System.Drawing.Size(152, 22);
             this.ToolStripMenuItemDoiMK.Text = "Đổi Mật Khẩu";
             this.ToolStripMenuItemDoiMK.Click += new System.EventHandler(this.ToolStripMenuItemDoiMK_Click);
             // 
@@ -437,28 +454,28 @@
             // ToolStripMenuItemNhanVien
             // 
             this.ToolStripMenuItemNhanVien.Name = "ToolStripMenuItemNhanVien";
-            this.ToolStripMenuItemNhanVien.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItemNhanVien.Size = new System.Drawing.Size(135, 22);
             this.ToolStripMenuItemNhanVien.Text = "Nhân Viên";
             this.ToolStripMenuItemNhanVien.Click += new System.EventHandler(this.ToolStripMenuItemNhanVien_Click);
             // 
             // ToolStripMenuItemTTCaNhan
             // 
             this.ToolStripMenuItemTTCaNhan.Name = "ToolStripMenuItemTTCaNhan";
-            this.ToolStripMenuItemTTCaNhan.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItemTTCaNhan.Size = new System.Drawing.Size(135, 22);
             this.ToolStripMenuItemTTCaNhan.Text = "TT Cá Nhân";
             this.ToolStripMenuItemTTCaNhan.Click += new System.EventHandler(this.ToolStripMenuItemTTCaNhan_Click);
             // 
             // ToolStripMenuItemCheDo
             // 
             this.ToolStripMenuItemCheDo.Name = "ToolStripMenuItemCheDo";
-            this.ToolStripMenuItemCheDo.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItemCheDo.Size = new System.Drawing.Size(135, 22);
             this.ToolStripMenuItemCheDo.Text = "Chế Độ";
             this.ToolStripMenuItemCheDo.Click += new System.EventHandler(this.ToolStripMenuItemCheDo_Click);
             // 
             // ToolStripMenuItemBacLuong
             // 
             this.ToolStripMenuItemBacLuong.Name = "ToolStripMenuItemBacLuong";
-            this.ToolStripMenuItemBacLuong.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItemBacLuong.Size = new System.Drawing.Size(135, 22);
             this.ToolStripMenuItemBacLuong.Text = "Bậc Lương";
             this.ToolStripMenuItemBacLuong.Click += new System.EventHandler(this.ToolStripMenuItemBacLuong_Click);
             // 
@@ -497,7 +514,7 @@
             // ToolStripMenuItemBangLuong
             // 
             this.ToolStripMenuItemBangLuong.Name = "ToolStripMenuItemBangLuong";
-            this.ToolStripMenuItemBangLuong.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItemBangLuong.Size = new System.Drawing.Size(138, 22);
             this.ToolStripMenuItemBangLuong.Text = "Bảng Lương";
             this.ToolStripMenuItemBangLuong.Click += new System.EventHandler(this.ToolStripMenuItemBangLuong_Click);
             // 
@@ -509,16 +526,12 @@
             this.ToolStripMenuItemSearch.Text = "Tìm Kiếm";
             this.ToolStripMenuItemSearch.Click += new System.EventHandler(this.ToolStripMenuItemSearch_Click);
             // 
-            // label1
+            // ToolStripMenuItemLogout
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("UVN Banh Mi", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(271, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(249, 43);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Quản Lý Nhân Sự";
+            this.ToolStripMenuItemLogout.Name = "ToolStripMenuItemLogout";
+            this.ToolStripMenuItemLogout.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItemLogout.Text = "Đăng Xuất";
+            this.ToolStripMenuItemLogout.Click += new System.EventHandler(this.ToolStripMenuItemLogout_Click);
             // 
             // FormMain
             // 
@@ -546,7 +559,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.panelQuanLy.ResumeLayout(false);
@@ -595,12 +608,13 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemBacLuong;
         private System.Windows.Forms.ToolStripMenuItem chứcNăngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemSearch;
-        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemQuanLy;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemPB;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemBangCong;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemBangLuong;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemLogout;
     }
 }
 

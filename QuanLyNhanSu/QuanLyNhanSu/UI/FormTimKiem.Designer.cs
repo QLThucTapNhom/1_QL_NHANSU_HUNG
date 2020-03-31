@@ -37,7 +37,7 @@
             this.radioButtonMaNV = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -125,7 +125,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.buttonSearch);
-            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.buttonExit);
             this.groupBox3.Location = new System.Drawing.Point(39, 337);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(687, 55);
@@ -145,18 +145,19 @@
             this.buttonSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSearch.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // buttonExit
             // 
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button3.Image = global::QuanLyNhanSu.Properties.Resources.close1;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(531, 14);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(70, 35);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Thoát";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonExit.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.buttonExit.Image = global::QuanLyNhanSu.Properties.Resources.close1;
+            this.buttonExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonExit.Location = new System.Drawing.Point(531, 14);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(70, 35);
+            this.buttonExit.TabIndex = 6;
+            this.buttonExit.Text = "Thoát";
+            this.buttonExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // dataGridView1
             // 
@@ -203,7 +204,7 @@
         private System.Windows.Forms.RadioButton radioButtonMaNV;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
