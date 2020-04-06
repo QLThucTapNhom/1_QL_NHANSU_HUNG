@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelThongBao = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxConfirm = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.buttonDangKy = new System.Windows.Forms.Button();
             this.buttonNhapLai = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.labelThongBao = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -85,6 +85,17 @@
             this.panel2.TabIndex = 8;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // labelThongBao
+            // 
+            this.labelThongBao.AutoSize = true;
+            this.labelThongBao.Font = new System.Drawing.Font("UVN Ai Cap", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelThongBao.ForeColor = System.Drawing.Color.Red;
+            this.labelThongBao.Location = new System.Drawing.Point(291, 376);
+            this.labelThongBao.Name = "labelThongBao";
+            this.labelThongBao.Size = new System.Drawing.Size(0, 20);
+            this.labelThongBao.TabIndex = 6;
+            this.labelThongBao.Click += new System.EventHandler(this.labelThongBao_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.textBoxConfirm);
@@ -110,6 +121,7 @@
             this.textBoxConfirm.MaxLength = 8;
             this.textBoxConfirm.Multiline = true;
             this.textBoxConfirm.Name = "textBoxConfirm";
+            this.textBoxConfirm.PasswordChar = '*';
             this.textBoxConfirm.Size = new System.Drawing.Size(234, 25);
             this.textBoxConfirm.TabIndex = 7;
             this.textBoxConfirm.TextChanged += new System.EventHandler(this.textBoxConfirm_TextChanged);
@@ -173,6 +185,7 @@
             this.textBoxPassword.MaxLength = 8;
             this.textBoxPassword.Multiline = true;
             this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(234, 25);
             this.textBoxPassword.TabIndex = 1;
             // 
@@ -237,6 +250,7 @@
             this.buttonNhapLai.Text = "Nhập Lại";
             this.buttonNhapLai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonNhapLai.UseVisualStyleBackColor = true;
+            this.buttonNhapLai.Click += new System.EventHandler(this.buttonNhapLai_Click);
             // 
             // panel4
             // 
@@ -245,18 +259,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(854, 68);
             this.panel4.TabIndex = 9;
-            // 
-            // labelThongBao
-            // 
-            this.labelThongBao.AutoSize = true;
-            this.labelThongBao.Font = new System.Drawing.Font("UVN Ai Cap", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelThongBao.ForeColor = System.Drawing.Color.Red;
-            this.labelThongBao.Location = new System.Drawing.Point(240, 382);
-            this.labelThongBao.Name = "labelThongBao";
-            this.labelThongBao.Size = new System.Drawing.Size(41, 20);
-            this.labelThongBao.TabIndex = 6;
-            this.labelThongBao.Text = "____";
-            this.labelThongBao.Click += new System.EventHandler(this.labelThongBao_Click);
             // 
             // FormDangKy2
             // 

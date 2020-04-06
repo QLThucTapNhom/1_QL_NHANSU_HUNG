@@ -58,6 +58,7 @@
             this.ToolStripMenuItemDN = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemDK = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemDoiMK = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemDanhMuc = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemNhanVien = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemTTCaNhan = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,7 +70,6 @@
             this.chứcNăngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemBangLuong = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemSearch = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuItemLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.menuStrip2.SuspendLayout();
@@ -400,7 +400,7 @@
             this.buttonDanhMuc.Name = "buttonDanhMuc";
             this.buttonDanhMuc.Size = new System.Drawing.Size(115, 45);
             this.buttonDanhMuc.TabIndex = 1;
-            this.buttonDanhMuc.Text = "Danh Mục";
+            this.buttonDanhMuc.Text = "Nhân Viên";
             this.buttonDanhMuc.UseVisualStyleBackColor = true;
             this.buttonDanhMuc.Click += new System.EventHandler(this.buttonDanhMuc_Click);
             // 
@@ -421,23 +421,30 @@
             // ToolStripMenuItemDN
             // 
             this.ToolStripMenuItemDN.Name = "ToolStripMenuItemDN";
-            this.ToolStripMenuItemDN.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItemDN.Size = new System.Drawing.Size(146, 22);
             this.ToolStripMenuItemDN.Text = "Đăng Nhập";
             this.ToolStripMenuItemDN.Click += new System.EventHandler(this.ToolStripMenuItemDN_Click);
             // 
             // ToolStripMenuItemDK
             // 
             this.ToolStripMenuItemDK.Name = "ToolStripMenuItemDK";
-            this.ToolStripMenuItemDK.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItemDK.Size = new System.Drawing.Size(146, 22);
             this.ToolStripMenuItemDK.Text = "Đăng Ký";
             this.ToolStripMenuItemDK.Click += new System.EventHandler(this.ToolStripMenuItemDK_Click);
             // 
             // ToolStripMenuItemDoiMK
             // 
             this.ToolStripMenuItemDoiMK.Name = "ToolStripMenuItemDoiMK";
-            this.ToolStripMenuItemDoiMK.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItemDoiMK.Size = new System.Drawing.Size(146, 22);
             this.ToolStripMenuItemDoiMK.Text = "Đổi Mật Khẩu";
             this.ToolStripMenuItemDoiMK.Click += new System.EventHandler(this.ToolStripMenuItemDoiMK_Click);
+            // 
+            // ToolStripMenuItemLogout
+            // 
+            this.ToolStripMenuItemLogout.Name = "ToolStripMenuItemLogout";
+            this.ToolStripMenuItemLogout.Size = new System.Drawing.Size(146, 22);
+            this.ToolStripMenuItemLogout.Text = "Đăng Xuất";
+            this.ToolStripMenuItemLogout.Click += new System.EventHandler(this.ToolStripMenuItemLogout_Click);
             // 
             // ToolStripMenuItemDanhMuc
             // 
@@ -449,7 +456,7 @@
             this.ToolStripMenuItemDanhMuc.Image = global::QuanLyNhanSu.Properties.Resources.Icon0011;
             this.ToolStripMenuItemDanhMuc.Name = "ToolStripMenuItemDanhMuc";
             this.ToolStripMenuItemDanhMuc.Size = new System.Drawing.Size(90, 20);
-            this.ToolStripMenuItemDanhMuc.Text = "Danh Mục";
+            this.ToolStripMenuItemDanhMuc.Text = "Nhân Viên";
             // 
             // ToolStripMenuItemNhanVien
             // 
@@ -525,13 +532,6 @@
             this.ToolStripMenuItemSearch.Size = new System.Drawing.Size(85, 20);
             this.ToolStripMenuItemSearch.Text = "Tìm Kiếm";
             this.ToolStripMenuItemSearch.Click += new System.EventHandler(this.ToolStripMenuItemSearch_Click);
-            // 
-            // ToolStripMenuItemLogout
-            // 
-            this.ToolStripMenuItemLogout.Name = "ToolStripMenuItemLogout";
-            this.ToolStripMenuItemLogout.Size = new System.Drawing.Size(152, 22);
-            this.ToolStripMenuItemLogout.Text = "Đăng Xuất";
-            this.ToolStripMenuItemLogout.Click += new System.EventHandler(this.ToolStripMenuItemLogout_Click);
             // 
             // FormMain
             // 

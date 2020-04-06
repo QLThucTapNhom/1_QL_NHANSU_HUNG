@@ -19,7 +19,7 @@ namespace QuanLyNhanSu
 
         private void buttonThoat_Click(object sender, EventArgs e)
         {
-
+            this.Close();
             
         }
     }

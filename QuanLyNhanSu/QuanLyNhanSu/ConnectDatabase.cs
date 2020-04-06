@@ -45,6 +45,56 @@ namespace QuanLyNhanSu
             dg.DataSource = dataSet.Tables[0];
         }
 
-        
+        public void loadComboBox(ComboBox cb, string strselect)
+        {
+            KetNoi();
+            sqlCommand = new SqlCommand(strselect, sqlConnection);
+            sqlDataReader = sqlCommand.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                cb.Items.Add(sqlDataReader[0].ToString());
+            }
+            NgatKetNoi();
+        }
+        public void loadComboBox_Show(ComboBox cb, string strselect)
+        {
+            KetNoi();
+            sqlCommand = new SqlCommand(strselect, sqlConnection);
+            sqlDataReader = sqlCommand.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                cb.Text = (sqlDataReader[0].ToString());
+            }
+            NgatKetNoi();
+        }
+        public void loadTextBox(TextBox tb, string strselect)
+        {
+            KetNoi();
+            sqlCommand = new SqlCommand(strselect, sqlConnection);
+            sqlDataReader = sqlCommand.ExecuteReader();
+
+            if (sqlDataReader.Read())
+            {
+                tb.Text = sqlDataReader[0].ToString();
+            }
+            NgatKetNoi();
+        }
+        public bool Check(string temp, string strsql)
+        {
+
+            KetNoi();
+            bool check = false;
+            sqlCommand = new SqlCommand(strsql, sqlConnection);
+            sqlDataReader = sqlCommand.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                if (sqlDataReader[0].ToString().Trim() == temp)
+                    check = true;
+            }
+            NgatKetNoi();
+            return check;
+        }
+
+
     }
 }

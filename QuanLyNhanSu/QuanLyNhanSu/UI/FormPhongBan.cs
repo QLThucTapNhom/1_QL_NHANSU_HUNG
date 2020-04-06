@@ -30,7 +30,7 @@ namespace QuanLyNhanSu
             textBoxChucNangPB.Text = "";
             textBoxDCPhong.Text = "";
             textBoxGhiChu.Text = "";
-            textBoxTruongPhong.Text = "";
+            comboBoxMaTruongPhong.Text = "";
             textBoxSDTPB.Text = "";
         }
     }

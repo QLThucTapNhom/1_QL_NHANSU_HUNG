@@ -121,7 +121,6 @@
             // 
             // comboBoxBacLuong
             // 
-            this.comboBoxBacLuong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxBacLuong.FormattingEnabled = true;
             this.comboBoxBacLuong.Location = new System.Drawing.Point(273, 19);
             this.comboBoxBacLuong.Name = "comboBoxBacLuong";

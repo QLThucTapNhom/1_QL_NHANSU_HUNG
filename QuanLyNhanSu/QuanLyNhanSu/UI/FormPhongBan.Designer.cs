@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxGhiChu = new System.Windows.Forms.TextBox();
+            this.textBoxDCPhong = new System.Windows.Forms.TextBox();
+            this.textBoxSDTPB = new System.Windows.Forms.TextBox();
+            this.textBoxChucNangPB = new System.Windows.Forms.TextBox();
+            this.textBoxTenPB = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,12 +51,7 @@
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.textBoxTenPB = new System.Windows.Forms.TextBox();
-            this.textBoxChucNangPB = new System.Windows.Forms.TextBox();
-            this.textBoxSDTPB = new System.Windows.Forms.TextBox();
-            this.textBoxDCPhong = new System.Windows.Forms.TextBox();
-            this.textBoxTruongPhong = new System.Windows.Forms.TextBox();
-            this.textBoxGhiChu = new System.Windows.Forms.TextBox();
+            this.comboBoxMaTruongPhong = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -60,8 +60,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.comboBoxMaTruongPhong);
             this.groupBox1.Controls.Add(this.textBoxGhiChu);
-            this.groupBox1.Controls.Add(this.textBoxTruongPhong);
             this.groupBox1.Controls.Add(this.textBoxDCPhong);
             this.groupBox1.Controls.Add(this.textBoxSDTPB);
             this.groupBox1.Controls.Add(this.textBoxChucNangPB);
@@ -83,6 +83,46 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Phòng Ban";
+            // 
+            // textBoxGhiChu
+            // 
+            this.textBoxGhiChu.Location = new System.Drawing.Point(508, 153);
+            this.textBoxGhiChu.Multiline = true;
+            this.textBoxGhiChu.Name = "textBoxGhiChu";
+            this.textBoxGhiChu.Size = new System.Drawing.Size(206, 23);
+            this.textBoxGhiChu.TabIndex = 32;
+            // 
+            // textBoxDCPhong
+            // 
+            this.textBoxDCPhong.Location = new System.Drawing.Point(508, 70);
+            this.textBoxDCPhong.Multiline = true;
+            this.textBoxDCPhong.Name = "textBoxDCPhong";
+            this.textBoxDCPhong.Size = new System.Drawing.Size(206, 23);
+            this.textBoxDCPhong.TabIndex = 30;
+            // 
+            // textBoxSDTPB
+            // 
+            this.textBoxSDTPB.Location = new System.Drawing.Point(508, 27);
+            this.textBoxSDTPB.Multiline = true;
+            this.textBoxSDTPB.Name = "textBoxSDTPB";
+            this.textBoxSDTPB.Size = new System.Drawing.Size(206, 23);
+            this.textBoxSDTPB.TabIndex = 29;
+            // 
+            // textBoxChucNangPB
+            // 
+            this.textBoxChucNangPB.Location = new System.Drawing.Point(137, 108);
+            this.textBoxChucNangPB.Multiline = true;
+            this.textBoxChucNangPB.Name = "textBoxChucNangPB";
+            this.textBoxChucNangPB.Size = new System.Drawing.Size(206, 23);
+            this.textBoxChucNangPB.TabIndex = 28;
+            // 
+            // textBoxTenPB
+            // 
+            this.textBoxTenPB.Location = new System.Drawing.Point(137, 60);
+            this.textBoxTenPB.Multiline = true;
+            this.textBoxTenPB.Name = "textBoxTenPB";
+            this.textBoxTenPB.Size = new System.Drawing.Size(206, 23);
+            this.textBoxTenPB.TabIndex = 27;
             // 
             // label8
             // 
@@ -156,7 +196,6 @@
             // 
             // comboBoxMaPB
             // 
-            this.comboBoxMaPB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMaPB.FormattingEnabled = true;
             this.comboBoxMaPB.Location = new System.Drawing.Point(137, 22);
             this.comboBoxMaPB.Name = "comboBoxMaPB";
@@ -260,53 +299,13 @@
             this.buttonAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAdd.UseVisualStyleBackColor = true;
             // 
-            // textBoxTenPB
+            // comboBoxMaTruongPhong
             // 
-            this.textBoxTenPB.Location = new System.Drawing.Point(137, 60);
-            this.textBoxTenPB.Multiline = true;
-            this.textBoxTenPB.Name = "textBoxTenPB";
-            this.textBoxTenPB.Size = new System.Drawing.Size(206, 23);
-            this.textBoxTenPB.TabIndex = 27;
-            // 
-            // textBoxChucNangPB
-            // 
-            this.textBoxChucNangPB.Location = new System.Drawing.Point(137, 108);
-            this.textBoxChucNangPB.Multiline = true;
-            this.textBoxChucNangPB.Name = "textBoxChucNangPB";
-            this.textBoxChucNangPB.Size = new System.Drawing.Size(206, 23);
-            this.textBoxChucNangPB.TabIndex = 28;
-            // 
-            // textBoxSDTPB
-            // 
-            this.textBoxSDTPB.Location = new System.Drawing.Point(508, 27);
-            this.textBoxSDTPB.Multiline = true;
-            this.textBoxSDTPB.Name = "textBoxSDTPB";
-            this.textBoxSDTPB.Size = new System.Drawing.Size(206, 23);
-            this.textBoxSDTPB.TabIndex = 29;
-            // 
-            // textBoxDCPhong
-            // 
-            this.textBoxDCPhong.Location = new System.Drawing.Point(508, 70);
-            this.textBoxDCPhong.Multiline = true;
-            this.textBoxDCPhong.Name = "textBoxDCPhong";
-            this.textBoxDCPhong.Size = new System.Drawing.Size(206, 23);
-            this.textBoxDCPhong.TabIndex = 30;
-            // 
-            // textBoxTruongPhong
-            // 
-            this.textBoxTruongPhong.Location = new System.Drawing.Point(508, 108);
-            this.textBoxTruongPhong.Multiline = true;
-            this.textBoxTruongPhong.Name = "textBoxTruongPhong";
-            this.textBoxTruongPhong.Size = new System.Drawing.Size(206, 23);
-            this.textBoxTruongPhong.TabIndex = 31;
-            // 
-            // textBoxGhiChu
-            // 
-            this.textBoxGhiChu.Location = new System.Drawing.Point(508, 153);
-            this.textBoxGhiChu.Multiline = true;
-            this.textBoxGhiChu.Name = "textBoxGhiChu";
-            this.textBoxGhiChu.Size = new System.Drawing.Size(206, 23);
-            this.textBoxGhiChu.TabIndex = 32;
+            this.comboBoxMaTruongPhong.FormattingEnabled = true;
+            this.comboBoxMaTruongPhong.Location = new System.Drawing.Point(508, 111);
+            this.comboBoxMaTruongPhong.Name = "comboBoxMaTruongPhong";
+            this.comboBoxMaTruongPhong.Size = new System.Drawing.Size(206, 23);
+            this.comboBoxMaTruongPhong.TabIndex = 33;
             // 
             // FormPhongBan
             // 
@@ -349,10 +348,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxGhiChu;
-        private System.Windows.Forms.TextBox textBoxTruongPhong;
         private System.Windows.Forms.TextBox textBoxDCPhong;
         private System.Windows.Forms.TextBox textBoxSDTPB;
         private System.Windows.Forms.TextBox textBoxChucNangPB;
         private System.Windows.Forms.TextBox textBoxTenPB;
+        private System.Windows.Forms.ComboBox comboBoxMaTruongPhong;
     }
 }

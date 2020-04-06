@@ -15,15 +15,19 @@ namespace QuanLyNhanSu
         ConnectDatabase database = new ConnectDatabase();
         public FormMain()
         {
+            
             InitializeComponent();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
            
             viTriBanDau();
-            string query = "SELECT NV.MaNV, NV.HoDemNV, NV.TenNV, TT.GioiTinh,TT.NgaySinh, TT.SDT_Email, NV.ChucVu FROM dbo.HoSoNV NV, dbo.TTNhanVienCoBan TT";
+            
+            string query = "SELECT * FROM dbo.HoSoNV";
             database.loadDataGridView(dataGridView, query);
+
         }
 
         int temp;
@@ -116,7 +120,7 @@ namespace QuanLyNhanSu
         {
             UI.FormLOGIN dangNhap = new UI.FormLOGIN();
             dangNhap.Show();
-            this.Hide();
+            this.Close();
         }
         private void ToolStripMenuItemDN_Click(object sender, EventArgs e)
         {

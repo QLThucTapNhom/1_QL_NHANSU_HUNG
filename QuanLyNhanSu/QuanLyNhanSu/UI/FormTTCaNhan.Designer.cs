@@ -30,7 +30,6 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.comboBoxMaNV = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -60,6 +59,7 @@
             this.textBoxTenNV = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.buttonReset = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
@@ -89,15 +89,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã NV";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(243, 119);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 15);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Địa chỉ";
-            // 
             // comboBoxMaNV
             // 
             this.comboBoxMaNV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -106,6 +97,7 @@
             this.comboBoxMaNV.Name = "comboBoxMaNV";
             this.comboBoxMaNV.Size = new System.Drawing.Size(115, 23);
             this.comboBoxMaNV.TabIndex = 4;
+            this.comboBoxMaNV.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaNV_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -212,17 +204,21 @@
             // 
             // textBoxPhongBan
             // 
+            this.textBoxPhongBan.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxPhongBan.Location = new System.Drawing.Point(599, 119);
             this.textBoxPhongBan.Multiline = true;
             this.textBoxPhongBan.Name = "textBoxPhongBan";
+            this.textBoxPhongBan.ReadOnly = true;
             this.textBoxPhongBan.Size = new System.Drawing.Size(115, 23);
             this.textBoxPhongBan.TabIndex = 31;
             // 
             // textBoxChucVu
             // 
+            this.textBoxChucVu.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxChucVu.Location = new System.Drawing.Point(599, 85);
             this.textBoxChucVu.Multiline = true;
             this.textBoxChucVu.Name = "textBoxChucVu";
+            this.textBoxChucVu.ReadOnly = true;
             this.textBoxChucVu.Size = new System.Drawing.Size(115, 23);
             this.textBoxChucVu.TabIndex = 30;
             // 
@@ -347,17 +343,21 @@
             // 
             // textBoxHoNV
             // 
+            this.textBoxHoNV.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxHoNV.Location = new System.Drawing.Point(88, 87);
             this.textBoxHoNV.Multiline = true;
             this.textBoxHoNV.Name = "textBoxHoNV";
+            this.textBoxHoNV.ReadOnly = true;
             this.textBoxHoNV.Size = new System.Drawing.Size(115, 23);
             this.textBoxHoNV.TabIndex = 15;
             // 
             // textBoxTenNV
             // 
+            this.textBoxTenNV.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxTenNV.Location = new System.Drawing.Point(88, 53);
             this.textBoxTenNV.Multiline = true;
             this.textBoxTenNV.Name = "textBoxTenNV";
+            this.textBoxTenNV.ReadOnly = true;
             this.textBoxTenNV.Size = new System.Drawing.Size(115, 23);
             this.textBoxTenNV.TabIndex = 14;
             // 
@@ -379,6 +379,15 @@
             this.label2.Size = new System.Drawing.Size(46, 15);
             this.label2.TabIndex = 12;
             this.label2.Text = "Tên NV";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(243, 119);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 15);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Địa chỉ";
             // 
             // groupBox2
             // 
@@ -433,6 +442,7 @@
             this.button2.Text = "Xóa";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -446,6 +456,7 @@
             this.button1.Text = "Sửa";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonHoanTat
             // 
@@ -459,6 +470,7 @@
             this.buttonHoanTat.Text = "Thêm";
             this.buttonHoanTat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonHoanTat.UseVisualStyleBackColor = true;
+            this.buttonHoanTat.Click += new System.EventHandler(this.buttonHoanTat_Click);
             // 
             // FormTTCaNhan
             // 
@@ -472,6 +484,7 @@
             this.Name = "FormTTCaNhan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TT Ca Nhan";
+            this.Load += new System.EventHandler(this.FormTTCaNhan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -483,7 +496,6 @@
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBoxMaNV;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
@@ -494,12 +506,12 @@
         private System.Windows.Forms.TextBox textBoxTenNV;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxEmail;
-        private System.Windows.Forms.TextBox textBoxDiaChi;
-        private System.Windows.Forms.TextBox textBoxNguyenQuan;
-        private System.Windows.Forms.TextBox textBoxQuocTich;
-        private System.Windows.Forms.TextBox textBoxDanToc;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button buttonHoanTat;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
@@ -513,11 +525,12 @@
         private System.Windows.Forms.TextBox textBoxNgoaiNgu;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button buttonHoanTat;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button buttonExit;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button buttonReset;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.TextBox textBoxDiaChi;
+        private System.Windows.Forms.TextBox textBoxNguyenQuan;
+        private System.Windows.Forms.TextBox textBoxQuocTich;
+        private System.Windows.Forms.TextBox textBoxDanToc;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label4;
     }
 }
