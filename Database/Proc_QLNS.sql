@@ -1,6 +1,6 @@
-USE TTN_QLNHANSU_01
+﻿USE TTN_QLNHANSU_01
 
----Th? t?c c?n thi?t cho bai quanlynhansu
+---Thu tuc can cho bai quanlynhansu
 
 
 CREATE PROC DEL_HoSoNV @MaNV NCHAR(20) AS
@@ -14,3 +14,11 @@ BEGIN
 END
 
 --EXEC dbo.DEL_HoSoNV @MaNV =N''
+
+---Thủ tục xóa một bậc lương
+
+CREATE PROC DEL_Luong @MaLuong NCHAR(20) AS
+BEGIN
+  UPDATE dbo.HoSoNV SET MaLuong=NULL WHERE MaLuong=@MaLuong 
+  DELETE FROM dbo.Luong WHERE MaLuong=@MaLuong
+END
