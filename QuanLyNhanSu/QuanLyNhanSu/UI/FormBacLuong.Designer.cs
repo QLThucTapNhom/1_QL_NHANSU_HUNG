@@ -60,13 +60,14 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.comboBoxBacLuong);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("UVN Ai Cap Nang", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(740, 167);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bậc Lương";
+            this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
             // comboBoxHSPhuCap
             // 
@@ -81,7 +82,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(120, 127);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 15);
+            this.label5.Size = new System.Drawing.Size(99, 15);
             this.label5.TabIndex = 17;
             this.label5.Text = "Hệ số phụ cấp";
             // 
@@ -106,7 +107,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(120, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 15);
+            this.label3.Size = new System.Drawing.Size(84, 15);
             this.label3.TabIndex = 13;
             this.label3.Text = "Hệ số lương";
             // 
@@ -115,7 +116,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(120, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 15);
+            this.label2.Size = new System.Drawing.Size(94, 15);
             this.label2.TabIndex = 12;
             this.label2.Text = "Lương cơ bản";
             // 
@@ -126,13 +127,14 @@
             this.comboBoxBacLuong.Name = "comboBoxBacLuong";
             this.comboBoxBacLuong.Size = new System.Drawing.Size(249, 23);
             this.comboBoxBacLuong.TabIndex = 4;
+            this.comboBoxBacLuong.SelectedIndexChanged += new System.EventHandler(this.ComboBoxBacLuong_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(120, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 15);
+            this.label1.Size = new System.Drawing.Size(75, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bậc Lương";
             // 
@@ -170,6 +172,7 @@
             this.buttonNew.Text = "Mới";
             this.buttonNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonNew.UseVisualStyleBackColor = true;
+            this.buttonNew.Click += new System.EventHandler(this.ButtonNew_Click);
             // 
             // buttonExit
             // 
@@ -183,6 +186,7 @@
             this.buttonExit.Text = "Thoát";
             this.buttonExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.ButtonExit_Click);
             // 
             // buttonDelete
             // 
@@ -196,6 +200,7 @@
             this.buttonDelete.Text = "Xóa";
             this.buttonDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.ButtonDelete_Click);
             // 
             // buttonUpdate
             // 
@@ -209,6 +214,7 @@
             this.buttonUpdate.Text = "Sửa";
             this.buttonUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.ButtonUpdate_Click);
             // 
             // buttonAdd
             // 
@@ -222,6 +228,7 @@
             this.buttonAdd.Text = "Thêm";
             this.buttonAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
             // 
             // FormBacLuong
             // 
