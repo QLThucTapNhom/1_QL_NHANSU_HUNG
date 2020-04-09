@@ -11,8 +11,7 @@ CREATE TABLE HoSoNV
    HoDemNV NVARCHAR(50),
    ChucVu NVARCHAR(50),
    MaPB NCHAR(20),
-   NgayVaoLam DATE,
-   NgayChinhThuc DATE,
+   NgayKyHD DATE,
    NgayHetHanHD DATE,
    MaLuong NCHAR(20)
 
@@ -61,8 +60,7 @@ GO
 CREATE TABLE CDBaoHiemXaHoi
 (
    MaNV NCHAR(20),
-   TenNV NVARCHAR(50),
-   HoDemNV NVARCHAR(50),
+   HoTenNV NVARCHAR(50),
    MaLuong NCHAR(20),
    MaBHXH NCHAR(20) PRIMARY KEY NOT NULL,
    NgayCapSo DATE,
@@ -74,8 +72,7 @@ GO
 CREATE TABLE CDThaiSan
 (
    MaNV NCHAR(20),
-   TenNV NVARCHAR(50),
-   HoDemNV NVARCHAR(50),
+   HoTenNV NVARCHAR(50),
    MaPB NCHAR(20),
    NgayBDNghi DATE,
    NgayTroLai DATE,
@@ -113,10 +110,9 @@ VALUES  ( N'L1', -- MaLuong - nchar(20)
           )
 
 INSERT dbo.PhongBan( MaPB ,TenPB ,ChucNang ,NgayThanhLap ,SDT_Fax ,DiaChiPB ,GhiChu ,MaTruongPhong)
-VALUES  ( N'Phong01' ,  N'Phòng Nhân sự' , N'QL Nhân sự' ,GETDATE() , N'0320129876' , N'P0604' ,  N'' ,Null )
-INSERT dbo.PhongBan( MaPB ,TenPB ,ChucNang ,NgayThanhLap ,SDT_Fax ,DiaChiPB ,GhiChu ,MaTruongPhong)
 VALUES  ( N'PB01' ,  N'Phòng Nhân sự' , N'QL Nhân sự' ,GETDATE() , N'0320129876' , N'P0604' ,  N'' ,Null )
 
+INSERT dbo.HoSoNV ( MaNV ,TenNV ,HoDemNV ,ChucVu ,MaPB , NgayKyHD ,NgayHetHanHD , MaLuong)
+VALUES  ( N'NV01' ,N'Lâm' ,N'Hoàng Mạnh' ,N'Trưởng Phòng' , N'PB01' , GETDATE() ,GETDATE() , N'L1')
 
-INSERT dbo.HoSoNV( MaNV ,TenNV , HoDemNV ,ChucVu ,MaPB ,NgayVaoLam ,NgayChinhThuc ,NgayHetHanHD ,MaLuong )
-VALUES  ( N'NV01' ,N'Lâm' ,N'Hoàng Mạnh' ,N'Trưởng Phòng' , N'PB01' , GETDATE() ,GETDATE() , GETDATE() , N'L1' )
+SELECT * FROM dbo.HoSoNV
