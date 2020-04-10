@@ -22,3 +22,11 @@ BEGIN
   UPDATE dbo.HoSoNV SET MaLuong=NULL WHERE MaLuong=@MaLuong 
   DELETE FROM dbo.Luong WHERE MaLuong=@MaLuong
 END
+
+-- Thủ tục xóa 1 Phòng Ban
+CREATE PROC DEL_PB @MaPB NCHAR(20) AS
+BEGIN
+  UPDATE dbo.HoSoNV SET MaPB=NULL WHERE MaPB=@MaPB 
+  UPDATE dbo.CDThaiSan SET MaPB=NULL WHERE MaPB=@MaPB 
+  DELETE FROM dbo.PhongBan WHERE MaPB=@MaPB
+END

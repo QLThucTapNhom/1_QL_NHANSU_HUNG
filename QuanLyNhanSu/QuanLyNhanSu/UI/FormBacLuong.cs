@@ -13,6 +13,7 @@ namespace QuanLyNhanSu
     public partial class FormBacLuong : Form
     {
         ConnectDatabase db = new ConnectDatabase();
+
         public FormBacLuong()
         {
             InitializeComponent();
@@ -135,6 +136,16 @@ namespace QuanLyNhanSu
                 //f.Show();
                 Close();
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxLuongCB_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
