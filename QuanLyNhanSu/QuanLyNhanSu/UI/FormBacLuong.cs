@@ -131,8 +131,8 @@ namespace QuanLyNhanSu
             if (ret == DialogResult.Yes)
 
             {
-                FormMain f = new FormMain();
-                f.Show();
+                //FormMain f = new FormMain();
+                //f.Show();
                 Close();
             }
         }

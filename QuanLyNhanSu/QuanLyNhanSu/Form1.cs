@@ -112,7 +112,17 @@ namespace QuanLyNhanSu
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
+            DialogResult ret = MessageBox.Show("Bạn có muốn thoát hay không", "Hỏi Thoát",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            if (ret == DialogResult.Yes)
+
+            {
+                //FormMain f = new FormMain();
+                //f.Show();
+                Application.Exit();
+            }
+            
         }
 
 

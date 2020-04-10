@@ -31,36 +31,3 @@ C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\b
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe.config
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.pdb
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\Microsoft.ReportViewer.WinForms.dll
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\Microsoft.SqlServer.Types.dll
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csprojResolveAssemblyReference.cache
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormMain.resources
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormBacLuong.resources
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormBangLuong.resources
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormCheDo.resources
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormDangKy.resources
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.FormDangKy2.resources
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormDangNhap.resources
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormDoiMatKhau.resources
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormHoSoNV.resources
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.FormLOGIN.resources
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormPhongBan.resources
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormTimKiem.resources
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormTTCaNhan.resources
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Properties.Resources.resources
-E:\CNTT3_2\TTN\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.GenerateResource.Cache

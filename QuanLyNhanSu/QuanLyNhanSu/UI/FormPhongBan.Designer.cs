@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBoxMaTruongPhong = new System.Windows.Forms.ComboBox();
             this.textBoxGhiChu = new System.Windows.Forms.TextBox();
             this.textBoxDCPhong = new System.Windows.Forms.TextBox();
             this.textBoxSDTPB = new System.Windows.Forms.TextBox();
@@ -51,7 +52,6 @@
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.comboBoxMaTruongPhong = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -83,6 +83,14 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Phòng Ban";
+            // 
+            // comboBoxMaTruongPhong
+            // 
+            this.comboBoxMaTruongPhong.FormattingEnabled = true;
+            this.comboBoxMaTruongPhong.Location = new System.Drawing.Point(508, 111);
+            this.comboBoxMaTruongPhong.Name = "comboBoxMaTruongPhong";
+            this.comboBoxMaTruongPhong.Size = new System.Drawing.Size(206, 23);
+            this.comboBoxMaTruongPhong.TabIndex = 33;
             // 
             // textBoxGhiChu
             // 
@@ -201,6 +209,7 @@
             this.comboBoxMaPB.Name = "comboBoxMaPB";
             this.comboBoxMaPB.Size = new System.Drawing.Size(206, 23);
             this.comboBoxMaPB.TabIndex = 4;
+            this.comboBoxMaPB.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaPB_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -259,6 +268,7 @@
             this.buttonExit.Text = "Thoát";
             this.buttonExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // buttonDelete
             // 
@@ -272,6 +282,7 @@
             this.buttonDelete.Text = "Xóa";
             this.buttonDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonUpdate
             // 
@@ -285,6 +296,7 @@
             this.buttonUpdate.Text = "Sửa";
             this.buttonUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // buttonAdd
             // 
@@ -298,14 +310,7 @@
             this.buttonAdd.Text = "Thêm";
             this.buttonAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAdd.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxMaTruongPhong
-            // 
-            this.comboBoxMaTruongPhong.FormattingEnabled = true;
-            this.comboBoxMaTruongPhong.Location = new System.Drawing.Point(508, 111);
-            this.comboBoxMaTruongPhong.Name = "comboBoxMaTruongPhong";
-            this.comboBoxMaTruongPhong.Size = new System.Drawing.Size(206, 23);
-            this.comboBoxMaTruongPhong.TabIndex = 33;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // FormPhongBan
             // 
@@ -319,6 +324,7 @@
             this.Name = "FormPhongBan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPhongBan";
+            this.Load += new System.EventHandler(this.FormPhongBan_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
