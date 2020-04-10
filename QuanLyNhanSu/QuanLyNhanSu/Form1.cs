@@ -14,8 +14,7 @@ namespace QuanLyNhanSu
     {
         ConnectDatabase database = new ConnectDatabase();
         public FormMain()
-        {
-            
+        {            
             InitializeComponent();
             
         }

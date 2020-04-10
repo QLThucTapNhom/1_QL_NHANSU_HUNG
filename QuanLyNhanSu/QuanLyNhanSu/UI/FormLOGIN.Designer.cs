@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBoxUsername = new System.Windows.Forms.TextBox();
-            this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.linkLabelDangKy = new System.Windows.Forms.LinkLabel();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonDangNhap = new System.Windows.Forms.Button();
             this.buttonNhapLai = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.linkLabelDangKy = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -58,6 +58,18 @@
             this.panel1.Size = new System.Drawing.Size(854, 75);
             this.panel1.TabIndex = 6;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.SeaGreen;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(232, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(491, 42);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Hệ Thống Quản Lý Nhân Sự";
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.SeaGreen;
@@ -66,25 +78,13 @@
             this.panel4.Size = new System.Drawing.Size(854, 87);
             this.panel4.TabIndex = 8;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.SeaGreen;
-            this.label1.Font = new System.Drawing.Font("UVN Da Lat", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(232, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(336, 49);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Hệ Thống Quản Lý Nhân Sự";
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.textBoxPassword);
             this.groupBox1.Controls.Add(this.textBoxUsername);
-            this.groupBox1.Font = new System.Drawing.Font("Star Jedi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(186, 63);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(455, 154);
@@ -92,15 +92,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Your Account";
             // 
-            // textBoxUsername
+            // label2
             // 
-            this.textBoxUsername.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxUsername.Location = new System.Drawing.Point(202, 46);
-            this.textBoxUsername.MaxLength = 8;
-            this.textBoxUsername.Multiline = true;
-            this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(211, 25);
-            this.textBoxUsername.TabIndex = 0;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(57, 90);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 15);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Password";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.Location = new System.Drawing.Point(57, 46);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 15);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Username";
             // 
             // textBoxPassword
             // 
@@ -113,25 +123,15 @@
             this.textBoxPassword.Size = new System.Drawing.Size(211, 25);
             this.textBoxPassword.TabIndex = 1;
             // 
-            // label3
+            // textBoxUsername
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(57, 46);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 15);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Username";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(57, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 15);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Password";
+            this.textBoxUsername.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBoxUsername.Location = new System.Drawing.Point(202, 46);
+            this.textBoxUsername.MaxLength = 8;
+            this.textBoxUsername.Multiline = true;
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(211, 25);
+            this.textBoxUsername.TabIndex = 0;
             // 
             // panel2
             // 
@@ -144,6 +144,28 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(849, 419);
             this.panel2.TabIndex = 7;
+            // 
+            // linkLabelDangKy
+            // 
+            this.linkLabelDangKy.AutoSize = true;
+            this.linkLabelDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelDangKy.Location = new System.Drawing.Point(517, 331);
+            this.linkLabelDangKy.Name = "linkLabelDangKy";
+            this.linkLabelDangKy.Size = new System.Drawing.Size(76, 20);
+            this.linkLabelDangKy.TabIndex = 8;
+            this.linkLabelDangKy.TabStop = true;
+            this.linkLabelDangKy.Text = "Đăng Ký";
+            this.linkLabelDangKy.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelDangKy_LinkClicked);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(252, 331);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(298, 20);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Nếu bạn chưa có tài khoản, Vui lòng";
             // 
             // groupBox2
             // 
@@ -198,28 +220,6 @@
             this.buttonNhapLai.UseVisualStyleBackColor = true;
             this.buttonNhapLai.Click += new System.EventHandler(this.buttonNhapLai_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("UVN Ai Cap Nang", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(252, 331);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(269, 20);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Nếu bạn chưa có tài khoản, Vui lòng";
-            // 
-            // linkLabelDangKy
-            // 
-            this.linkLabelDangKy.AutoSize = true;
-            this.linkLabelDangKy.Font = new System.Drawing.Font("UVN Ai Cap Nang", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelDangKy.Location = new System.Drawing.Point(517, 331);
-            this.linkLabelDangKy.Name = "linkLabelDangKy";
-            this.linkLabelDangKy.Size = new System.Drawing.Size(71, 20);
-            this.linkLabelDangKy.TabIndex = 8;
-            this.linkLabelDangKy.TabStop = true;
-            this.linkLabelDangKy.Text = "Đăng Ký";
-            this.linkLabelDangKy.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelDangKy_LinkClicked);
-            // 
             // FormLOGIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,6 +233,7 @@
             this.Name = "FormLOGIN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLOGIN";
+            this.Load += new System.EventHandler(this.FormLOGIN_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
