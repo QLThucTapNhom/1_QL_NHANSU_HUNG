@@ -34,3 +34,6 @@ C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\b
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\RdlCompile.cache
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\RdlCompile.compiled
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.UI.FormTroGiup.resources
+D:\GITHUB\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe.config
+D:\GITHUB\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
+D:\GITHUB\1_QL_NHANSU_HUNG\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb

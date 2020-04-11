@@ -12,7 +12,7 @@ namespace QuanLyNhanSu
 {
     class ConnectDatabase
     {
-        string strConnect = "Data Source=DESKTOP-4H2CDN2;Initial Catalog=TTN_QLNHANSU_01;Integrated Security=True";
+        string strConnect = "Data Source=;Initial Catalog=TTN_QLNHANSU_01;Integrated Security=True";
         SqlConnection sqlConnection;
         SqlCommand sqlCommand;
         SqlDataAdapter sqlDataAdapter;
