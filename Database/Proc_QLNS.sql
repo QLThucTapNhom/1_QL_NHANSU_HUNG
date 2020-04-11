@@ -46,3 +46,19 @@ END
 --DROP PROCEDURE TinhLuongNhanVien
 
 --EXEC.TinhLuongNhanVien
+
+--- Tìm kiếm theo nhân viên
+CREATE PROC TimKiemMaNV @MaNV NCHAR(20) AS
+BEGIN
+   SELECT NV.MaNV,NV.HoDemNV, NV.TenNV, TT.GioiTinh, TT.NgaySinh, PB.TenPB , NV.ChucVu,NV.NgayKyHD, 
+   NV.NgayHetHanHD, BHXH.MaBHXH AS BHXH, BHXH.NgayCapSo
+   FROM dbo.HoSoNV NV, dbo.CDBaoHiemXaHoi BHXH, dbo.TTNhanVienCoBan TT, dbo.PhongBan PB
+   WHERE NV.MaNV=TT.MaNV
+   AND NV.MaNV=BHXH.MaNV
+   AND NV.MaPB=PB.MaPB
+   AND NV.MaNV=@MaNV
+END
+
+--DROP PROCEDURE TimKiemMaNV
+
+--EXEC.TimKiemMaNV @MaNV='NV01'
