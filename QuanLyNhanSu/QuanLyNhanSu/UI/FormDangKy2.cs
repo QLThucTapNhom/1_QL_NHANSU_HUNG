@@ -68,10 +68,7 @@ namespace QuanLyNhanSu.UI
                             lg.Show();
                             this.Hide();
                         }
-                        else
-                        {
-
-                        }
+                       
                     }
                     else
                     {
@@ -120,6 +117,13 @@ namespace QuanLyNhanSu.UI
         private void FormDangKy2_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            UI.FormLOGIN lg = new FormLOGIN();
+            lg.Show();
+            this.Hide();
         }
     }
 }

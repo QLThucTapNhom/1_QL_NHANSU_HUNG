@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panelShow = new System.Windows.Forms.Panel();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.panelQuanLy = new System.Windows.Forms.Panel();
             this.panelDanhMuc = new System.Windows.Forms.Panel();
@@ -38,16 +39,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panelShow = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.buttonBangLuong = new System.Windows.Forms.Button();
-            this.buttonPhongBan = new System.Windows.Forms.Button();
-            this.buttonExit = new System.Windows.Forms.Button();
-            this.buttonBacLuong = new System.Windows.Forms.Button();
             this.buttonCheDo = new System.Windows.Forms.Button();
             this.buttonTTCaNhan = new System.Windows.Forms.Button();
             this.buttonNhanVien = new System.Windows.Forms.Button();
+            this.buttonBacLuong = new System.Windows.Forms.Button();
+            this.buttonPhongBan = new System.Windows.Forms.Button();
             this.buttonDangKy = new System.Windows.Forms.Button();
             this.buttonDangNhap = new System.Windows.Forms.Button();
             this.buttonChucNang = new System.Windows.Forms.Button();
@@ -69,13 +69,14 @@
             this.ToolStripMenuItemBangLuong = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemSearch = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3.SuspendLayout();
+            this.panelShow.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.panelQuanLy.SuspendLayout();
             this.panelDanhMuc.SuspendLayout();
             this.panelChucNang.SuspendLayout();
             this.panelTaiKhoan.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -87,6 +88,14 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(704, 438);
             this.panel3.TabIndex = 2;
+            // 
+            // panelShow
+            // 
+            this.panelShow.Controls.Add(this.dataGridView1);
+            this.panelShow.Location = new System.Drawing.Point(0, 26);
+            this.panelShow.Name = "panelShow";
+            this.panelShow.Size = new System.Drawing.Size(701, 395);
+            this.panelShow.TabIndex = 1;
             // 
             // menuStrip2
             // 
@@ -105,7 +114,7 @@
             // panelQuanLy
             // 
             this.panelQuanLy.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.panelQuanLy.Controls.Add(this.buttonBangLuong);
+            this.panelQuanLy.Controls.Add(this.buttonBacLuong);
             this.panelQuanLy.Controls.Add(this.buttonPhongBan);
             this.panelQuanLy.Location = new System.Drawing.Point(15, 396);
             this.panelQuanLy.Name = "panelQuanLy";
@@ -115,13 +124,12 @@
             // panelDanhMuc
             // 
             this.panelDanhMuc.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.panelDanhMuc.Controls.Add(this.buttonBacLuong);
             this.panelDanhMuc.Controls.Add(this.buttonCheDo);
             this.panelDanhMuc.Controls.Add(this.buttonTTCaNhan);
             this.panelDanhMuc.Controls.Add(this.buttonNhanVien);
-            this.panelDanhMuc.Location = new System.Drawing.Point(6, 291);
+            this.panelDanhMuc.Location = new System.Drawing.Point(24, 262);
             this.panelDanhMuc.Name = "panelDanhMuc";
-            this.panelDanhMuc.Size = new System.Drawing.Size(115, 177);
+            this.panelDanhMuc.Size = new System.Drawing.Size(115, 130);
             this.panelDanhMuc.TabIndex = 6;
             // 
             // panelChucNang
@@ -129,7 +137,7 @@
             this.panelChucNang.BackColor = System.Drawing.Color.MediumTurquoise;
             this.panelChucNang.Controls.Add(this.button4);
             this.panelChucNang.Controls.Add(this.buttonSearch);
-            this.panelChucNang.Location = new System.Drawing.Point(3, 346);
+            this.panelChucNang.Location = new System.Drawing.Point(-2, 114);
             this.panelChucNang.Name = "panelChucNang";
             this.panelChucNang.Size = new System.Drawing.Size(115, 99);
             this.panelChucNang.TabIndex = 8;
@@ -147,6 +155,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SeaGreen;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-2, -1);
             this.panel1.Name = "panel1";
@@ -168,18 +177,39 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.SeaGreen;
-            this.panel4.Controls.Add(this.buttonExit);
             this.panel4.Location = new System.Drawing.Point(-2, 497);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(854, 87);
             this.panel4.TabIndex = 7;
             // 
-            // panelShow
+            // dataGridView1
             // 
-            this.panelShow.Location = new System.Drawing.Point(0, 26);
-            this.panelShow.Name = "panelShow";
-            this.panelShow.Size = new System.Drawing.Size(701, 395);
-            this.panelShow.TabIndex = 1;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(701, 391);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::QuanLyNhanSu.Properties.Resources.SeaGreen;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold);
+            this.button1.Image = global::QuanLyNhanSu.Properties.Resources.icon50;
+            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button1.Location = new System.Drawing.Point(802, -1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 49);
+            this.button1.TabIndex = 8;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // button4
             // 
@@ -207,70 +237,6 @@
             this.buttonSearch.Text = "Tìm Kiếm";
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
-            // 
-            // buttonBangLuong
-            // 
-            this.buttonBangLuong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonBangLuong.BackgroundImage")));
-            this.buttonBangLuong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonBangLuong.Font = new System.Drawing.Font("UVN Da Lat", 11.25F);
-            this.buttonBangLuong.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonBangLuong.Location = new System.Drawing.Point(22, 49);
-            this.buttonBangLuong.Name = "buttonBangLuong";
-            this.buttonBangLuong.Size = new System.Drawing.Size(72, 34);
-            this.buttonBangLuong.TabIndex = 10;
-            this.buttonBangLuong.Text = "Bảng Lương";
-            this.buttonBangLuong.UseVisualStyleBackColor = true;
-            this.buttonBangLuong.Click += new System.EventHandler(this.buttonBangLuong_Click);
-            // 
-            // buttonPhongBan
-            // 
-            this.buttonPhongBan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonPhongBan.BackgroundImage")));
-            this.buttonPhongBan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonPhongBan.Font = new System.Drawing.Font("UVN Da Lat", 11.25F);
-            this.buttonPhongBan.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonPhongBan.Location = new System.Drawing.Point(22, 9);
-            this.buttonPhongBan.Name = "buttonPhongBan";
-            this.buttonPhongBan.Size = new System.Drawing.Size(72, 34);
-            this.buttonPhongBan.TabIndex = 1;
-            this.buttonPhongBan.Text = "Phòng Ban";
-            this.buttonPhongBan.UseVisualStyleBackColor = true;
-            this.buttonPhongBan.Click += new System.EventHandler(this.buttonPhongBan_Click);
-            // 
-            // buttonExit
-            // 
-            this.buttonExit.BackColor = System.Drawing.Color.Transparent;
-            this.buttonExit.BackgroundImage = global::QuanLyNhanSu.Properties.Resources.xanh;
-            this.buttonExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonExit.FlatAppearance.BorderSize = 0;
-            this.buttonExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold);
-            this.buttonExit.Image = global::QuanLyNhanSu.Properties.Resources.close1;
-            this.buttonExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonExit.Location = new System.Drawing.Point(751, 6);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(75, 23);
-            this.buttonExit.TabIndex = 5;
-            this.buttonExit.Text = "Thoát";
-            this.buttonExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonExit.UseVisualStyleBackColor = false;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
-            // 
-            // buttonBacLuong
-            // 
-            this.buttonBacLuong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonBacLuong.BackgroundImage")));
-            this.buttonBacLuong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonBacLuong.Font = new System.Drawing.Font("UVN Da Lat", 11.25F);
-            this.buttonBacLuong.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonBacLuong.Location = new System.Drawing.Point(22, 130);
-            this.buttonBacLuong.Name = "buttonBacLuong";
-            this.buttonBacLuong.Size = new System.Drawing.Size(72, 34);
-            this.buttonBacLuong.TabIndex = 10;
-            this.buttonBacLuong.Text = "Bậc Lương";
-            this.buttonBacLuong.UseVisualStyleBackColor = true;
-            this.buttonBacLuong.Click += new System.EventHandler(this.buttonBacLuong_Click);
             // 
             // buttonCheDo
             // 
@@ -313,6 +279,34 @@
             this.buttonNhanVien.Text = "Hồ Sơ";
             this.buttonNhanVien.UseVisualStyleBackColor = true;
             this.buttonNhanVien.Click += new System.EventHandler(this.buttonNhanVien_Click);
+            // 
+            // buttonBacLuong
+            // 
+            this.buttonBacLuong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonBacLuong.BackgroundImage")));
+            this.buttonBacLuong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonBacLuong.Font = new System.Drawing.Font("UVN Da Lat", 11.25F);
+            this.buttonBacLuong.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonBacLuong.Location = new System.Drawing.Point(22, 49);
+            this.buttonBacLuong.Name = "buttonBacLuong";
+            this.buttonBacLuong.Size = new System.Drawing.Size(72, 34);
+            this.buttonBacLuong.TabIndex = 10;
+            this.buttonBacLuong.Text = "Bậc Lương";
+            this.buttonBacLuong.UseVisualStyleBackColor = true;
+            this.buttonBacLuong.Click += new System.EventHandler(this.buttonBacLuong_Click);
+            // 
+            // buttonPhongBan
+            // 
+            this.buttonPhongBan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonPhongBan.BackgroundImage")));
+            this.buttonPhongBan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonPhongBan.Font = new System.Drawing.Font("UVN Da Lat", 11.25F);
+            this.buttonPhongBan.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonPhongBan.Location = new System.Drawing.Point(22, 9);
+            this.buttonPhongBan.Name = "buttonPhongBan";
+            this.buttonPhongBan.Size = new System.Drawing.Size(72, 34);
+            this.buttonPhongBan.TabIndex = 1;
+            this.buttonPhongBan.Text = "Phòng Ban";
+            this.buttonPhongBan.UseVisualStyleBackColor = true;
+            this.buttonPhongBan.Click += new System.EventHandler(this.buttonPhongBan_Click);
             // 
             // buttonDangKy
             // 
@@ -413,14 +407,14 @@
             // ToolStripMenuItemDoiMK
             // 
             this.ToolStripMenuItemDoiMK.Name = "ToolStripMenuItemDoiMK";
-            this.ToolStripMenuItemDoiMK.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItemDoiMK.Size = new System.Drawing.Size(146, 22);
             this.ToolStripMenuItemDoiMK.Text = "Đổi Mật Khẩu";
             this.ToolStripMenuItemDoiMK.Click += new System.EventHandler(this.ToolStripMenuItemDoiMK_Click);
             // 
             // ToolStripMenuItemLogout
             // 
             this.ToolStripMenuItemLogout.Name = "ToolStripMenuItemLogout";
-            this.ToolStripMenuItemLogout.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItemLogout.Size = new System.Drawing.Size(146, 22);
             this.ToolStripMenuItemLogout.Text = "Đăng Xuất";
             this.ToolStripMenuItemLogout.Click += new System.EventHandler(this.buttonDangXuat_Click);
             // 
@@ -477,16 +471,16 @@
             // ToolStripMenuItemPB
             // 
             this.ToolStripMenuItemPB.Name = "ToolStripMenuItemPB";
-            this.ToolStripMenuItemPB.Size = new System.Drawing.Size(138, 22);
+            this.ToolStripMenuItemPB.Size = new System.Drawing.Size(132, 22);
             this.ToolStripMenuItemPB.Text = "Phòng Ban";
             this.ToolStripMenuItemPB.Click += new System.EventHandler(this.buttonPhongBan_Click);
             // 
             // ToolStripMenuItemBangCong
             // 
             this.ToolStripMenuItemBangCong.Name = "ToolStripMenuItemBangCong";
-            this.ToolStripMenuItemBangCong.Size = new System.Drawing.Size(138, 22);
-            this.ToolStripMenuItemBangCong.Text = "Bảng Lương";
-            this.ToolStripMenuItemBangCong.Click += new System.EventHandler(this.buttonBangLuong_Click);
+            this.ToolStripMenuItemBangCong.Size = new System.Drawing.Size(132, 22);
+            this.ToolStripMenuItemBangCong.Text = "Bậc Lương";
+            this.ToolStripMenuItemBangCong.Click += new System.EventHandler(this.buttonBacLuong_Click);
             // 
             // chứcNăngToolStripMenuItem
             // 
@@ -529,7 +523,7 @@
             this.Controls.Add(this.buttonTaiKhoan);
             this.Controls.Add(this.buttonDanhMuc);
             this.Controls.Add(this.panel3);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(60, 0);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -537,6 +531,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panelShow.ResumeLayout(false);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.panelQuanLy.ResumeLayout(false);
@@ -545,7 +540,7 @@
             this.panelTaiKhoan.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -570,9 +565,7 @@
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Button buttonBacLuong;
         private System.Windows.Forms.Panel panelQuanLy;
-        private System.Windows.Forms.Button buttonBangLuong;
         private System.Windows.Forms.Button buttonPhongBan;
-        private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemTaiKhoan;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemDanhMuc;
@@ -590,6 +583,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemLogout;
         private System.Windows.Forms.Panel panelShow;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

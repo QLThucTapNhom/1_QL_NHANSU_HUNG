@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel4 = new System.Windows.Forms.Panel();
-            this.buttonExit = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.linkLabelDangKy = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,8 +41,8 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -53,33 +52,10 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.SeaGreen;
-            this.panel4.Controls.Add(this.buttonExit);
             this.panel4.Location = new System.Drawing.Point(-1, 494);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(854, 87);
             this.panel4.TabIndex = 8;
-            // 
-            // buttonExit
-            // 
-            this.buttonExit.BackColor = System.Drawing.Color.Transparent;
-            this.buttonExit.BackgroundImage = global::QuanLyNhanSu.Properties.Resources.xanh;
-            this.buttonExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonExit.FlatAppearance.BorderSize = 0;
-            this.buttonExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold);
-            this.buttonExit.Image = global::QuanLyNhanSu.Properties.Resources.close1;
-            this.buttonExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonExit.Location = new System.Drawing.Point(751, 6);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(75, 23);
-            this.buttonExit.TabIndex = 6;
-            this.buttonExit.Text = "Thoát";
-            this.buttonExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonExit.UseVisualStyleBackColor = false;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // panel2
             // 
@@ -211,11 +187,32 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SeaGreen;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(854, 75);
             this.panel1.TabIndex = 9;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::QuanLyNhanSu.Properties.Resources.SeaGreen;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold);
+            this.button1.Image = global::QuanLyNhanSu.Properties.Resources.icon50;
+            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button1.Location = new System.Drawing.Point(801, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 49);
+            this.button1.TabIndex = 7;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // label1
             // 
@@ -238,11 +235,12 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(865, 570);
             this.Name = "FormLOGIN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLOGIN";
-            this.panel4.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.FormLOGIN_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -265,10 +263,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.TextBox textBoxUsername;
-        private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabelDangKy;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
     }
 }

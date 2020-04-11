@@ -82,5 +82,10 @@ namespace QuanLyNhanSu.UI
                 Application.Exit();
             }
         }
+
+        private void FormLOGIN_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

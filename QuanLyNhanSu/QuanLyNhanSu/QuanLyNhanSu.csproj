@@ -267,6 +267,30 @@
   <ItemGroup>
     <None Include="Resources\send.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thoat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SeaGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_pin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xuat_hang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons_pin.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

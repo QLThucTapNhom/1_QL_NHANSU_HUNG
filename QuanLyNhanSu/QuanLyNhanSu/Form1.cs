@@ -28,8 +28,8 @@ namespace QuanLyNhanSu
            
             viTriBanDau();
             
-            //string query = "SELECT * FROM dbo.HoSoNV";
-            //database.loadDataGridView(dataGridView, query);
+            string query = "SELECT * FROM dbo.HoSoNV";
+            database.loadDataGridView(dataGridView1, query);
 
         }
 
@@ -71,8 +71,8 @@ namespace QuanLyNhanSu
             {
                 panelDanhMuc.Show();
                 panelDanhMuc.Location = new Point(15, 175);
-                buttonQuanLy.Location = new Point(15, 350);
-                buttonChucNang.Location = new Point(15, 400);
+                buttonQuanLy.Location = new Point(15, 305);
+                buttonChucNang.Location = new Point(15, 355);
                 temp = 1;
             }
             else if (temp == 1)
@@ -118,7 +118,7 @@ namespace QuanLyNhanSu
         private void buttonExit_Click(object sender, EventArgs e)
         {
 
-            DialogResult ret = MessageBox.Show("Bạn có muốn thoát?", "",
+            DialogResult ret = MessageBox.Show("Bạn có muốn thoát không?", "",
                MessageBoxButtons.YesNo, MessageBoxIcon.Error);
             if (ret == DialogResult.Yes)
 
@@ -324,5 +324,7 @@ namespace QuanLyNhanSu
             //FormDoiMatKhau changepass = new FormDoiMatKhau();
             //changepass.Show();
         }
+
+        
     }
 }
