@@ -12,6 +12,9 @@ namespace QuanLyNhanSu
 {
     public partial class FormMain : Form
     {
+
+        public static int kiemtratrangthaidangnhap = 0;
+
         ConnectDatabase database = new ConnectDatabase();
         public FormMain()
         {
@@ -26,17 +29,17 @@ namespace QuanLyNhanSu
             viTriBanDau();
             
             string query = "SELECT * FROM dbo.HoSoNV";
-            database.loadDataGridView(dataGridView, query);
+            database.loadDataGridView(dataGridView1, query);
 
         }
 
         int temp;
         public void viTriBanDau()
         {
-            buttonTaiKhoan.Location = new Point(45, 80);
-            buttonDanhMuc.Location = new Point(45, 130);
-            buttonQuanLy.Location = new Point(45, 180);
-            buttonChucNang.Location = new Point(45, 230);
+            buttonTaiKhoan.Location = new Point(15, 80);
+            buttonDanhMuc.Location = new Point(15, 130);
+            buttonQuanLy.Location = new Point(15, 180);
+            buttonChucNang.Location = new Point(15, 230);
             panelTaiKhoan.Hide();
             panelDanhMuc.Hide();
             panelChucNang.Hide();
@@ -49,10 +52,10 @@ namespace QuanLyNhanSu
             if (temp == 0)
             {
                 panelTaiKhoan.Show();
-                panelTaiKhoan.Location = new Point(45, 125);
-                buttonDanhMuc.Location = new Point(45, 220);
-                buttonQuanLy.Location = new Point(45, 270);
-                buttonChucNang.Location = new Point(45, 320);
+                panelTaiKhoan.Location = new Point(15, 125);
+                buttonDanhMuc.Location = new Point(15, 220);
+                buttonQuanLy.Location = new Point(15, 270);
+                buttonChucNang.Location = new Point(15, 320);
                 temp = 1;
             }
             else if (temp == 1)
@@ -67,9 +70,9 @@ namespace QuanLyNhanSu
             if (temp == 0)
             {
                 panelDanhMuc.Show();
-                panelDanhMuc.Location = new Point(45, 175);
-                buttonQuanLy.Location = new Point(45, 350);
-                buttonChucNang.Location = new Point(45, 400);
+                panelDanhMuc.Location = new Point(15, 175);
+                buttonQuanLy.Location = new Point(15, 305);
+                buttonChucNang.Location = new Point(15, 355);
                 temp = 1;
             }
             else if (temp == 1)
@@ -84,8 +87,8 @@ namespace QuanLyNhanSu
             if (temp == 0)
             {
                 panelQuanLy.Show();
-                panelQuanLy.Location = new Point(45, 225);
-                buttonChucNang.Location = new Point(45, 318);
+                panelQuanLy.Location = new Point(15, 225);
+                buttonChucNang.Location = new Point(15, 318);
                 temp = 1;
             }
             else if (temp == 1)
@@ -100,7 +103,7 @@ namespace QuanLyNhanSu
             if (temp == 0)
             {
                 panelChucNang.Show();
-                panelChucNang.Location = new Point(45, 275);
+                panelChucNang.Location = new Point(15, 275);
                 temp = 1;
             }
             else if (temp == 1)
@@ -110,138 +113,218 @@ namespace QuanLyNhanSu
             }
         }
 
+
+
         private void buttonExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
+            DialogResult ret = MessageBox.Show("Bạn có muốn thoát không?", "",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            if (ret == DialogResult.Yes)
+
+            {
+                //FormMain f = new FormMain();
+                //f.Show();
+                Application.Exit();
+            }
+            
         }
 
-
-        private void buttonDangNhap_Click(object sender, EventArgs e)
-        {
-            UI.FormLOGIN dangNhap = new UI.FormLOGIN();
-            dangNhap.Show();
-            this.Close();
-        }
+        /// <summary>
+        /// ///////////////
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void ToolStripMenuItemDN_Click(object sender, EventArgs e)
         {
-            FormDangNhap dangNhap = new FormDangNhap();
-            dangNhap.Show();
-        }
+            UI.FormLOGIN lg = new UI.FormLOGIN() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            lg.FormBorderStyle = FormBorderStyle.None;
+            this.panelShow.Controls.Add(lg);
+            foreach (Control ctrl in panelShow.Controls)
+            {
+                if (ctrl != lg)
+                    ctrl.Dispose();
+            }
+            lg.Show();
 
-        
-
-        private void buttonDangKy_Click(object sender, EventArgs e)
-        {
-            FormDangKy dangKy = new FormDangKy();
-            dangKy.Show();
+            //FormDangNhap dangNhap = new FormDangNhap();
+            //dangNhap.Show();
         }
-        private void ToolStripMenuItemDK_Click(object sender, EventArgs e)
-        {
-            FormDangKy dangKy = new FormDangKy();
-            dangKy.Show();
-        }
-
 
 
         private void buttonNhanVien_Click(object sender, EventArgs e)
         {
-            FormHoSoNV hs = new FormHoSoNV();
+
+            FormHoSoNV hs = new FormHoSoNV() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            hs.FormBorderStyle = FormBorderStyle.None;
+            this.panelShow.Controls.Add(hs);
+            foreach (Control ctrl in panelShow.Controls)
+            {
+                if (ctrl != hs)
+                    ctrl.Dispose();
+            }
             hs.Show();
+
+            //FormHoSoNV hs = new FormHoSoNV();
+            //hs.Show();
         }
 
         private void buttonTTCaNhan_Click(object sender, EventArgs e)
         {
-            FormTTCaNhan ttCaNhan = new FormTTCaNhan();
+
+            FormTTCaNhan ttCaNhan = new FormTTCaNhan() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            ttCaNhan.FormBorderStyle = FormBorderStyle.None;
+            this.panelShow.Controls.Add(ttCaNhan);
+            foreach (Control ctrl in panelShow.Controls)
+            {
+                if (ctrl != ttCaNhan)
+                    ctrl.Dispose();
+            }
             ttCaNhan.Show();
+
+
+            //FormTTCaNhan ttCaNhan = new FormTTCaNhan();
+            //ttCaNhan.Show();
         }
-        private void ToolStripMenuItemTTCaNhan_Click(object sender, EventArgs e)
-        {
-            FormTTCaNhan ttCaNhan = new FormTTCaNhan();
-            ttCaNhan.Show();
-        }
+        
 
         private void buttonCheDo_Click(object sender, EventArgs e)
         {
-            FormCheDo cd = new FormCheDo();
+
+
+            FormCheDo cd = new FormCheDo() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            cd.FormBorderStyle = FormBorderStyle.None;
+            this.panelShow.Controls.Add(cd);
+            foreach (Control ctrl in panelShow.Controls)
+            {
+                if (ctrl != cd)
+                    ctrl.Dispose();
+            }
             cd.Show();
-        }
-
-        private void ToolStripMenuItemDoiMK_Click(object sender, EventArgs e)
-        {
-            FormDoiMatKhau changepass = new FormDoiMatKhau();
-            changepass.Show();
-        }
-
-        private void ToolStripMenuItemSearch_Click(object sender, EventArgs e)
-        {
-            FormTimKiem search = new FormTimKiem();
-            search.Show();
+            //FormCheDo cd = new FormCheDo();
+            //cd.Show();
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            FormTimKiem search = new FormTimKiem();
+            FormTimKiem search = new FormTimKiem() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            search.FormBorderStyle = FormBorderStyle.None;
+            this.panelShow.Controls.Add(search);
+            foreach (Control ctrl in panelShow.Controls)
+            {
+                if (ctrl != search)
+                    ctrl.Dispose();
+            }
             search.Show();
+            //FormTimKiem search = new FormTimKiem();
+            //search.Show();
         }
 
-        private void ToolStripMenuItemPB_Click(object sender, EventArgs e)
-        {
-            FormPhongBan pb = new FormPhongBan();
-            pb.Show();
-        }
 
         private void buttonPhongBan_Click(object sender, EventArgs e)
         {
-            FormPhongBan pb = new FormPhongBan();
-            pb.Show();
+
+            FormPhongBan PB = new FormPhongBan() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            PB.FormBorderStyle = FormBorderStyle.None;
+            this.panelShow.Controls.Add(PB);
+            foreach (Control ctrl in panelShow.Controls)
+            {
+                if (ctrl != PB)
+                    ctrl.Dispose();
+            }
+            PB.Show();
+            //FormPhongBan pb = new FormPhongBan();
+            //pb.Show();
         }
 
-        private void ToolStripMenuItemCheDo_Click(object sender, EventArgs e)
-        {
-            FormCheDo cd = new FormCheDo();
-            cd.Show();
-        }
+        
 
-        private void ToolStripMenuItemNhanVien_Click(object sender, EventArgs e)
-        {
-            FormHoSoNV hs = new FormHoSoNV();
-            hs.Show();
-        }
+        
 
         private void buttonBacLuong_Click(object sender, EventArgs e)
         {
-            FormBacLuong bl = new FormBacLuong();
+
+            FormBacLuong bl = new FormBacLuong() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            bl.FormBorderStyle = FormBorderStyle.None;
+            this.panelShow.Controls.Add(bl);
+            foreach (Control ctrl in panelShow.Controls)
+            {
+                if (ctrl != bl)
+                    ctrl.Dispose();
+            }
             bl.Show();
+            //FormBacLuong bl = new FormBacLuong();
+            //bl.Show();
         }
 
-        private void ToolStripMenuItemBacLuong_Click(object sender, EventArgs e)
-        {
-            FormBacLuong bl = new FormBacLuong();
-            bl.Show();
-        }
-
-        private void ToolStripMenuItemBangLuong_Click(object sender, EventArgs e)
-        {
-            FormBangLuong bangluong = new FormBangLuong();
-            bangluong.Show();
-        }
 
         private void buttonBangLuong_Click(object sender, EventArgs e)
         {
-            FormBangLuong bangluong = new FormBangLuong();
+            FormBangLuong bangluong = new FormBangLuong() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            bangluong.FormBorderStyle = FormBorderStyle.None;
+            this.panelShow.Controls.Add(bangluong);
+            foreach (Control ctrl in panelShow.Controls)
+            {
+                if (ctrl != bangluong)
+                    ctrl.Dispose();
+            }
             bangluong.Show();
+            //FormBangLuong bangluong = new FormBangLuong();
+            //bangluong.Show();
         }
 
-        private void ToolStripMenuItemLogout_Click(object sender, EventArgs e)
-        {
-            UI.FormLOGIN login = new UI.FormLOGIN();
-            this.Hide();
-            login.Show();
-        }
-
+        
         private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
+        private void linkLabelDangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UI.FormDangKy2 dk = new UI.FormDangKy2() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            dk.FormBorderStyle = FormBorderStyle.None;
+            this.panelShow.Controls.Add(dk);
+            foreach (Control ctrl in panelShow.Controls)
+            {
+                if (ctrl != dk)
+                    ctrl.Dispose();
+            }
+            dk.Show();
+        }
+
+        private void buttonDangXuat_Click(object sender, EventArgs e)
+        {
+            DialogResult ret = MessageBox.Show("Bạn muốn đăng xuất?", "",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            if (ret == DialogResult.Yes)
+
+            {
+                UI.FormLOGIN lg = new UI.FormLOGIN();
+                lg.Show();
+                this.Hide();
+            }
+            
+
+
+        }
+
+        private void ToolStripMenuItemDoiMK_Click(object sender, EventArgs e)
+        {
+
+            FormDoiMatKhau changepass = new FormDoiMatKhau() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            changepass.FormBorderStyle = FormBorderStyle.None;
+            this.panelShow.Controls.Add(changepass);
+            foreach (Control ctrl in panelShow.Controls)
+            {
+                if (ctrl != changepass)
+                    ctrl.Dispose();
+            }
+            changepass.Show();
+            //FormDoiMatKhau changepass = new FormDoiMatKhau();
+            //changepass.Show();
+        }
+
+        
     }
 }

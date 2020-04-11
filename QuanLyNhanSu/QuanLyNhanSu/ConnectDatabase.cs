@@ -79,6 +79,9 @@ namespace QuanLyNhanSu
             }
             NgatKetNoi();
         }
+
+        
+
         public bool Check(string temp, string strsql)
         {
 

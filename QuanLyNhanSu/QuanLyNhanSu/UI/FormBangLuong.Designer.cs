@@ -28,63 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.DataSetBacLuong = new QuanLyNhanSu.DataSetBacLuong();
+            this.TinhLuongNhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.TinhLuongNhanVienTableAdapter = new QuanLyNhanSu.DataSetBacLuongTableAdapters.TinhLuongNhanVienTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetBacLuong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TinhLuongNhanVienBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.reportViewer1);
-            this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Font = new System.Drawing.Font("UVN Ai Cap Nang", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(10, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(740, 377);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông Tin Lương Nhân Viên";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 22);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(740, 355);
-            this.dataGridView1.TabIndex = 9;
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(0, 23);
+            reportDataSource1.Name = "DataSetBangLuong";
+            reportDataSource1.Value = this.TinhLuongNhanVienBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "QuanLyNhanSu.UI.Report1.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(10, 10);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(740, 354);
-            this.reportViewer1.TabIndex = 10;
+            this.reportViewer1.Size = new System.Drawing.Size(682, 379);
+            this.reportViewer1.TabIndex = 11;
+            // 
+            // DataSetBacLuong
+            // 
+            this.DataSetBacLuong.DataSetName = "DataSetBacLuong";
+            this.DataSetBacLuong.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // TinhLuongNhanVienBindingSource
+            // 
+            this.TinhLuongNhanVienBindingSource.DataMember = "TinhLuongNhanVien";
+            this.TinhLuongNhanVienBindingSource.DataSource = this.DataSetBacLuong;
+            // 
+            // TinhLuongNhanVienTableAdapter
+            // 
+            this.TinhLuongNhanVienTableAdapter.ClearBeforeFill = true;
             // 
             // FormBangLuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(761, 401);
-            this.Controls.Add(this.groupBox1);
-            this.MaximumSize = new System.Drawing.Size(777, 440);
+            this.ClientSize = new System.Drawing.Size(704, 401);
+            this.Controls.Add(this.reportViewer1);
+            this.MaximumSize = new System.Drawing.Size(720, 440);
             this.Name = "FormBangLuong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bang Luong";
             this.Load += new System.EventHandler(this.FormBangLuong_Load);
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetBacLuong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TinhLuongNhanVienBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource TinhLuongNhanVienBindingSource;
+        private DataSetBacLuong DataSetBacLuong;
+        private DataSetBacLuongTableAdapters.TinhLuongNhanVienTableAdapter TinhLuongNhanVienTableAdapter;
     }
 }

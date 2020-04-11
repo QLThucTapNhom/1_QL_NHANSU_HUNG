@@ -30,15 +30,14 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxConfirm = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.textBoxNewPassword = new System.Windows.Forms.TextBox();
+            this.textBoxOldPassword = new System.Windows.Forms.TextBox();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.buttonThoat = new System.Windows.Forms.Button();
             this.buttonHoanTat = new System.Windows.Forms.Button();
             this.buttonNhapLai = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -48,15 +47,15 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBoxConfirm);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBoxEmail);
-            this.groupBox1.Controls.Add(this.textBoxPassword);
+            this.groupBox1.Controls.Add(this.textBoxNewPassword);
+            this.groupBox1.Controls.Add(this.textBoxOldPassword);
             this.groupBox1.Controls.Add(this.textBoxUsername);
             this.groupBox1.Font = new System.Drawing.Font("Star Jedi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(26, 28);
+            this.groupBox1.Location = new System.Drawing.Point(176, 30);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(314, 204);
             this.groupBox1.TabIndex = 1;
@@ -73,15 +72,15 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Confirm";
             // 
-            // textBox1
+            // textBoxConfirm
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.Location = new System.Drawing.Point(111, 163);
-            this.textBox1.MaxLength = 50;
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(192, 25);
-            this.textBox1.TabIndex = 6;
+            this.textBoxConfirm.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBoxConfirm.Location = new System.Drawing.Point(111, 163);
+            this.textBoxConfirm.MaxLength = 50;
+            this.textBoxConfirm.Multiline = true;
+            this.textBoxConfirm.Name = "textBoxConfirm";
+            this.textBoxConfirm.Size = new System.Drawing.Size(192, 25);
+            this.textBoxConfirm.TabIndex = 6;
             // 
             // label3
             // 
@@ -113,25 +112,25 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Username";
             // 
-            // textBoxEmail
+            // textBoxNewPassword
             // 
-            this.textBoxEmail.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxEmail.Location = new System.Drawing.Point(111, 121);
-            this.textBoxEmail.MaxLength = 50;
-            this.textBoxEmail.Multiline = true;
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(192, 25);
-            this.textBoxEmail.TabIndex = 2;
+            this.textBoxNewPassword.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBoxNewPassword.Location = new System.Drawing.Point(111, 121);
+            this.textBoxNewPassword.MaxLength = 50;
+            this.textBoxNewPassword.Multiline = true;
+            this.textBoxNewPassword.Name = "textBoxNewPassword";
+            this.textBoxNewPassword.Size = new System.Drawing.Size(192, 25);
+            this.textBoxNewPassword.TabIndex = 2;
             // 
-            // textBoxPassword
+            // textBoxOldPassword
             // 
-            this.textBoxPassword.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxPassword.Location = new System.Drawing.Point(111, 77);
-            this.textBoxPassword.MaxLength = 8;
-            this.textBoxPassword.Multiline = true;
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(192, 25);
-            this.textBoxPassword.TabIndex = 1;
+            this.textBoxOldPassword.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBoxOldPassword.Location = new System.Drawing.Point(111, 77);
+            this.textBoxOldPassword.MaxLength = 8;
+            this.textBoxOldPassword.Multiline = true;
+            this.textBoxOldPassword.Name = "textBoxOldPassword";
+            this.textBoxOldPassword.Size = new System.Drawing.Size(192, 25);
+            this.textBoxOldPassword.TabIndex = 1;
             // 
             // textBoxUsername
             // 
@@ -145,63 +144,50 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.buttonThoat);
             this.groupBox2.Controls.Add(this.buttonHoanTat);
             this.groupBox2.Controls.Add(this.buttonNhapLai);
-            this.groupBox2.Location = new System.Drawing.Point(26, 240);
+            this.groupBox2.Location = new System.Drawing.Point(176, 240);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(314, 71);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
-            // 
-            // buttonThoat
-            // 
-            this.buttonThoat.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonThoat.Image = global::QuanLyNhanSu.Properties.Resources.close1;
-            this.buttonThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThoat.Location = new System.Drawing.Point(227, 19);
-            this.buttonThoat.Name = "buttonThoat";
-            this.buttonThoat.Size = new System.Drawing.Size(81, 33);
-            this.buttonThoat.TabIndex = 2;
-            this.buttonThoat.Text = "Thoát";
-            this.buttonThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonThoat.UseVisualStyleBackColor = true;
-            this.buttonThoat.Click += new System.EventHandler(this.buttonThoat_Click);
             // 
             // buttonHoanTat
             // 
             this.buttonHoanTat.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonHoanTat.Image = global::QuanLyNhanSu.Properties.Resources.add_user;
             this.buttonHoanTat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHoanTat.Location = new System.Drawing.Point(122, 19);
+            this.buttonHoanTat.Location = new System.Drawing.Point(183, 19);
             this.buttonHoanTat.Name = "buttonHoanTat";
             this.buttonHoanTat.Size = new System.Drawing.Size(81, 33);
             this.buttonHoanTat.TabIndex = 1;
             this.buttonHoanTat.Text = "Hoàn Tất";
             this.buttonHoanTat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonHoanTat.UseVisualStyleBackColor = true;
+            this.buttonHoanTat.Click += new System.EventHandler(this.buttonHoanTat_Click);
             // 
             // buttonNhapLai
             // 
             this.buttonNhapLai.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonNhapLai.Image = global::QuanLyNhanSu.Properties.Resources.edit_user;
             this.buttonNhapLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNhapLai.Location = new System.Drawing.Point(6, 19);
+            this.buttonNhapLai.Location = new System.Drawing.Point(45, 19);
             this.buttonNhapLai.Name = "buttonNhapLai";
             this.buttonNhapLai.Size = new System.Drawing.Size(81, 33);
             this.buttonNhapLai.TabIndex = 0;
             this.buttonNhapLai.Text = "Nhập Lại";
             this.buttonNhapLai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonNhapLai.UseVisualStyleBackColor = true;
+            this.buttonNhapLai.Click += new System.EventHandler(this.buttonNhapLai_Click);
             // 
             // FormDoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 323);
+            this.ClientSize = new System.Drawing.Size(704, 401);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.MaximumSize = new System.Drawing.Size(400, 362);
+            this.MaximumSize = new System.Drawing.Size(720, 440);
             this.Name = "FormDoiMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Change Password";
@@ -218,14 +204,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxEmail;
-        private System.Windows.Forms.TextBox textBoxPassword;
+        private System.Windows.Forms.TextBox textBoxNewPassword;
+        private System.Windows.Forms.TextBox textBoxOldPassword;
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button buttonThoat;
         private System.Windows.Forms.Button buttonHoanTat;
         private System.Windows.Forms.Button buttonNhapLai;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxConfirm;
     }
 }

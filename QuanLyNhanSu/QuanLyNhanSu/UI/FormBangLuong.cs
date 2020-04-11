@@ -19,6 +19,10 @@ namespace QuanLyNhanSu
 
         private void FormBangLuong_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'DataSetBacLuong.TinhLuongNhanVien' table. You can move, or remove it, as needed.
+            this.TinhLuongNhanVienTableAdapter.Fill(this.DataSetBacLuong.TinhLuongNhanVien);
+            // TODO: This line of code loads data into the 'DataSetBangLuong.TinhLuongNhanVien' table. You can move, or remove it, as needed.
+            //this.TinhLuongNhanVienTableAdapter.Fill(this.DataSetBangLuong.TinhLuongNhanVien);
 
             this.reportViewer1.RefreshReport();
         }

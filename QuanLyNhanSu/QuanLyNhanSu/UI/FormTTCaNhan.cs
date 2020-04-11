@@ -94,8 +94,8 @@ namespace QuanLyNhanSu
                 if (check == false)
                 {
                     //( MaNV ,TenNV ,HoDemNV ,GioiTinh ,NgaySinh ,QuocTich ,NguyenQuan ,DiaChi ,SDT_Email ,NgoaiNgu , HocVan , GhiChu )
-                    string insert = "INSERT INTO dbo.TTNhanVienCoBan "
-                          +"VALUES(N'"+MaNV+"', N'"+TenNV+"', N'"+HoNV+"', N'"+GTinh+"','"+NSinh+"', N'"+QuocTich+"',"
+                    string insert = "INSERT INTO dbo.TTNhanVienCoBan ( MaNV ,TenNV ,HoDemNV ,GioiTinh ,NgaySinh ,QuocTich ,NguyenQuan ,DiaChi ,SDT_Email ,NgoaiNgu , HocVan , GhiChu ) "
+                          + "VALUES(N'"+MaNV+"', N'"+TenNV+"', N'"+HoNV+"', N'"+GTinh+"','"+NSinh+"', N'"+QuocTich+"',"
                           +"N'"+NguyenQuan+"', N'"+DiaChi+"', N'"+SDT_Email+"', N'"+NgoaiNgu+"', N'"+HocVan+"',N'"+GhiChu+"')";
                     database.ThucThiKetNoi(insert);
                     MessageBox.Show("Hoàn Tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -106,12 +106,12 @@ namespace QuanLyNhanSu
                 }
                 else
                 {
-                    MessageBox.Show("Vui lòng sử dụng chức năng UPDATE!", "Không thể thêm", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Thông tin NV "+HoNV+" "+TenNV+" đã tồn tại!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
             }
             catch
             {
-                MessageBox.Show("Lỗi rồi!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Đã xảy ra lỗi!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 

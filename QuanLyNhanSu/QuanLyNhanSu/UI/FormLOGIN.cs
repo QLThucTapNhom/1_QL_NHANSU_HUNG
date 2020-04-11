@@ -39,38 +39,53 @@ namespace QuanLyNhanSu.UI
                 bool check = database.Check(password, "SELECT MatKhau FROM dbo.TaiKhoan WHERE Username='"+username+"'");
                 if (check == true)
                 {
-                    FormMain main = new FormMain();
-                    main.Show();
+                    FormMain m = new FormMain();
+                    m.Show();
                     this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("Username or password doesn't correct!","", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    
+                    MessageBox.Show("Username hoặc password không chính xác!","", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    textBoxUsername.Text = "";
+                    textBoxPassword.Text = "";
                 }
-                //FormMain main = new FormMain();
-                //main.Show();
-                //this.Hide();
 
             }
             else
             {
-                MessageBox.Show("Please typing your username and password!","", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                
+                MessageBox.Show("Vui lòng nhập đầy đủ username và password!","", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                textBoxUsername.Text = "";
+                textBoxPassword.Text = "";
             }
             
 
         }
 
-        private void buttonExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void linkLabelDangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FormDangKy2 dk2 = new FormDangKy2();
-            dk2.Show();
+            FormDangKy2 dk = new FormDangKy2();
+            dk.Show();
             this.Hide();
- 
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            DialogResult ret = MessageBox.Show("Bạn muốn thoát hay không?", "",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            if (ret == DialogResult.Yes)
+
+            {
+                //FormMain f = new FormMain();
+                //f.Show();
+                Application.Exit();
+            }
+        }
+
+        private void FormLOGIN_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
