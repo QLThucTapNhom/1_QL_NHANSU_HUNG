@@ -30,3 +30,19 @@ BEGIN
   UPDATE dbo.CDThaiSan SET MaPB=NULL WHERE MaPB=@MaPB 
   DELETE FROM dbo.PhongBan WHERE MaPB=@MaPB
 END
+
+-- Thủ tục tính lương nhân viên
+
+CREATE PROC TinhLuongNhanVien AS
+BEGIN
+      SELECT NV.MaPB, PB.TenPB, NV.MaNV, NV.HoDemNV, NV.TenNV,NV.ChucVu,L.LuongCB ,L.HSLuong,L.HSPhuCap, 
+	  L.LuongCB*L.HSLuong+L.LuongCB*L.HSPhuCap AS TongLuong, (L.LuongCB*L.HSLuong+L.LuongCB*L.HSPhuCap)*0.05 AS Thue,
+	  (L.LuongCB*L.HSLuong+L.LuongCB*L.HSPhuCap)-(L.LuongCB*L.HSLuong+L.LuongCB*L.HSPhuCap) * 0.05 AS ThucLinh
+      FROM dbo.HoSoNV NV, dbo.PhongBan PB, dbo.Luong L
+      WHERE NV.MaPB=PB.MaPB
+      AND NV.MaLuong=L.MaLuong
+END
+
+--DROP PROCEDURE TinhLuongNhanVien
+
+--EXEC.TinhLuongNhanVien
