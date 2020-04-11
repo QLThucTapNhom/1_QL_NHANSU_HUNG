@@ -37,12 +37,22 @@ namespace QuanLyNhanSu
             sqlCommand.ExecuteNonQuery();
             NgatKetNoi();
         }
+        //public void loadDataGridView(DataGridView dg, string strselect)
+        //{
+            
+        //    sqlDataAdapter = new SqlDataAdapter(strselect, strConnect);
+        //    dataSet.Clear();
+        //    sqlDataAdapter.Fill(dataSet, "query");
+        //    dg.DataSource = dataSet.Tables[0];
+        //}
+
         public void loadDataGridView(DataGridView dg, string strselect)
         {
-            dataSet.Clear();
+            DataTable table = new DataTable();
             sqlDataAdapter = new SqlDataAdapter(strselect, strConnect);
-            sqlDataAdapter.Fill(dataSet, "query");
-            dg.DataSource = dataSet.Tables[0];
+            table.Clear();
+            sqlDataAdapter.Fill(table);
+            dg.DataSource = table;
         }
 
         public void loadComboBox(ComboBox cb, string strselect)

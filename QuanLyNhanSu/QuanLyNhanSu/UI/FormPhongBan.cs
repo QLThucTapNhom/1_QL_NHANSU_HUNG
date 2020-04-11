@@ -67,6 +67,13 @@ namespace QuanLyNhanSu
                     //( MaPB ,TenPB ,ChucNang ,NgayThanhLap ,SDT_Fax ,DiaChiPB ,GhiChu ,MaTruongPhong)
                     string insert = "INSERT INTO dbo.PhongBan VALUES  ( N'"+MaPB+"' , N'"+TenPB+"' , N'"+ChucNang+"' , '"+NgayThanhLap+"' , N'"+SDT_Fax+"' , N'"+DiaChiPB+"' , N'"+GhiChu+"' , N'"+MaTruongPhong+"'   )";
                     db.ThucThiKetNoi(insert);
+                    // Update chức vụ cho trưởng phòng.
+                    string updtruongphong = "UPDATE dbo.HoSoNV SET ChucVu=N'Trưởng Phòng' WHERE MaNV=N'"+MaTruongPhong+"'";
+                    db.ThucThiKetNoi(updtruongphong);
+                    //update trưởng phòng thuộc phòng ban.
+                    string updtruongphongpb = "UPDATE dbo.HoSoNV SET MaPB=N'"+MaPB+"' WHERE MaNV=N'" + MaTruongPhong + "'";
+                    db.ThucThiKetNoi(updtruongphongpb);
+
                     MessageBox.Show("Hoàn Tất!");
                     db.loadDataGridView(dataGridView, "SELECT * FROM dbo.PhongBan WHERE MaPB='" + MaPB + "'");
                 }
@@ -159,6 +166,11 @@ namespace QuanLyNhanSu
                 //f.Show();
                 Close();
             }
+        }
+
+        private void buttonDSach_Click(object sender, EventArgs e)
+        {
+            db.loadDataGridView(dataGridView, "select * from dbo.PhongBan");
         }
     }
 }

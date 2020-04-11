@@ -53,6 +53,7 @@
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonDSach = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -241,7 +242,6 @@
             // 
             // dataGridView
             // 
-            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(25, 174);
@@ -251,6 +251,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.buttonDSach);
             this.groupBox2.Controls.Add(this.buttonNew);
             this.groupBox2.Controls.Add(this.buttonDelete);
             this.groupBox2.Controls.Add(this.buttonUpdate);
@@ -266,7 +267,7 @@
             this.buttonNew.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonNew.Image = global::QuanLyNhanSu.Properties.Resources.button5_Image;
             this.buttonNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNew.Location = new System.Drawing.Point(95, 18);
+            this.buttonNew.Location = new System.Drawing.Point(65, 18);
             this.buttonNew.Name = "buttonNew";
             this.buttonNew.Size = new System.Drawing.Size(70, 35);
             this.buttonNew.TabIndex = 6;
@@ -280,7 +281,7 @@
             this.buttonDelete.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonDelete.Image = global::QuanLyNhanSu.Properties.Resources.remove_user;
             this.buttonDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDelete.Location = new System.Drawing.Point(500, 18);
+            this.buttonDelete.Location = new System.Drawing.Point(395, 18);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(70, 35);
             this.buttonDelete.TabIndex = 4;
@@ -294,7 +295,7 @@
             this.buttonUpdate.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonUpdate.Image = global::QuanLyNhanSu.Properties.Resources.edit_user;
             this.buttonUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUpdate.Location = new System.Drawing.Point(365, 18);
+            this.buttonUpdate.Location = new System.Drawing.Point(285, 18);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(70, 35);
             this.buttonUpdate.TabIndex = 3;
@@ -308,7 +309,7 @@
             this.buttonAdd.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonAdd.Image = global::QuanLyNhanSu.Properties.Resources.add_user;
             this.buttonAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAdd.Location = new System.Drawing.Point(230, 18);
+            this.buttonAdd.Location = new System.Drawing.Point(175, 18);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(70, 35);
             this.buttonAdd.TabIndex = 2;
@@ -316,6 +317,20 @@
             this.buttonAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
+            // buttonDSach
+            // 
+            this.buttonDSach.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.buttonDSach.Image = global::QuanLyNhanSu.Properties.Resources.button7_Image;
+            this.buttonDSach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDSach.Location = new System.Drawing.Point(505, 18);
+            this.buttonDSach.Name = "buttonDSach";
+            this.buttonDSach.Size = new System.Drawing.Size(70, 35);
+            this.buttonDSach.TabIndex = 9;
+            this.buttonDSach.Text = "DS";
+            this.buttonDSach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonDSach.UseVisualStyleBackColor = true;
+            this.buttonDSach.Click += new System.EventHandler(this.buttonDSach_Click);
             // 
             // FormHoSoNV
             // 
@@ -367,5 +382,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxChucVu;
         private System.Windows.Forms.ComboBox comboBoxLuong;
+        private System.Windows.Forms.Button buttonDSach;
     }
 }

@@ -53,6 +53,8 @@ namespace QuanLyNhanSu
                     db.ThucThiKetNoi(insert);
                     MessageBox.Show("Thêm Bậc Lương Thành Công!");
                     db.loadDataGridView(dataGridView1, "SELECT * FROM dbo.Luong WHERE MaLuong='" + MaLuong + "'");
+                    comboBoxBacLuong.Items.Clear();
+                    db.loadComboBox(comboBoxBacLuong, "SELECT MaLuong FROM dbo.Luong");
                 }
                 else
                 {
@@ -140,6 +142,12 @@ namespace QuanLyNhanSu
         private void textBoxLuongCB_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonDSach_Click(object sender, EventArgs e)
+        {
+
+            db.loadDataGridView(dataGridView1, "select * from dbo.luong");
         }
     }
 }

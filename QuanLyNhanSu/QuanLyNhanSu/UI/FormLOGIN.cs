@@ -25,6 +25,7 @@ namespace QuanLyNhanSu.UI
             textBoxUsername.Text = "";
             textBoxPassword.Text = "";
         }
+        public static string useraccount;
 
         private void buttonDangNhap_Click(object sender, EventArgs e)
         {
@@ -39,6 +40,7 @@ namespace QuanLyNhanSu.UI
                 bool check = database.Check(password, "SELECT MatKhau FROM dbo.TaiKhoan WHERE Username='"+username+"'");
                 if (check == true)
                 {
+                    useraccount = username;
                     FormMain m = new FormMain();
                     m.Show();
                     this.Hide();
@@ -73,7 +75,7 @@ namespace QuanLyNhanSu.UI
         private void buttonExit_Click(object sender, EventArgs e)
         {
             DialogResult ret = MessageBox.Show("Bạn muốn thoát hay không?", "",
-               MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+               MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (ret == DialogResult.Yes)
 
             {

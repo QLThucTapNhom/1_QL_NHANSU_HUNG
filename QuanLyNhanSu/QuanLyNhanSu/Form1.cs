@@ -13,7 +13,7 @@ namespace QuanLyNhanSu
     public partial class FormMain : Form
     {
 
-        public static int kiemtratrangthaidangnhap = 0;
+        public string user;
 
         ConnectDatabase database = new ConnectDatabase();
         public FormMain()
@@ -27,6 +27,11 @@ namespace QuanLyNhanSu
         {
            
             viTriBanDau();
+            user = UI.FormLOGIN.useraccount;
+            string loichao ="Hello "+ user + "!";
+            labelChao.Text = loichao;
+            int toado = 787 - 10* user.Length;
+            labelChao.Location= new Point(toado, 50);
             
             string query = "SELECT * FROM dbo.HoSoNV";
             database.loadDataGridView(dataGridView1, query);
@@ -118,8 +123,8 @@ namespace QuanLyNhanSu
         private void buttonExit_Click(object sender, EventArgs e)
         {
 
-            DialogResult ret = MessageBox.Show("Bạn có muốn thoát không?", "",
-               MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            DialogResult ret = MessageBox.Show("Bạn có muốn thoát không?", "Tạm biệt "+user+"!",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (ret == DialogResult.Yes)
 
             {
@@ -295,8 +300,8 @@ namespace QuanLyNhanSu
 
         private void buttonDangXuat_Click(object sender, EventArgs e)
         {
-            DialogResult ret = MessageBox.Show("Bạn muốn đăng xuất?", "",
-               MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            DialogResult ret = MessageBox.Show("Bạn muốn đăng xuất không, "+user+"!", "",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (ret == DialogResult.Yes)
 
             {
@@ -325,6 +330,17 @@ namespace QuanLyNhanSu
             //changepass.Show();
         }
 
-        
+        private void buttonTroGiup_Click(object sender, EventArgs e)
+        {
+            UI.FormTroGiup support = new UI.FormTroGiup() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            support.FormBorderStyle = FormBorderStyle.None;
+            this.panelShow.Controls.Add(support);
+            foreach (Control ctrl in panelShow.Controls)
+            {
+                if (ctrl != support)
+                    ctrl.Dispose();
+            }
+            support.Show();
+        }
     }
 }

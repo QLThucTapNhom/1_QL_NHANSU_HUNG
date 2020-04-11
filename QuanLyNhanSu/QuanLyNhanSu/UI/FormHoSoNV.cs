@@ -172,5 +172,10 @@ namespace QuanLyNhanSu
                 MessageBox.Show("Đã xảy ra lỗi!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
+
+        private void buttonDSach_Click(object sender, EventArgs e)
+        {
+            database.loadDataGridView(dataGridView, "select * from dbo.hosonv");
+        }
     }
 }

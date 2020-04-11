@@ -18,7 +18,7 @@ namespace QuanLyNhanSu
         }
         ConnectDatabase db = new ConnectDatabase();
         public int check = 0;
-
+        
         private void radioButtonMaNV_CheckedChanged(object sender, EventArgs e)
         {
             check = 1;
@@ -88,6 +88,7 @@ namespace QuanLyNhanSu
                 }
                 else
                 {
+                   
                     db.loadDataGridView(dataGridView1, "SELECT * FROM dbo.HoSoNV WHERE TenNV LIKE N'%" + search + "%'");
                     textBoxSearch.Text = "";
                 }

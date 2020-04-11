@@ -79,6 +79,7 @@
             this.textBoxConfirm.MaxLength = 50;
             this.textBoxConfirm.Multiline = true;
             this.textBoxConfirm.Name = "textBoxConfirm";
+            this.textBoxConfirm.PasswordChar = '*';
             this.textBoxConfirm.Size = new System.Drawing.Size(192, 25);
             this.textBoxConfirm.TabIndex = 6;
             // 
@@ -119,6 +120,7 @@
             this.textBoxNewPassword.MaxLength = 50;
             this.textBoxNewPassword.Multiline = true;
             this.textBoxNewPassword.Name = "textBoxNewPassword";
+            this.textBoxNewPassword.PasswordChar = '*';
             this.textBoxNewPassword.Size = new System.Drawing.Size(192, 25);
             this.textBoxNewPassword.TabIndex = 2;
             // 
@@ -129,6 +131,7 @@
             this.textBoxOldPassword.MaxLength = 8;
             this.textBoxOldPassword.Multiline = true;
             this.textBoxOldPassword.Name = "textBoxOldPassword";
+            this.textBoxOldPassword.PasswordChar = '*';
             this.textBoxOldPassword.Size = new System.Drawing.Size(192, 25);
             this.textBoxOldPassword.TabIndex = 1;
             // 

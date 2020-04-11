@@ -204,11 +204,11 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold);
-            this.button1.Image = global::QuanLyNhanSu.Properties.Resources.icon50;
+            this.button1.Image = global::QuanLyNhanSu.Properties.Resources.icons8_close_window_30;
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(801, 0);
+            this.button1.Location = new System.Drawing.Point(816, -7);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 49);
+            this.button1.Size = new System.Drawing.Size(38, 39);
             this.button1.TabIndex = 7;
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;

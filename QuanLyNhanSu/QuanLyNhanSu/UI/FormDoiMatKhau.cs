@@ -29,33 +29,35 @@ namespace QuanLyNhanSu
                 string confirm = textBoxConfirm.Text.Trim();
                 string newPass = textBoxNewPassword.Text.Trim();
                 bool check = db.Check(oldPass, "SELECT MatKhau FROM dbo.TaiKhoan WHERE Username=N'" + userName + "'");
+                bool check1 = db.Check(userName, "SELECT Username FROM dbo.TaiKhoan");
 
                 if (userName.Length != 0 && oldPass.Length != 0 && confirm.Length != 0 && newPass.Length != 0)
                 {
 
-                    if (check == true)
+                    if (check1 == true)  //Nếu tài khoản tồn tại
                     {
-                        if (newPass == confirm)
+                        if (check == true) //Nếu mật khẩu là đúng
                         {
-                            string update = "UPDATE dbo.TaiKhoan SET MatKhau=N'" + newPass + "' WHERE Username=N'" + userName + "'";
-                            db.ThucThiKetNoi(update);
-                            DialogResult ret= MessageBox.Show("Bạn muốn đăng nhập lại không?", "Mật khẩu của bạn đã được cập nhật!", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                            if (ret == DialogResult.Yes)
-
+                            if (newPass == confirm)
                             {
-                                UI.FormLOGIN lg = new UI.FormLOGIN();
-                                lg.Show();
-                                this.Hide();
+                                string update = "UPDATE dbo.TaiKhoan SET MatKhau=N'" + newPass + "' WHERE Username=N'" + userName + "'";
+                                db.ThucThiKetNoi(update);
+                                MessageBox.Show("Mật khẩu của bạn đã được cập nhật!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                               
+                            }
+                            else
+                            {
+                                MessageBox.Show("Confirm không đúng!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Confirm không đúng!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                            MessageBox.Show("Mật khẩu không đúng!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Mật khẩu không đúng!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        MessageBox.Show("Username không tồn tại!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
 
                 }

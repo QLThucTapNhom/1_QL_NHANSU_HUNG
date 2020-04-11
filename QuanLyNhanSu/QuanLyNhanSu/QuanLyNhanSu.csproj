@@ -127,6 +127,12 @@
     <Compile Include="UI\FormTimKiem.Designer.cs">
       <DependentUpon>FormTimKiem.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\FormTroGiup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormTroGiup.Designer.cs">
+      <DependentUpon>FormTroGiup.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FormTTCaNhan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FormTimKiem.resx">
       <DependentUpon>FormTimKiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormTroGiup.resx">
+      <DependentUpon>FormTroGiup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FormTTCaNhan.resx">
       <DependentUpon>FormTTCaNhan.cs</DependentUpon>
@@ -307,6 +316,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons_pin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dove-80.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -115,8 +115,6 @@ VALUES  ( N'PB01' ,  N'Phòng Nhân sự' , N'QL Nhân sự' ,GETDATE() , N'0320
 INSERT dbo.HoSoNV ( MaNV ,TenNV ,HoDemNV ,ChucVu ,MaPB , NgayKyHD ,NgayHetHanHD , MaLuong)
 VALUES  ( N'NV01' ,N'Lâm' ,N'Hoàng Mạnh' ,N'Trưởng Phòng' , N'PB01' , GETDATE() ,GETDATE() , N'L1')
 
-SELECT * FROM dbo.HoSoNV
-select * from dbo.PhongBan
-
-INSERT dbo.PhongBan( MaPB ,TenPB ,ChucNang ,NgayThanhLap ,SDT_Fax ,DiaChiPB ,GhiChu ,MaTruongPhong)
-VALUES  ( N'PB02' ,  N'Phòng Nhân sự' , N'QL Nhân sự' ,'2013-6-6' , N'0320129876' , N'P0604' ,  N'' ,N'NV01' )
+--SELECT * FROM dbo.HoSoNV
+--select * from dbo.PhongBan
+UPDATE dbo.PhongBan SET MaTruongPhong = N'NV01' WHERE MaPB=N'PB01'

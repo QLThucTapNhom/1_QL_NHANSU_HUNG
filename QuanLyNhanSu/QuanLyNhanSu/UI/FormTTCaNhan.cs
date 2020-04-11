@@ -184,5 +184,10 @@ namespace QuanLyNhanSu
                 MessageBox.Show("Lỗi rồi!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
+
+        private void buttonDSach_Click(object sender, EventArgs e)
+        {
+            database.loadDataGridView(dataGridView1, "select * from dbo.TTNhanVienCoBan");
+        }
     }
 }

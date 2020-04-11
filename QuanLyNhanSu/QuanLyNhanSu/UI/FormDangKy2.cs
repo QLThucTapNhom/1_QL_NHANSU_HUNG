@@ -103,7 +103,7 @@ namespace QuanLyNhanSu.UI
         {
 
             DialogResult ret = MessageBox.Show("Bạn muốn hủy bỏ đăng ký?", "Đăng ký chưa hoàn tất",
-               MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+               MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (ret == DialogResult.Yes)
 
             {
