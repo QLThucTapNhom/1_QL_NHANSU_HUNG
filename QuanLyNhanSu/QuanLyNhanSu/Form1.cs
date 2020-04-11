@@ -14,7 +14,8 @@ namespace QuanLyNhanSu
     {
         ConnectDatabase database = new ConnectDatabase();
         public FormMain()
-        {            
+        {
+            
             InitializeComponent();
             
         }
@@ -111,17 +112,7 @@ namespace QuanLyNhanSu
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
-
-            DialogResult ret = MessageBox.Show("Bạn có muốn thoát hay không", "Hỏi Thoát",
-               MessageBoxButtons.YesNo, MessageBoxIcon.Error);
-            if (ret == DialogResult.Yes)
-
-            {
-                //FormMain f = new FormMain();
-                //f.Show();
-                Application.Exit();
-            }
-            
+            Application.Exit();
         }
 
 

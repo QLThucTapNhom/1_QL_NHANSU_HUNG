@@ -72,10 +72,5 @@ namespace QuanLyNhanSu.UI
             this.Hide();
  
         }
-
-        private void FormLOGIN_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
