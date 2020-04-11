@@ -17,10 +17,11 @@ namespace QuanLyNhanSu
             InitializeComponent();
         }
 
-        private void buttonThoat_Click(object sender, EventArgs e)
+       
+
+        private void buttonHoanTat_Click(object sender, EventArgs e)
         {
-            this.Close();
-            
+
         }
     }
 }

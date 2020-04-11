@@ -61,12 +61,12 @@ namespace QuanLyNhanSu.UI
                         string insert = "INSERT INTO dbo.TaiKhoan VALUES  ( '" + username + "' ,'" + pass + "' ,N'" + email + "' ,1)";
                         database.ThucThiKetNoi(insert);
                         DialogResult result;
-                        result = MessageBox.Show("Bạn muốn đăng nhập không?", "Đăng Ký Thành Công", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        result = MessageBox.Show("Bạn muốn đăng nhập ngay không?", "Đăng Ký Thành Công", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (result == System.Windows.Forms.DialogResult.Yes)
                         {
                             FormLOGIN lg = new FormLOGIN();
                             lg.Show();
-                            this.Close();
+                            this.Hide();
                         }
                         else
                         {
@@ -75,13 +75,14 @@ namespace QuanLyNhanSu.UI
                     }
                     else
                     {
-                        labelThongBao.Text = "Confirm Password doesn't correct!";
+                        MessageBox.Show("Nhập lại mật khẩu không đúng!","",MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     }
                     
 
                 }
                 else {
-                    labelThongBao.Text = "Tài khoản đã tồn tại! Vui lòng thử lại!";
+                    //labelThongBao.Text = "Tài khoản đã tồn tại! Vui lòng thử lại!";
+                    MessageBox.Show("Username đã tồn tại!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
                 
             }
@@ -92,14 +93,6 @@ namespace QuanLyNhanSu.UI
 
             
         }
-
-        private void buttonThoat_Click(object sender, EventArgs e)
-        {
-            FormLOGIN lg = new FormLOGIN();
-            lg.Show();
-            this.Close();
-        }
-
         private void buttonNhapLai_Click(object sender, EventArgs e)
         {
 
@@ -107,7 +100,26 @@ namespace QuanLyNhanSu.UI
             textBoxPassword.Text = "";
             textBoxConfirm.Text = "";
             textBoxEmail.Text = "";
-            labelThongBao.Text = "";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            DialogResult ret = MessageBox.Show("Bạn muốn hủy bỏ đăng ký?", "Đăng ký chưa hoàn tất",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            if (ret == DialogResult.Yes)
+
+            {
+                FormLOGIN lg = new FormLOGIN();
+                lg.Show();
+                this.Hide();
+            }
+            
+        }
+
+        private void FormDangKy2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

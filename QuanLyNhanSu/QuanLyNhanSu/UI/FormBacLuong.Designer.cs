@@ -40,7 +40,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.buttonNew = new System.Windows.Forms.Button();
-            this.buttonExit = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
@@ -61,16 +60,16 @@
             this.groupBox1.Controls.Add(this.comboBoxBacLuong);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("UVN Ai Cap Nang", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(25, 10);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(740, 167);
+            this.groupBox1.Size = new System.Drawing.Size(655, 159);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bậc Lương";
             // 
             // textBoxHSPhuCap
             // 
-            this.textBoxHSPhuCap.Location = new System.Drawing.Point(273, 124);
+            this.textBoxHSPhuCap.Location = new System.Drawing.Point(237, 115);
             this.textBoxHSPhuCap.Multiline = true;
             this.textBoxHSPhuCap.Name = "textBoxHSPhuCap";
             this.textBoxHSPhuCap.Size = new System.Drawing.Size(249, 23);
@@ -79,7 +78,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(120, 127);
+            this.label5.Location = new System.Drawing.Point(120, 117);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 15);
             this.label5.TabIndex = 17;
@@ -87,7 +86,7 @@
             // 
             // textBoxHSLuong
             // 
-            this.textBoxHSLuong.Location = new System.Drawing.Point(273, 86);
+            this.textBoxHSLuong.Location = new System.Drawing.Point(237, 85);
             this.textBoxHSLuong.Multiline = true;
             this.textBoxHSLuong.Name = "textBoxHSLuong";
             this.textBoxHSLuong.Size = new System.Drawing.Size(249, 23);
@@ -95,16 +94,17 @@
             // 
             // textBoxLuongCB
             // 
-            this.textBoxLuongCB.Location = new System.Drawing.Point(273, 53);
+            this.textBoxLuongCB.Location = new System.Drawing.Point(237, 55);
             this.textBoxLuongCB.Multiline = true;
             this.textBoxLuongCB.Name = "textBoxLuongCB";
             this.textBoxLuongCB.Size = new System.Drawing.Size(249, 23);
             this.textBoxLuongCB.TabIndex = 14;
+            this.textBoxLuongCB.TextChanged += new System.EventHandler(this.textBoxLuongCB_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(120, 94);
+            this.label3.Location = new System.Drawing.Point(120, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 15);
             this.label3.TabIndex = 13;
@@ -113,7 +113,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(120, 61);
+            this.label2.Location = new System.Drawing.Point(120, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 15);
             this.label2.TabIndex = 12;
@@ -122,7 +122,7 @@
             // comboBoxBacLuong
             // 
             this.comboBoxBacLuong.FormattingEnabled = true;
-            this.comboBoxBacLuong.Location = new System.Drawing.Point(273, 19);
+            this.comboBoxBacLuong.Location = new System.Drawing.Point(237, 25);
             this.comboBoxBacLuong.Name = "comboBoxBacLuong";
             this.comboBoxBacLuong.Size = new System.Drawing.Size(249, 23);
             this.comboBoxBacLuong.TabIndex = 4;
@@ -131,7 +131,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(120, 22);
+            this.label1.Location = new System.Drawing.Point(120, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 15);
             this.label1.TabIndex = 0;
@@ -139,23 +139,23 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 185);
+            this.dataGridView1.Location = new System.Drawing.Point(25, 177);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(740, 123);
+            this.dataGridView1.Size = new System.Drawing.Size(655, 151);
             this.dataGridView1.TabIndex = 8;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.buttonNew);
-            this.groupBox2.Controls.Add(this.buttonExit);
             this.groupBox2.Controls.Add(this.buttonDelete);
             this.groupBox2.Controls.Add(this.buttonUpdate);
             this.groupBox2.Controls.Add(this.buttonAdd);
-            this.groupBox2.Location = new System.Drawing.Point(12, 319);
+            this.groupBox2.Location = new System.Drawing.Point(25, 331);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(740, 68);
+            this.groupBox2.Size = new System.Drawing.Size(655, 68);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             // 
@@ -164,7 +164,7 @@
             this.buttonNew.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonNew.Image = global::QuanLyNhanSu.Properties.Resources.button5_Image;
             this.buttonNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNew.Location = new System.Drawing.Point(114, 19);
+            this.buttonNew.Location = new System.Drawing.Point(95, 18);
             this.buttonNew.Name = "buttonNew";
             this.buttonNew.Size = new System.Drawing.Size(70, 35);
             this.buttonNew.TabIndex = 6;
@@ -173,26 +173,12 @@
             this.buttonNew.UseVisualStyleBackColor = true;
             this.buttonNew.Click += new System.EventHandler(this.buttonNew_Click);
             // 
-            // buttonExit
-            // 
-            this.buttonExit.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonExit.Image = global::QuanLyNhanSu.Properties.Resources.close1;
-            this.buttonExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExit.Location = new System.Drawing.Point(540, 19);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(70, 35);
-            this.buttonExit.TabIndex = 5;
-            this.buttonExit.Text = "Thoát";
-            this.buttonExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonExit.UseVisualStyleBackColor = true;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
-            // 
             // buttonDelete
             // 
             this.buttonDelete.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonDelete.Image = global::QuanLyNhanSu.Properties.Resources.remove_user;
             this.buttonDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDelete.Location = new System.Drawing.Point(435, 19);
+            this.buttonDelete.Location = new System.Drawing.Point(500, 19);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(70, 35);
             this.buttonDelete.TabIndex = 4;
@@ -206,7 +192,7 @@
             this.buttonUpdate.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonUpdate.Image = global::QuanLyNhanSu.Properties.Resources.edit_user;
             this.buttonUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUpdate.Location = new System.Drawing.Point(329, 19);
+            this.buttonUpdate.Location = new System.Drawing.Point(365, 19);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(70, 35);
             this.buttonUpdate.TabIndex = 3;
@@ -220,7 +206,7 @@
             this.buttonAdd.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonAdd.Image = global::QuanLyNhanSu.Properties.Resources.add_user;
             this.buttonAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAdd.Location = new System.Drawing.Point(216, 19);
+            this.buttonAdd.Location = new System.Drawing.Point(230, 18);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(70, 35);
             this.buttonAdd.TabIndex = 2;
@@ -233,11 +219,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(761, 401);
+            this.ClientSize = new System.Drawing.Size(704, 401);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
-            this.MaximumSize = new System.Drawing.Size(777, 440);
+            this.MaximumSize = new System.Drawing.Size(720, 440);
             this.Name = "FormBacLuong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bac Luong";
@@ -263,7 +249,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button buttonNew;
-        private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonAdd;

@@ -38,7 +38,6 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.buttonThoat = new System.Windows.Forms.Button();
             this.buttonHoanTat = new System.Windows.Forms.Button();
             this.buttonNhapLai = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -56,7 +55,7 @@
             this.groupBox1.Controls.Add(this.textBoxPassword);
             this.groupBox1.Controls.Add(this.textBoxUsername);
             this.groupBox1.Font = new System.Drawing.Font("Star Jedi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(26, 28);
+            this.groupBox1.Location = new System.Drawing.Point(176, 30);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(314, 204);
             this.groupBox1.TabIndex = 1;
@@ -145,48 +144,34 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.buttonThoat);
             this.groupBox2.Controls.Add(this.buttonHoanTat);
             this.groupBox2.Controls.Add(this.buttonNhapLai);
-            this.groupBox2.Location = new System.Drawing.Point(26, 240);
+            this.groupBox2.Location = new System.Drawing.Point(176, 240);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(314, 71);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
-            // 
-            // buttonThoat
-            // 
-            this.buttonThoat.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonThoat.Image = global::QuanLyNhanSu.Properties.Resources.close1;
-            this.buttonThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThoat.Location = new System.Drawing.Point(227, 19);
-            this.buttonThoat.Name = "buttonThoat";
-            this.buttonThoat.Size = new System.Drawing.Size(81, 33);
-            this.buttonThoat.TabIndex = 2;
-            this.buttonThoat.Text = "Thoát";
-            this.buttonThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonThoat.UseVisualStyleBackColor = true;
-            this.buttonThoat.Click += new System.EventHandler(this.buttonThoat_Click);
             // 
             // buttonHoanTat
             // 
             this.buttonHoanTat.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonHoanTat.Image = global::QuanLyNhanSu.Properties.Resources.add_user;
             this.buttonHoanTat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHoanTat.Location = new System.Drawing.Point(122, 19);
+            this.buttonHoanTat.Location = new System.Drawing.Point(183, 19);
             this.buttonHoanTat.Name = "buttonHoanTat";
             this.buttonHoanTat.Size = new System.Drawing.Size(81, 33);
             this.buttonHoanTat.TabIndex = 1;
             this.buttonHoanTat.Text = "Hoàn Tất";
             this.buttonHoanTat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonHoanTat.UseVisualStyleBackColor = true;
+            this.buttonHoanTat.Click += new System.EventHandler(this.buttonHoanTat_Click);
             // 
             // buttonNhapLai
             // 
             this.buttonNhapLai.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonNhapLai.Image = global::QuanLyNhanSu.Properties.Resources.edit_user;
             this.buttonNhapLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNhapLai.Location = new System.Drawing.Point(6, 19);
+            this.buttonNhapLai.Location = new System.Drawing.Point(45, 19);
             this.buttonNhapLai.Name = "buttonNhapLai";
             this.buttonNhapLai.Size = new System.Drawing.Size(81, 33);
             this.buttonNhapLai.TabIndex = 0;
@@ -198,10 +183,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 323);
+            this.ClientSize = new System.Drawing.Size(704, 401);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.MaximumSize = new System.Drawing.Size(400, 362);
+            this.MaximumSize = new System.Drawing.Size(720, 440);
             this.Name = "FormDoiMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Change Password";
@@ -222,7 +207,6 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button buttonThoat;
         private System.Windows.Forms.Button buttonHoanTat;
         private System.Windows.Forms.Button buttonNhapLai;
         private System.Windows.Forms.Label label4;

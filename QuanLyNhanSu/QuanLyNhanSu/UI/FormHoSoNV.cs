@@ -169,7 +169,7 @@ namespace QuanLyNhanSu
             }
             catch
             {
-                MessageBox.Show("Không thể xóa!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Đã xảy ra lỗi!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
     }

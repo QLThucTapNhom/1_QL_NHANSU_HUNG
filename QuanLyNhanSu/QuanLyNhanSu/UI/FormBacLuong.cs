@@ -131,10 +131,15 @@ namespace QuanLyNhanSu
             if (ret == DialogResult.Yes)
 
             {
-                FormMain f = new FormMain();
-                f.Show();
+                //FormMain f = new FormMain();
+                //f.Show();
                 Close();
             }
+        }
+
+        private void textBoxLuongCB_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
