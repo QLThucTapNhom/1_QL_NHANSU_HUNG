@@ -266,7 +266,7 @@ namespace QuanLyNhanSu
 
         private void buttonBangLuong_Click(object sender, EventArgs e)
         {
-            FormBangLuong bangluong = new FormBangLuong() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            UI.FormTienLuong bangluong = new UI.FormTienLuong() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             bangluong.FormBorderStyle = FormBorderStyle.None;
             this.panelShow.Controls.Add(bangluong);
             foreach (Control ctrl in panelShow.Controls)
@@ -275,11 +275,24 @@ namespace QuanLyNhanSu
                     ctrl.Dispose();
             }
             bangluong.Show();
-            //FormBangLuong bangluong = new FormBangLuong();
+
+            //UI.FormTinhLuong luong = new UI.FormTinhLuong();
+            //luong.Show();
+            
+        }
+        private void printReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //UI.FormTinhLuong bangluong = new UI.FormTinhLuong() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            //bangluong.FormBorderStyle = FormBorderStyle.None;
+            //this.panelShow.Controls.Add(bangluong);
+            //foreach (Control ctrl in panelShow.Controls)
+            //{
+            //    if (ctrl != bangluong)
+            //        ctrl.Dispose();
+            //}
             //bangluong.Show();
         }
 
-        
         private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -342,5 +355,7 @@ namespace QuanLyNhanSu
             }
             support.Show();
         }
+
+        
     }
 }

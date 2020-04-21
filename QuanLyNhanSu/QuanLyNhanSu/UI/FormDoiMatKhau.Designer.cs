@@ -40,12 +40,14 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.buttonHoanTat = new System.Windows.Forms.Button();
             this.buttonNhapLai = new System.Windows.Forms.Button();
+            this.checkBoxShow = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.checkBoxShow);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.textBoxConfirm);
             this.groupBox1.Controls.Add(this.label3);
@@ -57,7 +59,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Star Jedi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(176, 30);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(314, 204);
+            this.groupBox1.Size = new System.Drawing.Size(314, 227);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Change Password";
@@ -149,7 +151,7 @@
             // 
             this.groupBox2.Controls.Add(this.buttonHoanTat);
             this.groupBox2.Controls.Add(this.buttonNhapLai);
-            this.groupBox2.Location = new System.Drawing.Point(176, 240);
+            this.groupBox2.Location = new System.Drawing.Point(176, 263);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(314, 71);
             this.groupBox2.TabIndex = 2;
@@ -183,6 +185,18 @@
             this.buttonNhapLai.UseVisualStyleBackColor = true;
             this.buttonNhapLai.Click += new System.EventHandler(this.buttonNhapLai_Click);
             // 
+            // checkBoxShow
+            // 
+            this.checkBoxShow.AutoSize = true;
+            this.checkBoxShow.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxShow.Location = new System.Drawing.Point(251, 194);
+            this.checkBoxShow.Name = "checkBoxShow";
+            this.checkBoxShow.Size = new System.Drawing.Size(52, 19);
+            this.checkBoxShow.TabIndex = 8;
+            this.checkBoxShow.Text = "Hiện";
+            this.checkBoxShow.UseVisualStyleBackColor = true;
+            this.checkBoxShow.CheckedChanged += new System.EventHandler(this.checkBoxShow_CheckedChanged);
+            // 
             // FormDoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,5 +229,6 @@
         private System.Windows.Forms.Button buttonNhapLai;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxConfirm;
+        private System.Windows.Forms.CheckBox checkBoxShow;
     }
 }

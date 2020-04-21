@@ -100,6 +100,7 @@
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -214,7 +215,7 @@
             // ToolStripMenuItemBangLuong
             // 
             this.ToolStripMenuItemBangLuong.Name = "ToolStripMenuItemBangLuong";
-            this.ToolStripMenuItemBangLuong.Size = new System.Drawing.Size(138, 22);
+            this.ToolStripMenuItemBangLuong.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItemBangLuong.Text = "Bảng Lương";
             this.ToolStripMenuItemBangLuong.Click += new System.EventHandler(this.buttonBangLuong_Click);
             // 

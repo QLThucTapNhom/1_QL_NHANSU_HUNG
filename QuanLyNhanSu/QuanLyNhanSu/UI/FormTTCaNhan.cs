@@ -80,7 +80,7 @@ namespace QuanLyNhanSu
                 string MaNV = comboBoxMaNV.Text.Trim();
                 string TenNV = textBoxTenNV.Text.Trim();
                 string HoNV = textBoxHoNV.Text.Trim();
-                string GTinh = comboBoxGTinh.SelectedItem.ToString();
+                string GTinh = comboBoxGTinh.Text.TrimEnd();
                 string NSinh = dateTimePickerNS.Value.ToShortDateString();
                 string QuocTich=textBoxQuocTich.Text.Trim();
                 string NguyenQuan = textBoxNguyenQuan.Text.Trim();
@@ -90,24 +90,33 @@ namespace QuanLyNhanSu
                 string HocVan = textBoxHocVan.Text.Trim();
                 string GhiChu = textBoxGhiChu.Text.Trim();
 
-                bool check = database.Check(MaNV, "SELECT MaNV FROM dbo.TTNhanVienCoBan");
-                if (check == false)
+                if (MaNV.Length != 0 && TenNV.Length != 0 && HoNV.Length != 0 && GTinh.Length != 0 && QuocTich.Length != 0 
+                    && NguyenQuan.Length != 0&&DiaChi.Length != 0&&SDT_Email.Length != 0&&HocVan.Length != 0&&NgoaiNgu.Length != 0)
                 {
-                    //( MaNV ,TenNV ,HoDemNV ,GioiTinh ,NgaySinh ,QuocTich ,NguyenQuan ,DiaChi ,SDT_Email ,NgoaiNgu , HocVan , GhiChu )
-                    string insert = "INSERT INTO dbo.TTNhanVienCoBan ( MaNV ,TenNV ,HoDemNV ,GioiTinh ,NgaySinh ,QuocTich ,NguyenQuan ,DiaChi ,SDT_Email ,NgoaiNgu , HocVan , GhiChu ) "
-                          + "VALUES(N'"+MaNV+"', N'"+TenNV+"', N'"+HoNV+"', N'"+GTinh+"','"+NSinh+"', N'"+QuocTich+"',"
-                          +"N'"+NguyenQuan+"', N'"+DiaChi+"', N'"+SDT_Email+"', N'"+NgoaiNgu+"', N'"+HocVan+"',N'"+GhiChu+"')";
-                    database.ThucThiKetNoi(insert);
-                    MessageBox.Show("Hoàn Tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    //load lại dataGridView1
-                    dataGridView1.DataSource = "";
-                    string query = "SELECT * FROM dbo.TTNhanVienCoBan WHERE MaNV='" + MaNV + "'";
-                    database.loadDataGridView(dataGridView1, query);
+                    bool check = database.Check(MaNV, "SELECT MaNV FROM dbo.TTNhanVienCoBan");
+                    if (check == false)
+                    {
+                        //( MaNV ,TenNV ,HoDemNV ,GioiTinh ,NgaySinh ,QuocTich ,NguyenQuan ,DiaChi ,SDT_Email ,NgoaiNgu , HocVan , GhiChu )
+                        string insert = "INSERT INTO dbo.TTNhanVienCoBan ( MaNV ,TenNV ,HoDemNV ,GioiTinh ,NgaySinh ,QuocTich ,NguyenQuan ,DiaChi ,SDT_Email ,NgoaiNgu , HocVan , GhiChu ) "
+                              + "VALUES(N'" + MaNV + "', N'" + TenNV + "', N'" + HoNV + "', N'" + GTinh + "','" + NSinh + "', N'" + QuocTich + "',"
+                              + "N'" + NguyenQuan + "', N'" + DiaChi + "', N'" + SDT_Email + "', N'" + NgoaiNgu + "', N'" + HocVan + "',N'" + GhiChu + "')";
+                        database.ThucThiKetNoi(insert);
+                        MessageBox.Show("Hoàn Tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        //load lại dataGridView1
+                        dataGridView1.DataSource = "";
+                        string query = "SELECT * FROM dbo.TTNhanVienCoBan WHERE MaNV='" + MaNV + "'";
+                        database.loadDataGridView(dataGridView1, query);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thông tin NV " + HoNV + " " + TenNV + " đã tồn tại!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Thông tin NV "+HoNV+" "+TenNV+" đã tồn tại!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Vui lòng nhập điền đầy đủ bắt buộc đến trường học vấn!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
+                
             }
             catch
             {
@@ -120,7 +129,7 @@ namespace QuanLyNhanSu
             try
             {
                 string MaNV = comboBoxMaNV.Text.Trim();
-                string GTinh = comboBoxGTinh.SelectedItem.ToString();
+                string GTinh = comboBoxGTinh.Text.Trim();
                 string NSinh = dateTimePickerNS.Value.ToShortDateString();
                 string QuocTich = textBoxQuocTich.Text.Trim();
                 string NguyenQuan = textBoxNguyenQuan.Text.Trim();
@@ -129,27 +138,37 @@ namespace QuanLyNhanSu
                 string NgoaiNgu = textBoxNgoaiNgu.Text.Trim();
                 string HocVan = textBoxHocVan.Text.Trim();
                 string GhiChu = textBoxGhiChu.Text.Trim();
-
-                bool check = database.Check(MaNV, "SELECT MaNV FROM dbo.TTNhanVienCoBan");
-
-                if (check == true)
+                if (MaNV.Length != 0 && GTinh.Length != 0 && QuocTich.Length != 0
+                    && NguyenQuan.Length != 0 && DiaChi.Length != 0 && SDT_Email.Length != 0 && HocVan.Length != 0 && NgoaiNgu.Length != 0)
                 {
-                    //( MaNV ,TenNV ,HoDemNV ,GioiTinh ,NgaySinh ,QuocTich ,NguyenQuan ,DiaChi ,SDT_Email ,NgoaiNgu , HocVan , GhiChu )
-                    string update = "UPDATE dbo.TTNhanVienCoBan SET "
-                          + "GioiTinh = N'" + GTinh + "',NgaySinh='" + NSinh + "',QuocTich= N'" + QuocTich + "',"
-                          + "NguyenQuan= N'" + NguyenQuan + "',DiaChi= N'" + DiaChi + "',SDT_Email= N'" + SDT_Email + "',NgoaiNgu= N'"
-                          + NgoaiNgu + "',HocVan= N'" + HocVan + "',GhiChu = N'" + GhiChu + "' WHERE MaNV='"+MaNV+"'";
-                    database.ThucThiKetNoi(update);
-                    MessageBox.Show("Hoàn Tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    //load lại dataGridView1
-                    dataGridView1.DataSource = "";
-                    string query = "SELECT * FROM dbo.TTNhanVienCoBan WHERE MaNV='" + MaNV + "'";
-                    database.loadDataGridView(dataGridView1, query);
+                    bool check = database.Check(MaNV, "SELECT MaNV FROM dbo.TTNhanVienCoBan");
+
+                    if (check == true)
+                    {
+                        //( MaNV ,TenNV ,HoDemNV ,GioiTinh ,NgaySinh ,QuocTich ,NguyenQuan ,DiaChi ,SDT_Email ,NgoaiNgu , HocVan , GhiChu )
+                        string update = "UPDATE dbo.TTNhanVienCoBan SET "
+                              + "GioiTinh = N'" + GTinh + "',NgaySinh='" + NSinh + "',QuocTich= N'" + QuocTich + "',"
+                              + "NguyenQuan= N'" + NguyenQuan + "',DiaChi= N'" + DiaChi + "',SDT_Email= N'" + SDT_Email + "',NgoaiNgu= N'"
+                              + NgoaiNgu + "',HocVan= N'" + HocVan + "',GhiChu = N'" + GhiChu + "' WHERE MaNV='" + MaNV + "'";
+                        database.ThucThiKetNoi(update);
+                        MessageBox.Show("Hoàn Tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        //load lại dataGridView1
+                        dataGridView1.DataSource = "";
+                        string query = "SELECT * FROM dbo.TTNhanVienCoBan WHERE MaNV='" + MaNV + "'";
+                        database.loadDataGridView(dataGridView1, query);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thông tin nhân viên chưa được thêm!", "Không thể sửa!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Thông tin nhân viên chưa được thêm!", "Không thể sửa!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Vui lòng điền đầy đủ bắt buộc đến trường học vấn!", "Không thể sửa!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
+
+
+                    
             }
             catch
             {

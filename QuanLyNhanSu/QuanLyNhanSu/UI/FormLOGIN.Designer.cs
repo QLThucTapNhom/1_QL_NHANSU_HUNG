@@ -36,6 +36,7 @@
             this.buttonDangNhap = new System.Windows.Forms.Button();
             this.buttonNhapLai = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBoxShow = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
@@ -73,7 +74,7 @@
             // 
             this.linkLabelDangKy.AutoSize = true;
             this.linkLabelDangKy.Font = new System.Drawing.Font("UVN Ai Cap Nang", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelDangKy.Location = new System.Drawing.Point(356, 277);
+            this.linkLabelDangKy.Location = new System.Drawing.Point(371, 277);
             this.linkLabelDangKy.Name = "linkLabelDangKy";
             this.linkLabelDangKy.Size = new System.Drawing.Size(71, 20);
             this.linkLabelDangKy.TabIndex = 10;
@@ -85,7 +86,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("UVN Ai Cap Nang", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(91, 277);
+            this.label4.Location = new System.Drawing.Point(106, 277);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(269, 20);
             this.label4.TabIndex = 9;
@@ -131,6 +132,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.checkBoxShow);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.textBoxPassword);
@@ -142,6 +144,18 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Your Account";
+            // 
+            // checkBoxShow
+            // 
+            this.checkBoxShow.AutoSize = true;
+            this.checkBoxShow.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.checkBoxShow.Location = new System.Drawing.Point(364, 121);
+            this.checkBoxShow.Name = "checkBoxShow";
+            this.checkBoxShow.Size = new System.Drawing.Size(49, 19);
+            this.checkBoxShow.TabIndex = 2;
+            this.checkBoxShow.Text = "Hiện";
+            this.checkBoxShow.UseVisualStyleBackColor = true;
+            this.checkBoxShow.CheckedChanged += new System.EventHandler(this.checkBoxShow_CheckedChanged);
             // 
             // label2
             // 
@@ -268,5 +282,6 @@
         private System.Windows.Forms.LinkLabel linkLabelDangKy;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox checkBoxShow;
     }
 }

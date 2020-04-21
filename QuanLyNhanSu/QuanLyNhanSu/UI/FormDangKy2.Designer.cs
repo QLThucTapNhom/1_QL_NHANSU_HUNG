@@ -45,6 +45,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.checkBoxShow = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -52,6 +53,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.checkBoxShow);
             this.groupBox1.Controls.Add(this.textBoxConfirm);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
@@ -256,6 +258,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Hệ Thống Quản Lý Nhân Sự";
             // 
+            // checkBoxShow
+            // 
+            this.checkBoxShow.AutoSize = true;
+            this.checkBoxShow.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.checkBoxShow.Location = new System.Drawing.Point(346, 205);
+            this.checkBoxShow.Name = "checkBoxShow";
+            this.checkBoxShow.Size = new System.Drawing.Size(52, 19);
+            this.checkBoxShow.TabIndex = 3;
+            this.checkBoxShow.Text = "Hiện";
+            this.checkBoxShow.UseVisualStyleBackColor = true;
+            this.checkBoxShow.CheckedChanged += new System.EventHandler(this.checkBoxShow_CheckedChanged);
+            // 
             // FormDangKy2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,5 +312,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.CheckBox checkBoxShow;
     }
 }

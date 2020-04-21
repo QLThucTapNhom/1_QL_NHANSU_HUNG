@@ -80,6 +80,23 @@ namespace QuanLyNhanSu
             textBoxOldPassword.Text = "";
             textBoxConfirm.Text = "";
             textBoxNewPassword.Text = "";
+            checkBoxShow.Checked = false;
+        }
+
+        private void checkBoxShow_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxShow.Checked)
+            {
+                textBoxOldPassword.UseSystemPasswordChar = true;
+                textBoxNewPassword.UseSystemPasswordChar = true;
+                textBoxConfirm.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                textBoxOldPassword.UseSystemPasswordChar = false;
+                textBoxNewPassword.UseSystemPasswordChar = false;
+                textBoxConfirm.UseSystemPasswordChar = false;
+            }
         }
     }
 }

@@ -46,20 +46,28 @@ namespace QuanLyNhanSu
                 string LuongCB = textBoxLuongCB.Text.Trim();
                 string HSLuong = textBoxHSLuong.Text.Trim();
                 string HSPhuCap = textBoxHSPhuCap.Text.Trim();
-                bool check = db.Check(MaLuong, "SELECT MaLuong FROM dbo.Luong");
-                if (check == false)
+                if (MaLuong.Length != 0 && LuongCB.Length != 0 && HSLuong.Length != 0 && HSPhuCap.Length != 0)
                 {
-                    string insert = "INSERT INTO dbo.Luong VALUES  ( N'" + MaLuong + "', N'" + LuongCB + "', N'" + HSLuong + "', N'" + HSPhuCap + "')";
-                    db.ThucThiKetNoi(insert);
-                    MessageBox.Show("Thêm Bậc Lương Thành Công!");
-                    db.loadDataGridView(dataGridView1, "SELECT * FROM dbo.Luong WHERE MaLuong='" + MaLuong + "'");
-                    comboBoxBacLuong.Items.Clear();
-                    db.loadComboBox(comboBoxBacLuong, "SELECT MaLuong FROM dbo.Luong");
+                    bool check = db.Check(MaLuong, "SELECT MaLuong FROM dbo.Luong");
+                    if (check == false)
+                    {
+                        string insert = "INSERT INTO dbo.Luong VALUES  ( N'" + MaLuong + "', N'" + LuongCB + "', N'" + HSLuong + "', N'" + HSPhuCap + "')";
+                        db.ThucThiKetNoi(insert);
+                        MessageBox.Show("Thêm Bậc Lương Thành Công!");
+                        db.loadDataGridView(dataGridView1, "SELECT * FROM dbo.Luong WHERE MaLuong='" + MaLuong + "'");
+                        comboBoxBacLuong.Items.Clear();
+                        db.loadComboBox(comboBoxBacLuong, "SELECT MaLuong FROM dbo.Luong");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mã Bậc Lương đã tồn lại!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Mã Bậc Lương đã tồn lại!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
+                
 
             }
             catch
@@ -76,19 +84,27 @@ namespace QuanLyNhanSu
                 string LuongCB = textBoxLuongCB.Text.Trim();
                 string HSLuong = textBoxHSLuong.Text.Trim();
                 string HSPhuCap = textBoxHSPhuCap.Text.Trim();
-                bool check = db.Check(MaLuong, "SELECT MaLuong FROM dbo.Luong");
-                if (check == true)
+                if (MaLuong.Length != 0 && LuongCB.Length != 0 && HSLuong.Length != 0 && HSPhuCap.Length != 0)
                 {
-                    string update = "UPDATE dbo.Luong SET LuongCB=N'" + LuongCB + "', HSLuong=N'" + HSLuong
-                        + "', HSPhuCap=N'" + HSPhuCap + "'";
-                    db.ThucThiKetNoi(update);
-                    MessageBox.Show("Sửa Lương Thành Công!");
-                    db.loadDataGridView(dataGridView1, "SELECT * FROM dbo.Luong WHERE MaLuong='" + MaLuong + "'");
+                    bool check = db.Check(MaLuong, "SELECT MaLuong FROM dbo.Luong");
+                    if (check == true)
+                    {
+                        string update = "UPDATE dbo.Luong SET LuongCB=N'" + LuongCB + "', HSLuong=N'" + HSLuong
+                            + "', HSPhuCap=N'" + HSPhuCap + "'";
+                        db.ThucThiKetNoi(update);
+                        MessageBox.Show("Sửa Lương Thành Công!");
+                        db.loadDataGridView(dataGridView1, "SELECT * FROM dbo.Luong WHERE MaLuong='" + MaLuong + "'");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mã Lương không tồn tại!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Mã Lương không tồn tại!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
+                
             }
             catch
             {

@@ -24,6 +24,7 @@ namespace QuanLyNhanSu.UI
         {
             textBoxUsername.Text = "";
             textBoxPassword.Text = "";
+            checkBoxShow.Checked = false;
         }
         public static string useraccount;
 
@@ -51,6 +52,7 @@ namespace QuanLyNhanSu.UI
                     MessageBox.Show("Username hoặc password không chính xác!","", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     textBoxUsername.Text = "";
                     textBoxPassword.Text = "";
+                    checkBoxShow.Checked = false;
                 }
 
             }
@@ -60,6 +62,7 @@ namespace QuanLyNhanSu.UI
                 MessageBox.Show("Vui lòng nhập đầy đủ username và password!","", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 textBoxUsername.Text = "";
                 textBoxPassword.Text = "";
+                checkBoxShow.Checked = false;
             }
             
 
@@ -88,6 +91,20 @@ namespace QuanLyNhanSu.UI
         private void FormLOGIN_Load(object sender, EventArgs e)
         {
 
+        }
+
+       
+
+        private void checkBoxShow_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxShow.Checked)
+            {
+                textBoxPassword.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                textBoxPassword.UseSystemPasswordChar = false;
+            }
         }
     }
 }

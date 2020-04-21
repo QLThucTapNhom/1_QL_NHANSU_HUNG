@@ -71,34 +71,41 @@ namespace QuanLyNhanSu
         {
             try
             {
-                string MaNV = comboBoxMaNV.Text.TrimEnd();
-                string TenNV = textBoxTenNV.Text.TrimEnd();
-                string HoNV = textBoxHoNV.Text.TrimEnd();
-                string MaPB = comboBoxMaPB.SelectedItem.ToString();
+                string MaNV = comboBoxMaNV.Text.Trim();
+                string TenNV = textBoxTenNV.Text.Trim();
+                string HoNV = textBoxHoNV.Text.Trim();
+                string MaPB = comboBoxMaPB.Text.Trim();
                 string NgayKyHD = dateTimePicker2.Value.ToShortDateString();
                 string NgayHH = dateTimePicker1.Value.ToShortDateString();
-                string Chucvu = textBoxChucVu.Text.TrimEnd();
-                string Luong = comboBoxLuong.SelectedItem.ToString();
-
-
-                bool check = database.Check(MaNV, "SELECT MaNV FROM dbo.HoSoNV");
-                if (check == false)
+                string Chucvu = textBoxChucVu.Text.Trim();
+                string Luong = comboBoxLuong.Text.Trim();
+                if (MaNV.Length!=0&&TenNV.Length != 0 &&HoNV.Length != 0 &&MaPB.Length != 0&&Chucvu.Length != 0 &&Luong.Length != 0)
                 {
-                    string input = "INSERT INTO dbo.HoSoNV VALUES  ( N'"+MaNV+"' , N'"+TenNV+"' , N'"+HoNV+"' ,N'"+Chucvu+"' ,  N'"+MaPB+"' , '"+NgayHH+"' , '"+NgayHH+"', N'"+Luong+"' )";
-                    database.ThucThiKetNoi(input);
-                    MessageBox.Show("Hoàn Tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    //load lại combobox Mã NV
-                    comboBoxMaNV.Items.Clear();
-                    database.loadComboBox(comboBoxMaNV, "SELECT MaNV FROM dbo.HoSoNV");
-                    string query = "SELECT * FROM dbo.HoSoNV WHERE MaNV='" + MaNV + "'";
-                    database.loadDataGridView(dataGridView, query);
+                    bool check = database.Check(MaNV, "SELECT MaNV FROM dbo.HoSoNV");
+                    if (check == false)
+                    {
+                        string input = "INSERT INTO dbo.HoSoNV VALUES  ( N'" + MaNV + "' , N'" + TenNV + "' , N'" + HoNV + "' ,N'" + Chucvu + "' ,  N'" + MaPB + "' , '" + NgayHH + "' , '" + NgayHH + "', N'" + Luong + "' )";
+                        database.ThucThiKetNoi(input);
+                        MessageBox.Show("Hoàn Tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        //load lại combobox Mã NV
+                        comboBoxMaNV.Items.Clear();
+                        database.loadComboBox(comboBoxMaNV, "SELECT MaNV FROM dbo.HoSoNV");
+                        string query = "SELECT * FROM dbo.HoSoNV WHERE MaNV='" + MaNV + "'";
+                        database.loadDataGridView(dataGridView, query);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không thể thêm! Nhân viên đã tồn tại!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Không thể thêm! Nhân viên đã tồn tại!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
+
+                
             }
-            catch {
+            catch(Exception) {
 
 
                 MessageBox.Show("Lỗi rồi!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
@@ -118,26 +125,34 @@ namespace QuanLyNhanSu
                 string MaNV = comboBoxMaNV.Text.TrimEnd();
                 string TenNV = textBoxTenNV.Text.TrimEnd();
                 string HoNV = textBoxHoNV.Text.TrimEnd();
-                string MaPB = comboBoxMaPB.SelectedItem.ToString();
+                string MaPB = comboBoxMaPB.Text.TrimEnd();
                 string NgayKyHD = dateTimePicker2.Value.ToShortDateString();
                 string NgayHH = dateTimePicker1.Value.ToShortDateString();
                 string Chucvu = textBoxChucVu.Text.TrimEnd();
-                string Luong = comboBoxLuong.SelectedItem.ToString();
-
-                bool check = database.Check(MaNV, "SELECT MaNV FROM dbo.HoSoNV");
-                if (check == true)
+                string Luong = comboBoxLuong.Text.TrimEnd();
+                if (MaNV.Length != 0 && TenNV.Length != 0 && HoNV.Length != 0 && MaPB.Length != 0 && Chucvu.Length != 0 && Luong.Length != 0)
                 {
-                    string update = "UPDATE dbo.HoSoNV SET TenNV = N'" + TenNV + "' ,HoDemNV= N'" + HoNV + "' ,ChucVu=N'" + Chucvu + "' ,MaPB= N'" + MaPB + "' ,NgayKyHD= '" + NgayHH + "' ,NgayHetHanHD= '" + NgayHH + "',MaLuong= N'" + Luong + "' WHERE MaNV ='"+MaNV+"'";
-                    database.ThucThiKetNoi(update);
-                    MessageBox.Show("Hoàn Tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    
-                    string query = "SELECT * FROM dbo.HoSoNV WHERE MaNV='" + MaNV + "'";
-                    database.loadDataGridView(dataGridView, query);
+                    bool check = database.Check(MaNV, "SELECT MaNV FROM dbo.HoSoNV");
+                    if (check == true)
+                    {
+                        string update = "UPDATE dbo.HoSoNV SET TenNV = N'" + TenNV + "' ,HoDemNV= N'" + HoNV + "' ,ChucVu=N'" + Chucvu + "' ,MaPB= N'" + MaPB + "' ,NgayKyHD= '" + NgayHH + "' ,NgayHetHanHD= '" + NgayHH + "',MaLuong= N'" + Luong + "' WHERE MaNV ='" + MaNV + "'";
+                        database.ThucThiKetNoi(update);
+                        MessageBox.Show("Hoàn Tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                        string query = "SELECT * FROM dbo.HoSoNV WHERE MaNV='" + MaNV + "'";
+                        database.loadDataGridView(dataGridView, query);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nhân viên không tồn tại!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Nhân viên không tồn tại!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
+
+                
             }
             catch {
 

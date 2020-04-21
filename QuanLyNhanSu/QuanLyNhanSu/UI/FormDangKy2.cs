@@ -97,6 +97,7 @@ namespace QuanLyNhanSu.UI
             textBoxPassword.Text = "";
             textBoxConfirm.Text = "";
             textBoxEmail.Text = "";
+            checkBoxShow.Checked = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -124,6 +125,21 @@ namespace QuanLyNhanSu.UI
             UI.FormLOGIN lg = new FormLOGIN();
             lg.Show();
             this.Hide();
+        }
+
+        private void checkBoxShow_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxShow.Checked)
+            {
+                textBoxPassword.UseSystemPasswordChar = true;
+                textBoxConfirm.UseSystemPasswordChar = true;
+                
+            }
+            else
+            {
+                textBoxPassword.UseSystemPasswordChar = false;
+                textBoxConfirm.UseSystemPasswordChar = false; 
+            }
         }
     }
 }
