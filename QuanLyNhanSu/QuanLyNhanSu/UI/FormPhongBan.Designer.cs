@@ -29,52 +29,52 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBoxMaTruongPhong = new System.Windows.Forms.ComboBox();
-            this.textBoxGhiChu = new System.Windows.Forms.TextBox();
-            this.textBoxDCPhong = new System.Windows.Forms.TextBox();
-            this.textBoxSDTPB = new System.Windows.Forms.TextBox();
-            this.textBoxChucNangPB = new System.Windows.Forms.TextBox();
-            this.textBoxTenPB = new System.Windows.Forms.TextBox();
+            this.cbbMaTruongPhong = new System.Windows.Forms.ComboBox();
+            this.txtGhiChu = new System.Windows.Forms.TextBox();
+            this.txtDCPhong = new System.Windows.Forms.TextBox();
+            this.txtSDTPB = new System.Windows.Forms.TextBox();
+            this.txtChucNangPB = new System.Windows.Forms.TextBox();
+            this.txtTenPB = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePickerNgayTL = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgayTL = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBoxMaPB = new System.Windows.Forms.ComboBox();
+            this.cbbMaPB = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.dgvPhongBan = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.buttonDSach = new System.Windows.Forms.Button();
             this.buttonNew = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonDSach = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBan)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.comboBoxMaTruongPhong);
-            this.groupBox1.Controls.Add(this.textBoxGhiChu);
-            this.groupBox1.Controls.Add(this.textBoxDCPhong);
-            this.groupBox1.Controls.Add(this.textBoxSDTPB);
-            this.groupBox1.Controls.Add(this.textBoxChucNangPB);
-            this.groupBox1.Controls.Add(this.textBoxTenPB);
+            this.groupBox1.Controls.Add(this.cbbMaTruongPhong);
+            this.groupBox1.Controls.Add(this.txtGhiChu);
+            this.groupBox1.Controls.Add(this.txtDCPhong);
+            this.groupBox1.Controls.Add(this.txtSDTPB);
+            this.groupBox1.Controls.Add(this.txtChucNangPB);
+            this.groupBox1.Controls.Add(this.txtTenPB);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.dateTimePickerNgayTL);
+            this.groupBox1.Controls.Add(this.dtpNgayTL);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.comboBoxMaPB);
+            this.groupBox1.Controls.Add(this.cbbMaPB);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("UVN Ai Cap Nang", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(25, 10);
@@ -84,53 +84,54 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Phòng Ban";
             // 
-            // comboBoxMaTruongPhong
+            // cbbMaTruongPhong
             // 
-            this.comboBoxMaTruongPhong.FormattingEnabled = true;
-            this.comboBoxMaTruongPhong.Location = new System.Drawing.Point(423, 85);
-            this.comboBoxMaTruongPhong.Name = "comboBoxMaTruongPhong";
-            this.comboBoxMaTruongPhong.Size = new System.Drawing.Size(206, 23);
-            this.comboBoxMaTruongPhong.TabIndex = 33;
+            this.cbbMaTruongPhong.FormattingEnabled = true;
+            this.cbbMaTruongPhong.Location = new System.Drawing.Point(423, 85);
+            this.cbbMaTruongPhong.Name = "cbbMaTruongPhong";
+            this.cbbMaTruongPhong.Size = new System.Drawing.Size(206, 23);
+            this.cbbMaTruongPhong.TabIndex = 33;
             // 
-            // textBoxGhiChu
+            // txtGhiChu
             // 
-            this.textBoxGhiChu.Location = new System.Drawing.Point(423, 115);
-            this.textBoxGhiChu.Multiline = true;
-            this.textBoxGhiChu.Name = "textBoxGhiChu";
-            this.textBoxGhiChu.Size = new System.Drawing.Size(206, 23);
-            this.textBoxGhiChu.TabIndex = 32;
+            this.txtGhiChu.Location = new System.Drawing.Point(423, 115);
+            this.txtGhiChu.Multiline = true;
+            this.txtGhiChu.Name = "txtGhiChu";
+            this.txtGhiChu.Size = new System.Drawing.Size(206, 23);
+            this.txtGhiChu.TabIndex = 32;
             // 
-            // textBoxDCPhong
+            // txtDCPhong
             // 
-            this.textBoxDCPhong.Location = new System.Drawing.Point(423, 55);
-            this.textBoxDCPhong.Multiline = true;
-            this.textBoxDCPhong.Name = "textBoxDCPhong";
-            this.textBoxDCPhong.Size = new System.Drawing.Size(206, 23);
-            this.textBoxDCPhong.TabIndex = 30;
+            this.txtDCPhong.Location = new System.Drawing.Point(423, 55);
+            this.txtDCPhong.Multiline = true;
+            this.txtDCPhong.Name = "txtDCPhong";
+            this.txtDCPhong.Size = new System.Drawing.Size(206, 23);
+            this.txtDCPhong.TabIndex = 30;
+            this.txtDCPhong.TextChanged += new System.EventHandler(this.textBoxDCPhong_TextChanged);
             // 
-            // textBoxSDTPB
+            // txtSDTPB
             // 
-            this.textBoxSDTPB.Location = new System.Drawing.Point(423, 25);
-            this.textBoxSDTPB.Multiline = true;
-            this.textBoxSDTPB.Name = "textBoxSDTPB";
-            this.textBoxSDTPB.Size = new System.Drawing.Size(206, 23);
-            this.textBoxSDTPB.TabIndex = 29;
+            this.txtSDTPB.Location = new System.Drawing.Point(423, 25);
+            this.txtSDTPB.Multiline = true;
+            this.txtSDTPB.Name = "txtSDTPB";
+            this.txtSDTPB.Size = new System.Drawing.Size(206, 23);
+            this.txtSDTPB.TabIndex = 29;
             // 
-            // textBoxChucNangPB
+            // txtChucNangPB
             // 
-            this.textBoxChucNangPB.Location = new System.Drawing.Point(80, 85);
-            this.textBoxChucNangPB.Multiline = true;
-            this.textBoxChucNangPB.Name = "textBoxChucNangPB";
-            this.textBoxChucNangPB.Size = new System.Drawing.Size(206, 23);
-            this.textBoxChucNangPB.TabIndex = 28;
+            this.txtChucNangPB.Location = new System.Drawing.Point(80, 85);
+            this.txtChucNangPB.Multiline = true;
+            this.txtChucNangPB.Name = "txtChucNangPB";
+            this.txtChucNangPB.Size = new System.Drawing.Size(206, 23);
+            this.txtChucNangPB.TabIndex = 28;
             // 
-            // textBoxTenPB
+            // txtTenPB
             // 
-            this.textBoxTenPB.Location = new System.Drawing.Point(80, 55);
-            this.textBoxTenPB.Multiline = true;
-            this.textBoxTenPB.Name = "textBoxTenPB";
-            this.textBoxTenPB.Size = new System.Drawing.Size(206, 23);
-            this.textBoxTenPB.TabIndex = 27;
+            this.txtTenPB.Location = new System.Drawing.Point(80, 55);
+            this.txtTenPB.Multiline = true;
+            this.txtTenPB.Name = "txtTenPB";
+            this.txtTenPB.Size = new System.Drawing.Size(206, 23);
+            this.txtTenPB.TabIndex = 27;
             // 
             // label8
             // 
@@ -168,12 +169,13 @@
             this.label6.TabIndex = 19;
             this.label6.Text = "Chức Năng";
             // 
-            // dateTimePickerNgayTL
+            // dtpNgayTL
             // 
-            this.dateTimePickerNgayTL.Location = new System.Drawing.Point(80, 115);
-            this.dateTimePickerNgayTL.Name = "dateTimePickerNgayTL";
-            this.dateTimePickerNgayTL.Size = new System.Drawing.Size(206, 23);
-            this.dateTimePickerNgayTL.TabIndex = 18;
+            this.dtpNgayTL.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgayTL.Location = new System.Drawing.Point(80, 115);
+            this.dtpNgayTL.Name = "dtpNgayTL";
+            this.dtpNgayTL.Size = new System.Drawing.Size(206, 23);
+            this.dtpNgayTL.TabIndex = 18;
             // 
             // label5
             // 
@@ -202,14 +204,14 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Tên PB";
             // 
-            // comboBoxMaPB
+            // cbbMaPB
             // 
-            this.comboBoxMaPB.FormattingEnabled = true;
-            this.comboBoxMaPB.Location = new System.Drawing.Point(80, 25);
-            this.comboBoxMaPB.Name = "comboBoxMaPB";
-            this.comboBoxMaPB.Size = new System.Drawing.Size(206, 23);
-            this.comboBoxMaPB.TabIndex = 4;
-            this.comboBoxMaPB.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaPB_SelectedIndexChanged);
+            this.cbbMaPB.FormattingEnabled = true;
+            this.cbbMaPB.Location = new System.Drawing.Point(80, 25);
+            this.cbbMaPB.Name = "cbbMaPB";
+            this.cbbMaPB.Size = new System.Drawing.Size(206, 23);
+            this.cbbMaPB.TabIndex = 4;
+            this.cbbMaPB.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaPB_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -220,14 +222,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã PB";
             // 
-            // dataGridView
+            // dgvPhongBan
             // 
-            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(25, 177);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(655, 141);
-            this.dataGridView.TabIndex = 7;
+            this.dgvPhongBan.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvPhongBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPhongBan.Location = new System.Drawing.Point(25, 177);
+            this.dgvPhongBan.Name = "dgvPhongBan";
+            this.dgvPhongBan.Size = new System.Drawing.Size(655, 141);
+            this.dgvPhongBan.TabIndex = 7;
+            this.dgvPhongBan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhongBan_CellContentClick);
             // 
             // groupBox2
             // 
@@ -241,6 +244,20 @@
             this.groupBox2.Size = new System.Drawing.Size(655, 68);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
+            // 
+            // buttonDSach
+            // 
+            this.buttonDSach.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.buttonDSach.Image = global::QuanLyNhanSu.Properties.Resources.button7_Image;
+            this.buttonDSach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDSach.Location = new System.Drawing.Point(505, 18);
+            this.buttonDSach.Name = "buttonDSach";
+            this.buttonDSach.Size = new System.Drawing.Size(70, 35);
+            this.buttonDSach.TabIndex = 8;
+            this.buttonDSach.Text = "DS";
+            this.buttonDSach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonDSach.UseVisualStyleBackColor = true;
+            this.buttonDSach.Click += new System.EventHandler(this.buttonDSach_Click);
             // 
             // buttonNew
             // 
@@ -298,27 +315,13 @@
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // buttonDSach
-            // 
-            this.buttonDSach.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonDSach.Image = global::QuanLyNhanSu.Properties.Resources.button7_Image;
-            this.buttonDSach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDSach.Location = new System.Drawing.Point(505, 18);
-            this.buttonDSach.Name = "buttonDSach";
-            this.buttonDSach.Size = new System.Drawing.Size(70, 35);
-            this.buttonDSach.TabIndex = 8;
-            this.buttonDSach.Text = "DS";
-            this.buttonDSach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonDSach.UseVisualStyleBackColor = true;
-            this.buttonDSach.Click += new System.EventHandler(this.buttonDSach_Click);
-            // 
             // FormPhongBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 401);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.dgvPhongBan);
             this.Controls.Add(this.groupBox1);
             this.MaximumSize = new System.Drawing.Size(720, 440);
             this.Name = "FormPhongBan";
@@ -327,7 +330,7 @@
             this.Load += new System.EventHandler(this.FormPhongBan_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBan)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -337,13 +340,13 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePickerNgayTL;
+        private System.Windows.Forms.DateTimePicker dtpNgayTL;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBoxMaPB;
+        private System.Windows.Forms.ComboBox cbbMaPB;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.DataGridView dgvPhongBan;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button buttonNew;
         private System.Windows.Forms.Button buttonDelete;
@@ -352,12 +355,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxGhiChu;
-        private System.Windows.Forms.TextBox textBoxDCPhong;
-        private System.Windows.Forms.TextBox textBoxSDTPB;
-        private System.Windows.Forms.TextBox textBoxChucNangPB;
-        private System.Windows.Forms.TextBox textBoxTenPB;
-        private System.Windows.Forms.ComboBox comboBoxMaTruongPhong;
+        private System.Windows.Forms.TextBox txtGhiChu;
+        private System.Windows.Forms.TextBox txtDCPhong;
+        private System.Windows.Forms.TextBox txtSDTPB;
+        private System.Windows.Forms.TextBox txtChucNangPB;
+        private System.Windows.Forms.TextBox txtTenPB;
+        private System.Windows.Forms.ComboBox cbbMaTruongPhong;
         private System.Windows.Forms.Button buttonDSach;
     }
 }

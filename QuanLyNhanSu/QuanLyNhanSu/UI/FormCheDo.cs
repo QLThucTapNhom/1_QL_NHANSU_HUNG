@@ -23,12 +23,12 @@ namespace QuanLyNhanSu
 
         private void FormCheDo_Load(object sender, EventArgs e)
         {
-            dataGridViewTS.AllowUserToResizeColumns = true;
-            dataGridViewBH.AllowUserToResizeColumns = true;
-            db.loadDataGridView(dataGridViewTS, "SELECT * FROM dbo.CDThaiSan");
-            db.loadDataGridView(dataGridViewBH, "SELECT * FROM dbo.CDBaoHiemXaHoi");
-            db.loadComboBox(comboBoxMaNV1, "SELECT MaNV FROM dbo.HoSoNV");
-            db.loadComboBox(comboBoxMaNV2, "SELECT HS.MaNV FROM dbo.HoSoNV HS, dbo.TTNhanVienCoBan TT WHERE HS.MaNV = TT.MaNV AND TT.GioiTinh = N'Nữ'");
+            dgvTS.AllowUserToResizeColumns = true;
+            dgvBH.AllowUserToResizeColumns = true;
+            db.loadDataGridView(dgvTS, "SELECT * FROM dbo.CDThaiSan");
+            db.loadDataGridView(dgvBH, "SELECT * FROM dbo.CDBaoHiemXaHoi");
+            db.loadComboBox(cbbMaNV1, "SELECT MaNV FROM dbo.HoSoNV");
+            db.loadComboBox(cbbMaNV2, "SELECT HS.MaNV FROM dbo.HoSoNV HS, dbo.TTNhanVienCoBan TT WHERE HS.MaNV = TT.MaNV AND TT.GioiTinh = N'Nữ'");
 
         }
         //Tab page Chế độ bảo hiểm xã hội
@@ -36,28 +36,28 @@ namespace QuanLyNhanSu
         public void Reset()
         {
             
-            textBoxMaLuong1.Text = ""; ;
-            textBoxTenNV1.Text = "";
-            textBoxMaBHXH.Text = "";
-            textBoxGhiChu1.Text = "";
+            txtMaLuong1.Text = ""; ;
+            txtTenNV1.Text = "";
+            txtMaBHXH.Text = "";
+            txtGhiChu1.Text = "";
         }
         private void buttonNew_Click(object sender, EventArgs e)
         {
-            comboBoxMaNV1.Text = "";
+            cbbMaNV1.Text = "";
             Reset();
         }
         private void comboBoxMaNV1_SelectedIndexChanged(object sender, EventArgs e)
         {
             Reset();
-            string MaNV = comboBoxMaNV1.SelectedItem.ToString();
-            db.loadTextBox(textBoxMaLuong1, "SELECT MaLuong FROM dbo.HoSoNV WHERE MaNV=N'"+MaNV+"'");
+            string MaNV = cbbMaNV1.SelectedItem.ToString();
+            db.loadTextBox(txtMaLuong1, "SELECT MaLuong FROM dbo.HoSoNV WHERE MaNV=N'"+MaNV+"'");
 
-            db.loadTextBox(textBoxTenNV1, "SELECT TenNV FROM dbo.HoSoNV WHERE MaNV=N'" + MaNV + "'");
-            string ten = textBoxTenNV1.Text.Trim();
-            db.loadTextBox(textBoxTenNV1, "SELECT HoDemNV FROM dbo.HoSoNV WHERE MaNV=N'" + MaNV + "'");
-            string ho = textBoxTenNV1.Text.Trim();
+            db.loadTextBox(txtTenNV1, "SELECT TenNV FROM dbo.HoSoNV WHERE MaNV=N'" + MaNV + "'");
+            string ten = txtTenNV1.Text.Trim();
+            db.loadTextBox(txtTenNV1, "SELECT HoDemNV FROM dbo.HoSoNV WHERE MaNV=N'" + MaNV + "'");
+            string ho = txtTenNV1.Text.Trim();
             string HoTenNV = ho + " " + ten;
-            textBoxTenNV1.Text = HoTenNV;
+            txtTenNV1.Text = HoTenNV;
 
             //db.loadTextBox(textBoxGhiChu1, "SELECT GhiChu FROM dbo.HoSoNV WHERE MaNV=N'" + MaNV + "'");
 
@@ -65,7 +65,7 @@ namespace QuanLyNhanSu
 
             try
             {
-                db.loadTextBox(textBoxMaBHXH, "SELECT MaBHXH FROM dbo.CDBaoHiemXaHoi WHERE MaNV='"+MaNV+"'");
+                db.loadTextBox(txtMaBHXH, "SELECT MaBHXH FROM dbo.CDBaoHiemXaHoi WHERE MaNV='"+MaNV+"'");
             }
             catch
             {
@@ -79,12 +79,12 @@ namespace QuanLyNhanSu
         {
             try
             {
-                string MaNV = comboBoxMaNV1.Text.Trim();
-                string HoTenNV = textBoxTenNV1.Text.Trim();
-                string MaLuong = textBoxMaLuong1.Text.Trim();
-                string MaBHXH = textBoxMaBHXH.Text.Trim();
-                string NgayCap = dateTimePickerNC.Value.ToShortDateString();
-                string GhiChu = textBoxGhiChu1.Text.Trim();
+                string MaNV = cbbMaNV1.Text.Trim();
+                string HoTenNV = txtTenNV1.Text.Trim();
+                string MaLuong = txtMaLuong1.Text.Trim();
+                string MaBHXH = txtMaBHXH.Text.Trim();
+                string NgayCap = dtpNC.Value.ToShortDateString();
+                string GhiChu = txtGhiChu1.Text.Trim();
                 if (MaNV.Length != 0 && HoTenNV.Length != 0 && MaLuong.Length != 0 && MaBHXH.Length != 0)
                 {
                     bool check1 = db.Check(MaNV, "SELECT MaNV FROM dbo.CDBaoHiemXaHoi");
@@ -98,7 +98,7 @@ namespace QuanLyNhanSu
                                 + "  VALUES  ( N'" + MaNV + "' , N'" + HoTenNV + "' , N'" + MaLuong + "' ,  N'" + MaBHXH + "' ,  '" + NgayCap + "' , N'" + GhiChu + "')";
                             db.ThucThiKetNoi(insert);
                             MessageBox.Show("Thêm sổ BHXH cho NV: " + HoTenNV + " hoàn tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            db.loadDataGridView(dataGridViewBH, "SELECT * FROM dbo.CDBaoHiemXaHoi");
+                            db.loadDataGridView(dgvBH, "SELECT * FROM dbo.CDBaoHiemXaHoi");
                         }
                         else
                         {
@@ -127,12 +127,12 @@ namespace QuanLyNhanSu
         {
             try
             {
-                string MaNV = comboBoxMaNV1.Text.Trim();
-                string HoTenNV = textBoxTenNV1.Text.Trim();
+                string MaNV = cbbMaNV1.Text.Trim();
+                string HoTenNV = txtTenNV1.Text.Trim();
                 //string MaLuong = textBoxMaLuong1.Text.Trim();
-                string MaBHXH = textBoxMaBHXH.Text.Trim();
-                string NgayCap = dateTimePickerNC.Value.ToShortDateString();
-                string GhiChu = textBoxGhiChu1.Text.Trim();
+                string MaBHXH = txtMaBHXH.Text.Trim();
+                string NgayCap = dtpNC.Value.ToShortDateString();
+                string GhiChu = txtGhiChu1.Text.Trim();
                 if (MaNV.Length != 0 && HoTenNV.Length != 0 && MaBHXH.Length != 0)
                 {
                     bool check1 = db.Check(MaNV, "SELECT MaNV FROM dbo.CDBaoHiemXaHoi");
@@ -145,7 +145,7 @@ namespace QuanLyNhanSu
                             string update = "UPDATE dbo.CDBaoHiemXaHoi SET NgayCapSo='" + NgayCap + "' ,GhiChu = N'" + GhiChu + "' WHERE MaNV='"+ MaNV+"'";
                             db.ThucThiKetNoi(update);
                             MessageBox.Show("Sửa sổ BHXH cho NV: " + HoTenNV + " hoàn tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            db.loadDataGridView(dataGridViewBH, "SELECT * FROM dbo.CDBaoHiemXaHoi");
+                            db.loadDataGridView(dgvBH, "SELECT * FROM dbo.CDBaoHiemXaHoi");
                         }
                         else
                         {
@@ -174,8 +174,8 @@ namespace QuanLyNhanSu
         {
             try
             {
-                string MaNV = comboBoxMaNV1.Text.Trim();
-                string HoTenNV = textBoxTenNV1.Text.Trim();
+                string MaNV = cbbMaNV1.Text.Trim();
+                string HoTenNV = txtTenNV1.Text.Trim();
                 bool check1 = db.Check(MaNV, "SELECT MaNV FROM dbo.CDBaoHiemXaHoi");
                 //bool check2 = db.Check(MaBHXH, "SELECT MaBHXH FROM dbo.CDBaoHiemXaHoi");
                 if (check1 == true)
@@ -186,8 +186,8 @@ namespace QuanLyNhanSu
 
 
                     //Load lại
-                    dataGridViewBH.DataSource = "";
-                    db.loadDataGridView(dataGridViewBH, "SELECT * FROM dbo.CDBaoHiemXaHoi");
+                    dgvBH.DataSource = "";
+                    db.loadDataGridView(dgvBH, "SELECT * FROM dbo.CDBaoHiemXaHoi");
                 }
                 else
                 {
@@ -213,8 +213,8 @@ namespace QuanLyNhanSu
         }
         private void buttonDS1_Click(object sender, EventArgs e)
         {
-            dataGridViewBH.DataSource = null;
-            db.loadDataGridView(dataGridViewBH, "SELECT * FROM dbo.CDBaoHiemXaHoi");
+            dgvBH.DataSource = null;
+            db.loadDataGridView(dgvBH, "SELECT * FROM dbo.CDBaoHiemXaHoi");
 
         }
         private void groupBox3_Enter(object sender, EventArgs e)
@@ -229,11 +229,11 @@ namespace QuanLyNhanSu
         {
 
 
-            comboBoxMaNV2.Text = "";
-            textBoxTenNV2.Text = "";
-            comboBoxMaPB.Text = "";
-            textBoxGhiChu2.Text = "";
-            dataGridViewTS.DataSource = "";
+            cbbMaNV2.Text = "";
+            txtTenNV2.Text = "";
+            cbbMaPB.Text = "";
+            txtGhiChu2.Text = "";
+            dgvTS.DataSource = "";
         }
 
         private void buttonReset2_Click(object sender, EventArgs e)
@@ -244,20 +244,20 @@ namespace QuanLyNhanSu
         private void comboBoxMaNV2_SelectedIndexChanged(object sender, EventArgs e)
         {
             Reset2();
-            string MaNV = comboBoxMaNV2.SelectedItem.ToString();
+            string MaNV = cbbMaNV2.SelectedItem.ToString();
 
             //db.loadTextBox(textBoxTenNV2, "SELECT HoTenNV FROM dbo.HoSoNV WHERE MaNV=N'" + "'"); 
 
-            db.loadTextBox(textBoxTenNV2, "SELECT TenNV FROM dbo.HoSoNV WHERE MaNV=N'" + MaNV + "'");
-            string ten = textBoxTenNV2.Text.Trim();
-            db.loadTextBox(textBoxTenNV2, "SELECT HoDemNV FROM dbo.HoSoNV WHERE MaNV=N'" + MaNV + "'");
-            string ho = textBoxTenNV2.Text.Trim();
+            db.loadTextBox(txtTenNV2, "SELECT TenNV FROM dbo.HoSoNV WHERE MaNV=N'" + MaNV + "'");
+            string ten = txtTenNV2.Text.Trim();
+            db.loadTextBox(txtTenNV2, "SELECT HoDemNV FROM dbo.HoSoNV WHERE MaNV=N'" + MaNV + "'");
+            string ho = txtTenNV2.Text.Trim();
             string HoTenNV = ho + " " + ten;
-            textBoxTenNV2.Text = HoTenNV;
+            txtTenNV2.Text = HoTenNV;
 
-            db.loadComboBox_Show(comboBoxMaPB, "SELECT MaPB FROM dbo.HoSoNV WHERE MaNV=N'"+MaNV+"'");
+            db.loadComboBox_Show(cbbMaPB, "SELECT MaPB FROM dbo.HoSoNV WHERE MaNV=N'"+MaNV+"'");
 
-            db.loadDataGridView(dataGridViewTS, "SELECT * FROM dbo.CDThaiSan");
+            db.loadDataGridView(dgvTS, "SELECT * FROM dbo.CDThaiSan");
 
         }
 
@@ -265,12 +265,12 @@ namespace QuanLyNhanSu
         {
             try
             {
-                string MaNV = comboBoxMaNV2.Text.Trim();
-                string HoTenNV = textBoxTenNV2.Text.Trim();
-                string MaPB = comboBoxMaPB.Text.Trim();
-                string NgayBD = dateTimePicker2.Value.ToShortDateString();
-                string NgayTL = dateTimePicker1.Value.ToShortDateString();
-                string GhiChu = textBoxGhiChu2.Text.Trim();
+                string MaNV = cbbMaNV2.Text.Trim();
+                string HoTenNV = txtTenNV2.Text.Trim();
+                string MaPB = cbbMaPB.Text.Trim();
+                string NgayBD = dtpNgayBD.Value.ToShortDateString();
+                string NgayTL = dtpNgayTL.Value.ToShortDateString();
+                string GhiChu = txtGhiChu2.Text.Trim();
 
                 if (MaNV.Length != 0 && HoTenNV.Length != 0 && MaPB.Length != 0 && MaPB.Length != 0)
                 {
@@ -284,7 +284,7 @@ namespace QuanLyNhanSu
                             + "VALUES(N'" + MaNV + "', N'" + HoTenNV + "', N'" + MaPB + "', '" + NgayBD + "', '" + NgayTL + "', N'" + GhiChu + "')";
                             db.ThucThiKetNoi(insert);
                             MessageBox.Show("Hoàn tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            db.loadDataGridView(dataGridViewTS, "SELECT * FROM dbo.CDThaiSan");
+                            db.loadDataGridView(dgvTS, "SELECT * FROM dbo.CDThaiSan");
                         }
                         else
                         {
@@ -315,12 +315,12 @@ namespace QuanLyNhanSu
         {
             try
             {
-                string MaNV = comboBoxMaNV2.Text.Trim();
-                string HoTenNV = textBoxTenNV2.Text.Trim();
-                string MaPB = comboBoxMaPB.Text.Trim();
-                string NgayBD = dateTimePicker2.Value.ToShortDateString();
-                string NgayTL = dateTimePicker1.Value.ToShortDateString();
-                string GhiChu = textBoxGhiChu2.Text.Trim();
+                string MaNV = cbbMaNV2.Text.Trim();
+                string HoTenNV = txtTenNV2.Text.Trim();
+                string MaPB = cbbMaPB.Text.Trim();
+                string NgayBD = dtpNgayBD.Value.ToShortDateString();
+                string NgayTL = dtpNgayTL.Value.ToShortDateString();
+                string GhiChu = txtGhiChu2.Text.Trim();
                 if (MaNV.Length != 0 && HoTenNV.Length != 0 && MaPB.Length != 0 && MaPB.Length != 0)
                 {
                     bool check = db.Check(MaNV, "SELECT MaNV FROM dbo.CDThaiSan");
@@ -332,7 +332,7 @@ namespace QuanLyNhanSu
                         + "NgayBDNghi= '" + NgayBD + "',NgayTroLai= '" + NgayTL + "',GhiChu= N'" + GhiChu + "' WHERE MaNV =N'" + MaNV + "'";
                         db.ThucThiKetNoi(update);
                         MessageBox.Show("Sửa hoàn tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        db.loadDataGridView(dataGridViewTS, "SELECT * FROM dbo.CDThaiSan");
+                        db.loadDataGridView(dgvTS, "SELECT * FROM dbo.CDThaiSan");
 
 
                     }
@@ -358,8 +358,8 @@ namespace QuanLyNhanSu
         {
             try
             {
-                string MaNV = comboBoxMaNV2.Text.Trim();
-                string HoTenNV = textBoxTenNV2.Text.Trim();
+                string MaNV = cbbMaNV2.Text.Trim();
+                string HoTenNV = txtTenNV2.Text.Trim();
                 bool check = db.Check(MaNV, "SELECT MaNV FROM dbo.CDThaiSan");
                 if (check == true)
                 {
@@ -368,8 +368,8 @@ namespace QuanLyNhanSu
                     string update = "DELETE FROM dbo.CDThaiSan WHERE MaNV =N'" + MaNV + "'";
                     db.ThucThiKetNoi(update);
                     MessageBox.Show("Xóa hoàn tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    dataGridViewTS.DataSource = "";
-                    db.loadDataGridView(dataGridViewTS, "SELECT * FROM dbo.CDThaiSan");
+                    dgvTS.DataSource = "";
+                    db.loadDataGridView(dgvTS, "SELECT * FROM dbo.CDThaiSan");
 
 
                 }
@@ -405,16 +405,36 @@ namespace QuanLyNhanSu
 
         private void buttonDS2_Click(object sender, EventArgs e)
         {
-            dataGridViewTS.DataSource = null;
+            dgvTS.DataSource = null;
             //deldrv(dataGridViewTS);
 
 
-            db.loadDataGridView(dataGridViewTS, "SELECT * FROM dbo.CDThaiSan");
+            db.loadDataGridView(dgvTS, "SELECT * FROM dbo.CDThaiSan");
         }
 
         private void dataGridViewBH_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            int i;
+            i = dgvBH.CurrentRow.Index;
+            cbbMaNV1.Text = dgvBH.Rows[i].Cells[0].Value.ToString();
+            txtTenNV1.Text = dgvBH.Rows[i].Cells[1].Value.ToString();
+            txtMaLuong1.Text = dgvBH.Rows[i].Cells[2].Value.ToString();
+            txtMaBHXH.Text = dgvBH.Rows[i].Cells[3].Value.ToString();
+            dtpNC.Text = dgvBH.Rows[i].Cells[4].Value.ToString();
+            txtGhiChu1.Text = dgvBH.Rows[i].Cells[5].Value.ToString();
+  
+        }
 
+        private void dgvTS_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i;
+            i = dgvTS.CurrentRow.Index;
+            cbbMaNV2.Text = dgvTS.Rows[i].Cells[0].Value.ToString();
+            txtTenNV2.Text = dgvTS.Rows[i].Cells[1].Value.ToString();
+            cbbMaPB.Text = dgvTS.Rows[i].Cells[2].Value.ToString();
+            dtpNgayBD.Text = dgvTS.Rows[i].Cells[3].Value.ToString();
+            dtpNgayTL.Text = dgvTS.Rows[i].Cells[4].Value.ToString();
+            txtGhiChu2.Text = dgvTS.Rows[i].Cells[5].Value.ToString();
         }
     }
 }

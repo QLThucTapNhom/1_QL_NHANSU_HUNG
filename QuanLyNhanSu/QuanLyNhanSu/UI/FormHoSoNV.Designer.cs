@@ -29,53 +29,53 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBoxLuong = new System.Windows.Forms.ComboBox();
-            this.textBoxChucVu = new System.Windows.Forms.TextBox();
+            this.cbbLuong = new System.Windows.Forms.ComboBox();
+            this.txtChucVu = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxMaPB = new System.Windows.Forms.ComboBox();
+            this.dtpNgayKyHD = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgayHH = new System.Windows.Forms.DateTimePicker();
+            this.cbbMaPB = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBoxHoNV = new System.Windows.Forms.TextBox();
-            this.textBoxTenNV = new System.Windows.Forms.TextBox();
+            this.txtHoNV = new System.Windows.Forms.TextBox();
+            this.txtTenNV = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBoxMaNV = new System.Windows.Forms.ComboBox();
+            this.cbbMaNV = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.dgvHoSo = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.buttonDSach = new System.Windows.Forms.Button();
-            this.buttonNew = new System.Windows.Forms.Button();
-            this.buttonDelete = new System.Windows.Forms.Button();
-            this.buttonUpdate = new System.Windows.Forms.Button();
-            this.buttonAdd = new System.Windows.Forms.Button();
+            this.btnDSach = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHoSo)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.comboBoxLuong);
-            this.groupBox1.Controls.Add(this.textBoxChucVu);
+            this.groupBox1.Controls.Add(this.cbbLuong);
+            this.groupBox1.Controls.Add(this.txtChucVu);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.comboBoxMaPB);
+            this.groupBox1.Controls.Add(this.dtpNgayKyHD);
+            this.groupBox1.Controls.Add(this.dtpNgayHH);
+            this.groupBox1.Controls.Add(this.cbbMaPB);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBoxHoNV);
-            this.groupBox1.Controls.Add(this.textBoxTenNV);
+            this.groupBox1.Controls.Add(this.txtHoNV);
+            this.groupBox1.Controls.Add(this.txtTenNV);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.comboBoxMaNV);
+            this.groupBox1.Controls.Add(this.cbbMaNV);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("UVN Ai Cap Nang", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -86,21 +86,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hồ sơ nhân viên";
             // 
-            // comboBoxLuong
+            // cbbLuong
             // 
-            this.comboBoxLuong.FormattingEnabled = true;
-            this.comboBoxLuong.Location = new System.Drawing.Point(455, 115);
-            this.comboBoxLuong.Name = "comboBoxLuong";
-            this.comboBoxLuong.Size = new System.Drawing.Size(174, 23);
-            this.comboBoxLuong.TabIndex = 48;
+            this.cbbLuong.FormattingEnabled = true;
+            this.cbbLuong.Location = new System.Drawing.Point(455, 115);
+            this.cbbLuong.Name = "cbbLuong";
+            this.cbbLuong.Size = new System.Drawing.Size(174, 23);
+            this.cbbLuong.TabIndex = 48;
             // 
-            // textBoxChucVu
+            // txtChucVu
             // 
-            this.textBoxChucVu.Location = new System.Drawing.Point(455, 85);
-            this.textBoxChucVu.Multiline = true;
-            this.textBoxChucVu.Name = "textBoxChucVu";
-            this.textBoxChucVu.Size = new System.Drawing.Size(174, 23);
-            this.textBoxChucVu.TabIndex = 47;
+            this.txtChucVu.Location = new System.Drawing.Point(455, 85);
+            this.txtChucVu.Multiline = true;
+            this.txtChucVu.Name = "txtChucVu";
+            this.txtChucVu.Size = new System.Drawing.Size(174, 23);
+            this.txtChucVu.TabIndex = 47;
             // 
             // label10
             // 
@@ -130,28 +130,30 @@
             this.label6.TabIndex = 44;
             this.label6.Text = "Chức vụ";
             // 
-            // dateTimePicker2
+            // dtpNgayKyHD
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(455, 25);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(174, 23);
-            this.dateTimePicker2.TabIndex = 41;
+            this.dtpNgayKyHD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgayKyHD.Location = new System.Drawing.Point(455, 25);
+            this.dtpNgayKyHD.Name = "dtpNgayKyHD";
+            this.dtpNgayKyHD.Size = new System.Drawing.Size(174, 23);
+            this.dtpNgayKyHD.TabIndex = 41;
             // 
-            // dateTimePicker1
+            // dtpNgayHH
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(455, 55);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(174, 23);
-            this.dateTimePicker1.TabIndex = 40;
+            this.dtpNgayHH.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgayHH.Location = new System.Drawing.Point(455, 55);
+            this.dtpNgayHH.Name = "dtpNgayHH";
+            this.dtpNgayHH.Size = new System.Drawing.Size(174, 23);
+            this.dtpNgayHH.TabIndex = 40;
             // 
-            // comboBoxMaPB
+            // cbbMaPB
             // 
-            this.comboBoxMaPB.FormattingEnabled = true;
-            this.comboBoxMaPB.Location = new System.Drawing.Point(78, 115);
-            this.comboBoxMaPB.Name = "comboBoxMaPB";
-            this.comboBoxMaPB.Size = new System.Drawing.Size(174, 23);
-            this.comboBoxMaPB.TabIndex = 39;
-            this.comboBoxMaPB.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaPB_SelectedIndexChanged);
+            this.cbbMaPB.FormattingEnabled = true;
+            this.cbbMaPB.Location = new System.Drawing.Point(78, 115);
+            this.cbbMaPB.Name = "cbbMaPB";
+            this.cbbMaPB.Size = new System.Drawing.Size(174, 23);
+            this.cbbMaPB.TabIndex = 39;
+            this.cbbMaPB.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaPB_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -163,21 +165,21 @@
             this.label7.Text = "Ngày Ký HĐ";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // textBoxHoNV
+            // txtHoNV
             // 
-            this.textBoxHoNV.Location = new System.Drawing.Point(78, 85);
-            this.textBoxHoNV.Multiline = true;
-            this.textBoxHoNV.Name = "textBoxHoNV";
-            this.textBoxHoNV.Size = new System.Drawing.Size(174, 23);
-            this.textBoxHoNV.TabIndex = 15;
+            this.txtHoNV.Location = new System.Drawing.Point(78, 85);
+            this.txtHoNV.Multiline = true;
+            this.txtHoNV.Name = "txtHoNV";
+            this.txtHoNV.Size = new System.Drawing.Size(174, 23);
+            this.txtHoNV.TabIndex = 15;
             // 
-            // textBoxTenNV
+            // txtTenNV
             // 
-            this.textBoxTenNV.Location = new System.Drawing.Point(78, 55);
-            this.textBoxTenNV.Multiline = true;
-            this.textBoxTenNV.Name = "textBoxTenNV";
-            this.textBoxTenNV.Size = new System.Drawing.Size(174, 23);
-            this.textBoxTenNV.TabIndex = 14;
+            this.txtTenNV.Location = new System.Drawing.Point(78, 55);
+            this.txtTenNV.Multiline = true;
+            this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.Size = new System.Drawing.Size(174, 23);
+            this.txtTenNV.TabIndex = 14;
             // 
             // label3
             // 
@@ -197,14 +199,14 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Tên NV";
             // 
-            // comboBoxMaNV
+            // cbbMaNV
             // 
-            this.comboBoxMaNV.FormattingEnabled = true;
-            this.comboBoxMaNV.Location = new System.Drawing.Point(78, 25);
-            this.comboBoxMaNV.Name = "comboBoxMaNV";
-            this.comboBoxMaNV.Size = new System.Drawing.Size(174, 23);
-            this.comboBoxMaNV.TabIndex = 4;
-            this.comboBoxMaNV.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaNV_SelectedIndexChanged);
+            this.cbbMaNV.FormattingEnabled = true;
+            this.cbbMaNV.Location = new System.Drawing.Point(78, 25);
+            this.cbbMaNV.Name = "cbbMaNV";
+            this.cbbMaNV.Size = new System.Drawing.Size(174, 23);
+            this.cbbMaNV.TabIndex = 4;
+            this.cbbMaNV.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaNV_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -240,98 +242,98 @@
             this.label9.TabIndex = 27;
             this.label9.Text = "Ngày vào làm";
             // 
-            // dataGridView
+            // dgvHoSo
             // 
-            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(25, 174);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(655, 141);
-            this.dataGridView.TabIndex = 7;
-            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
+            this.dgvHoSo.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvHoSo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHoSo.Location = new System.Drawing.Point(25, 174);
+            this.dgvHoSo.Name = "dgvHoSo";
+            this.dgvHoSo.Size = new System.Drawing.Size(655, 141);
+            this.dgvHoSo.TabIndex = 7;
+            this.dgvHoSo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.buttonDSach);
-            this.groupBox2.Controls.Add(this.buttonNew);
-            this.groupBox2.Controls.Add(this.buttonDelete);
-            this.groupBox2.Controls.Add(this.buttonUpdate);
-            this.groupBox2.Controls.Add(this.buttonAdd);
+            this.groupBox2.Controls.Add(this.btnDSach);
+            this.groupBox2.Controls.Add(this.btnNew);
+            this.groupBox2.Controls.Add(this.btnDelete);
+            this.groupBox2.Controls.Add(this.btnUpdate);
+            this.groupBox2.Controls.Add(this.btnAdd);
             this.groupBox2.Location = new System.Drawing.Point(25, 321);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(655, 68);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             // 
-            // buttonDSach
+            // btnDSach
             // 
-            this.buttonDSach.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonDSach.Image = global::QuanLyNhanSu.Properties.Resources.button7_Image;
-            this.buttonDSach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDSach.Location = new System.Drawing.Point(505, 18);
-            this.buttonDSach.Name = "buttonDSach";
-            this.buttonDSach.Size = new System.Drawing.Size(70, 35);
-            this.buttonDSach.TabIndex = 9;
-            this.buttonDSach.Text = "DS";
-            this.buttonDSach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonDSach.UseVisualStyleBackColor = true;
-            this.buttonDSach.Click += new System.EventHandler(this.buttonDSach_Click);
+            this.btnDSach.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnDSach.Image = global::QuanLyNhanSu.Properties.Resources.button7_Image;
+            this.btnDSach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDSach.Location = new System.Drawing.Point(505, 18);
+            this.btnDSach.Name = "btnDSach";
+            this.btnDSach.Size = new System.Drawing.Size(70, 35);
+            this.btnDSach.TabIndex = 9;
+            this.btnDSach.Text = "DS";
+            this.btnDSach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDSach.UseVisualStyleBackColor = true;
+            this.btnDSach.Click += new System.EventHandler(this.buttonDSach_Click);
             // 
-            // buttonNew
+            // btnNew
             // 
-            this.buttonNew.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonNew.Image = global::QuanLyNhanSu.Properties.Resources.button5_Image;
-            this.buttonNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNew.Location = new System.Drawing.Point(65, 18);
-            this.buttonNew.Name = "buttonNew";
-            this.buttonNew.Size = new System.Drawing.Size(70, 35);
-            this.buttonNew.TabIndex = 6;
-            this.buttonNew.Text = "Mới";
-            this.buttonNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonNew.UseVisualStyleBackColor = true;
-            this.buttonNew.Click += new System.EventHandler(this.buttonNew_Click);
+            this.btnNew.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnNew.Image = global::QuanLyNhanSu.Properties.Resources.button5_Image;
+            this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNew.Location = new System.Drawing.Point(65, 18);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(70, 35);
+            this.btnNew.TabIndex = 6;
+            this.btnNew.Text = "Mới";
+            this.btnNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.buttonNew_Click);
             // 
-            // buttonDelete
+            // btnDelete
             // 
-            this.buttonDelete.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonDelete.Image = global::QuanLyNhanSu.Properties.Resources.remove_user;
-            this.buttonDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDelete.Location = new System.Drawing.Point(395, 18);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(70, 35);
-            this.buttonDelete.TabIndex = 4;
-            this.buttonDelete.Text = "Xóa";
-            this.buttonDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonDelete.UseVisualStyleBackColor = true;
-            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnDelete.Image = global::QuanLyNhanSu.Properties.Resources.remove_user;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(395, 18);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(70, 35);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
-            // buttonUpdate
+            // btnUpdate
             // 
-            this.buttonUpdate.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonUpdate.Image = global::QuanLyNhanSu.Properties.Resources.edit_user;
-            this.buttonUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUpdate.Location = new System.Drawing.Point(285, 18);
-            this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(70, 35);
-            this.buttonUpdate.TabIndex = 3;
-            this.buttonUpdate.Text = "Sửa";
-            this.buttonUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonUpdate.UseVisualStyleBackColor = true;
-            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
+            this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnUpdate.Image = global::QuanLyNhanSu.Properties.Resources.edit_user;
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.Location = new System.Drawing.Point(285, 18);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(70, 35);
+            this.btnUpdate.TabIndex = 3;
+            this.btnUpdate.Text = "Sửa";
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
-            // buttonAdd
+            // btnAdd
             // 
-            this.buttonAdd.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonAdd.Image = global::QuanLyNhanSu.Properties.Resources.add_user;
-            this.buttonAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAdd.Location = new System.Drawing.Point(175, 18);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(70, 35);
-            this.buttonAdd.TabIndex = 2;
-            this.buttonAdd.Text = "Thêm";
-            this.buttonAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnAdd.Image = global::QuanLyNhanSu.Properties.Resources.add_user;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(175, 18);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(70, 35);
+            this.btnAdd.TabIndex = 2;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // FormHoSoNV
             // 
@@ -339,7 +341,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 401);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.dgvHoSo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dateTimePicker3);
@@ -349,7 +351,7 @@
             this.Load += new System.EventHandler(this.FormHoSoNV_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHoSo)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -361,28 +363,28 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBoxHoNV;
-        private System.Windows.Forms.TextBox textBoxTenNV;
+        private System.Windows.Forms.TextBox txtHoNV;
+        private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBoxMaNV;
+        private System.Windows.Forms.ComboBox cbbMaNV;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.DataGridView dgvHoSo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBoxMaPB;
+        private System.Windows.Forms.DateTimePicker dtpNgayKyHD;
+        private System.Windows.Forms.DateTimePicker dtpNgayHH;
+        private System.Windows.Forms.ComboBox cbbMaPB;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button buttonNew;
-        private System.Windows.Forms.Button buttonDelete;
-        private System.Windows.Forms.Button buttonUpdate;
-        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBoxChucVu;
-        private System.Windows.Forms.ComboBox comboBoxLuong;
-        private System.Windows.Forms.Button buttonDSach;
+        private System.Windows.Forms.TextBox txtChucVu;
+        private System.Windows.Forms.ComboBox cbbLuong;
+        private System.Windows.Forms.Button btnDSach;
     }
 }
