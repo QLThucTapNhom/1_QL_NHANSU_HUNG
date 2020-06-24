@@ -25,6 +25,8 @@ namespace QuanLyNhanSu
         {
             dataGridViewTS.AllowUserToResizeColumns = true;
             dataGridViewBH.AllowUserToResizeColumns = true;
+            db.loadDataGridView(dataGridViewTS, "SELECT * FROM dbo.CDThaiSan");
+            db.loadDataGridView(dataGridViewBH, "SELECT * FROM dbo.CDBaoHiemXaHoi");
             db.loadComboBox(comboBoxMaNV1, "SELECT MaNV FROM dbo.HoSoNV");
             db.loadComboBox(comboBoxMaNV2, "SELECT HS.MaNV FROM dbo.HoSoNV HS, dbo.TTNhanVienCoBan TT WHERE HS.MaNV = TT.MaNV AND TT.GioiTinh = N'Nữ'");
 
@@ -57,7 +59,9 @@ namespace QuanLyNhanSu
             string HoTenNV = ho + " " + ten;
             textBoxTenNV1.Text = HoTenNV;
 
-            db.loadDataGridView(dataGridViewBH, "SELECT * FROM dbo.CDBaoHiemXaHoi WHERE MaNV=N'" + MaNV + "'");
+            //db.loadTextBox(textBoxGhiChu1, "SELECT GhiChu FROM dbo.HoSoNV WHERE MaNV=N'" + MaNV + "'");
+
+            //db.loadDataGridView(dataGridViewBH, "SELECT * FROM dbo.CDBaoHiemXaHoi WHERE MaNV=N'" + MaNV + "'");
 
             try
             {
@@ -94,7 +98,7 @@ namespace QuanLyNhanSu
                                 + "  VALUES  ( N'" + MaNV + "' , N'" + HoTenNV + "' , N'" + MaLuong + "' ,  N'" + MaBHXH + "' ,  '" + NgayCap + "' , N'" + GhiChu + "')";
                             db.ThucThiKetNoi(insert);
                             MessageBox.Show("Thêm sổ BHXH cho NV: " + HoTenNV + " hoàn tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            db.loadDataGridView(dataGridViewBH, "SELECT * FROM dbo.CDBaoHiemXaHoi WHERE MaNV=N'" + MaNV + "'");
+                            db.loadDataGridView(dataGridViewBH, "SELECT * FROM dbo.CDBaoHiemXaHoi");
                         }
                         else
                         {
@@ -138,10 +142,10 @@ namespace QuanLyNhanSu
                         if (check2 == true)
                         {
 
-                            string update = "UPDATE dbo.CDBaoHiemXaHoi SET NgayCapSo='" + NgayCap + "' ,GhiChu = N'" + GhiChu + "' ";
+                            string update = "UPDATE dbo.CDBaoHiemXaHoi SET NgayCapSo='" + NgayCap + "' ,GhiChu = N'" + GhiChu + "' WHERE MaNV='"+ MaNV+"'";
                             db.ThucThiKetNoi(update);
                             MessageBox.Show("Sửa sổ BHXH cho NV: " + HoTenNV + " hoàn tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            db.loadDataGridView(dataGridViewBH, "SELECT * FROM dbo.CDBaoHiemXaHoi WHERE MaNV=N'" + MaNV + "'");
+                            db.loadDataGridView(dataGridViewBH, "SELECT * FROM dbo.CDBaoHiemXaHoi");
                         }
                         else
                         {
@@ -183,6 +187,7 @@ namespace QuanLyNhanSu
 
                     //Load lại
                     dataGridViewBH.DataSource = "";
+                    db.loadDataGridView(dataGridViewBH, "SELECT * FROM dbo.CDBaoHiemXaHoi");
                 }
                 else
                 {
@@ -252,7 +257,7 @@ namespace QuanLyNhanSu
 
             db.loadComboBox_Show(comboBoxMaPB, "SELECT MaPB FROM dbo.HoSoNV WHERE MaNV=N'"+MaNV+"'");
 
-            db.loadDataGridView(dataGridViewTS, "SELECT * FROM dbo.CDThaiSan WHERE MaNV=N'" + MaNV + "'");
+            db.loadDataGridView(dataGridViewTS, "SELECT * FROM dbo.CDThaiSan");
 
         }
 
@@ -279,7 +284,7 @@ namespace QuanLyNhanSu
                             + "VALUES(N'" + MaNV + "', N'" + HoTenNV + "', N'" + MaPB + "', '" + NgayBD + "', '" + NgayTL + "', N'" + GhiChu + "')";
                             db.ThucThiKetNoi(insert);
                             MessageBox.Show("Hoàn tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            db.loadDataGridView(dataGridViewBH, "SELECT * FROM dbo.CDThaiSan WHERE MaNV=N'" + MaNV + "'");
+                            db.loadDataGridView(dataGridViewTS, "SELECT * FROM dbo.CDThaiSan");
                         }
                         else
                         {
@@ -327,7 +332,7 @@ namespace QuanLyNhanSu
                         + "NgayBDNghi= '" + NgayBD + "',NgayTroLai= '" + NgayTL + "',GhiChu= N'" + GhiChu + "' WHERE MaNV =N'" + MaNV + "'";
                         db.ThucThiKetNoi(update);
                         MessageBox.Show("Sửa hoàn tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        db.loadDataGridView(dataGridViewBH, "SELECT * FROM dbo.CDThaiSan WHERE MaNV=N'" + MaNV + "'");
+                        db.loadDataGridView(dataGridViewTS, "SELECT * FROM dbo.CDThaiSan");
 
 
                     }
@@ -364,6 +369,7 @@ namespace QuanLyNhanSu
                     db.ThucThiKetNoi(update);
                     MessageBox.Show("Xóa hoàn tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dataGridViewTS.DataSource = "";
+                    db.loadDataGridView(dataGridViewTS, "SELECT * FROM dbo.CDThaiSan");
 
 
                 }

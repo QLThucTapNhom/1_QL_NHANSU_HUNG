@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBoxShow = new System.Windows.Forms.CheckBox();
             this.textBoxConfirm = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBoxShow = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -70,6 +70,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sign up for an account";
             // 
+            // checkBoxShow
+            // 
+            this.checkBoxShow.AutoSize = true;
+            this.checkBoxShow.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.checkBoxShow.Location = new System.Drawing.Point(346, 205);
+            this.checkBoxShow.Name = "checkBoxShow";
+            this.checkBoxShow.Size = new System.Drawing.Size(52, 19);
+            this.checkBoxShow.TabIndex = 3;
+            this.checkBoxShow.Text = "Hiện";
+            this.checkBoxShow.UseVisualStyleBackColor = true;
+            this.checkBoxShow.CheckedChanged += new System.EventHandler(this.checkBoxShow_CheckedChanged);
+            // 
             // textBoxConfirm
             // 
             this.textBoxConfirm.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -88,9 +100,9 @@
             this.label5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.Location = new System.Drawing.Point(14, 177);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 15);
+            this.label5.Size = new System.Drawing.Size(45, 15);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Email/SĐT";
+            this.label5.Text = "Mã NV";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label3
@@ -257,18 +269,6 @@
             this.label1.Size = new System.Drawing.Size(336, 49);
             this.label1.TabIndex = 0;
             this.label1.Text = "Hệ Thống Quản Lý Nhân Sự";
-            // 
-            // checkBoxShow
-            // 
-            this.checkBoxShow.AutoSize = true;
-            this.checkBoxShow.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.checkBoxShow.Location = new System.Drawing.Point(346, 205);
-            this.checkBoxShow.Name = "checkBoxShow";
-            this.checkBoxShow.Size = new System.Drawing.Size(52, 19);
-            this.checkBoxShow.TabIndex = 3;
-            this.checkBoxShow.Text = "Hiện";
-            this.checkBoxShow.UseVisualStyleBackColor = true;
-            this.checkBoxShow.CheckedChanged += new System.EventHandler(this.checkBoxShow_CheckedChanged);
             // 
             // FormDangKy2
             // 

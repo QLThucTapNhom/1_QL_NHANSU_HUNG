@@ -49,11 +49,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.buttonDSach = new System.Windows.Forms.Button();
             this.buttonNew = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonDSach = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -248,6 +248,7 @@
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.Size = new System.Drawing.Size(655, 141);
             this.dataGridView.TabIndex = 7;
+            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             // 
             // groupBox2
             // 
@@ -261,6 +262,20 @@
             this.groupBox2.Size = new System.Drawing.Size(655, 68);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
+            // 
+            // buttonDSach
+            // 
+            this.buttonDSach.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.buttonDSach.Image = global::QuanLyNhanSu.Properties.Resources.button7_Image;
+            this.buttonDSach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDSach.Location = new System.Drawing.Point(505, 18);
+            this.buttonDSach.Name = "buttonDSach";
+            this.buttonDSach.Size = new System.Drawing.Size(70, 35);
+            this.buttonDSach.TabIndex = 9;
+            this.buttonDSach.Text = "DS";
+            this.buttonDSach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonDSach.UseVisualStyleBackColor = true;
+            this.buttonDSach.Click += new System.EventHandler(this.buttonDSach_Click);
             // 
             // buttonNew
             // 
@@ -317,20 +332,6 @@
             this.buttonAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
-            // 
-            // buttonDSach
-            // 
-            this.buttonDSach.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonDSach.Image = global::QuanLyNhanSu.Properties.Resources.button7_Image;
-            this.buttonDSach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDSach.Location = new System.Drawing.Point(505, 18);
-            this.buttonDSach.Name = "buttonDSach";
-            this.buttonDSach.Size = new System.Drawing.Size(70, 35);
-            this.buttonDSach.TabIndex = 9;
-            this.buttonDSach.Text = "DS";
-            this.buttonDSach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonDSach.UseVisualStyleBackColor = true;
-            this.buttonDSach.Click += new System.EventHandler(this.buttonDSach_Click);
             // 
             // FormHoSoNV
             // 

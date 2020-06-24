@@ -34,6 +34,7 @@ namespace QuanLyNhanSu
             database.loadComboBox(comboBoxMaPB, "SELECT MaPB FROM dbo.PhongBan");
             database.loadComboBox(comboBoxLuong, "SELECT MaLuong FROM dbo.Luong");
             database.loadComboBox(comboBoxMaNV, "SELECT MaNV FROM dbo.HoSoNV");
+            database.loadDataGridView(dataGridView, "SELECT * FROM dbo.HoSoNV");
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -90,7 +91,7 @@ namespace QuanLyNhanSu
                         //load lại combobox Mã NV
                         comboBoxMaNV.Items.Clear();
                         database.loadComboBox(comboBoxMaNV, "SELECT MaNV FROM dbo.HoSoNV");
-                        string query = "SELECT * FROM dbo.HoSoNV WHERE MaNV='" + MaNV + "'";
+                        string query = "SELECT * FROM dbo.HoSoNV ";
                         database.loadDataGridView(dataGridView, query);
                     }
                     else
@@ -139,7 +140,7 @@ namespace QuanLyNhanSu
                         database.ThucThiKetNoi(update);
                         MessageBox.Show("Hoàn Tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                        string query = "SELECT * FROM dbo.HoSoNV WHERE MaNV='" + MaNV + "'";
+                        string query = "SELECT * FROM dbo.HoSoNV ";
                         database.loadDataGridView(dataGridView, query);
                     }
                     else
@@ -175,6 +176,8 @@ namespace QuanLyNhanSu
                     //load lại combobox Mã NV
                     comboBoxMaNV.Items.Clear();
                     database.loadComboBox(comboBoxMaNV, "SELECT MaNV FROM dbo.HoSoNV");
+                    string query = "SELECT * FROM dbo.HoSoNV ";
+                    database.loadDataGridView(dataGridView, query);
                 }
                 else
                 {
@@ -191,6 +194,11 @@ namespace QuanLyNhanSu
         private void buttonDSach_Click(object sender, EventArgs e)
         {
             database.loadDataGridView(dataGridView, "select * from dbo.hosonv");
+        }
+
+        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }

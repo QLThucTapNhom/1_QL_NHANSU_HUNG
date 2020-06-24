@@ -21,6 +21,7 @@ namespace QuanLyNhanSu
         private void FormBacLuong_Load(object sender, EventArgs e)
         {
             db.loadComboBox(comboBoxBacLuong, "SELECT MaLuong FROM dbo.Luong");
+            db.loadDataGridView(dataGridView1, "SELECT * FROM dbo.Luong");
         }
 
         private void comboBoxBacLuong_SelectedIndexChanged(object sender, EventArgs e)
@@ -54,7 +55,7 @@ namespace QuanLyNhanSu
                         string insert = "INSERT INTO dbo.Luong VALUES  ( N'" + MaLuong + "', N'" + LuongCB + "', N'" + HSLuong + "', N'" + HSPhuCap + "')";
                         db.ThucThiKetNoi(insert);
                         MessageBox.Show("Thêm Bậc Lương Thành Công!");
-                        db.loadDataGridView(dataGridView1, "SELECT * FROM dbo.Luong WHERE MaLuong='" + MaLuong + "'");
+                        db.loadDataGridView(dataGridView1, "SELECT * FROM dbo.Luong");
                         comboBoxBacLuong.Items.Clear();
                         db.loadComboBox(comboBoxBacLuong, "SELECT MaLuong FROM dbo.Luong");
                     }
@@ -93,7 +94,7 @@ namespace QuanLyNhanSu
                             + "', HSPhuCap=N'" + HSPhuCap + "'";
                         db.ThucThiKetNoi(update);
                         MessageBox.Show("Sửa Lương Thành Công!");
-                        db.loadDataGridView(dataGridView1, "SELECT * FROM dbo.Luong WHERE MaLuong='" + MaLuong + "'");
+                        db.loadDataGridView(dataGridView1, "SELECT * FROM dbo.Luong");
                     }
                     else
                     {
@@ -128,6 +129,7 @@ namespace QuanLyNhanSu
                     dataGridView1.DataSource = "";
                     comboBoxBacLuong.Items.Clear();
                     db.loadComboBox(comboBoxBacLuong, "SELECT MaLuong FROM dbo.Luong");
+                    db.loadDataGridView(dataGridView1, "SELECT * FROM dbo.Luong");
 
 
                 }

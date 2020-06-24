@@ -40,6 +40,7 @@ namespace QuanLyNhanSu
         {
             db.loadComboBox(comboBoxMaPB, "SELECT MaPB FROM dbo.PhongBan");
             db.loadComboBox(comboBoxMaTruongPhong, "SELECT MaNV FROM dbo.HoSoNV");
+            db.loadDataGridView(dataGridView, "SELECT * FROM dbo.PhongBan");
 
         }
 
@@ -77,7 +78,7 @@ namespace QuanLyNhanSu
                         db.ThucThiKetNoi(updtruongphongpb);
 
                         MessageBox.Show("Hoàn Tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        db.loadDataGridView(dataGridView, "SELECT * FROM dbo.PhongBan WHERE MaPB='" + MaPB + "'");
+                        db.loadDataGridView(dataGridView, "SELECT * FROM dbo.PhongBan");
                     }
                     else
                     {
@@ -118,7 +119,7 @@ namespace QuanLyNhanSu
                             + "' , DiaChiPB= N'" + DiaChiPB + "' ,GhiChu= N'" + GhiChu + "' ,MaTruongPhong = N'" + MaTruongPhong + "' WHERE MaPB=N'" + MaPB + "'";
                         db.ThucThiKetNoi(update);
                         MessageBox.Show("Hoàn Tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        db.loadDataGridView(dataGridView, "SELECT * FROM dbo.PhongBan WHERE MaPB='" + MaPB + "'");
+                        db.loadDataGridView(dataGridView, "SELECT * FROM dbo.PhongBan");
                     }
                     else
                     {
@@ -157,6 +158,7 @@ namespace QuanLyNhanSu
                     dataGridView.DataSource = "";
                     comboBoxMaPB.Items.Clear();
                     db.loadComboBox(comboBoxMaPB, "SELECT MaPB FROM dbo.PhongBan");
+                    db.loadDataGridView(dataGridView, "SELECT * FROM dbo.PhongBan");
 
 
                 }

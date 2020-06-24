@@ -20,6 +20,7 @@ namespace QuanLyNhanSu
         private void FormTTCaNhan_Load(object sender, EventArgs e)
         {
             database.loadComboBox(comboBoxMaNV, "SELECT MaNV FROM dbo.HoSoNV");
+            database.loadDataGridView(dataGridView1, "SELECT * FROM dbo.TTNhanVienCoBan");
         }
         private void label16_Click(object sender, EventArgs e)
         {
@@ -104,7 +105,7 @@ namespace QuanLyNhanSu
                         MessageBox.Show("Hoàn Tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         //load lại dataGridView1
                         dataGridView1.DataSource = "";
-                        string query = "SELECT * FROM dbo.TTNhanVienCoBan WHERE MaNV='" + MaNV + "'";
+                        string query = "SELECT * FROM dbo.TTNhanVienCoBan";
                         database.loadDataGridView(dataGridView1, query);
                     }
                     else
@@ -154,7 +155,7 @@ namespace QuanLyNhanSu
                         MessageBox.Show("Hoàn Tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         //load lại dataGridView1
                         dataGridView1.DataSource = "";
-                        string query = "SELECT * FROM dbo.TTNhanVienCoBan WHERE MaNV='" + MaNV + "'";
+                        string query = "SELECT * FROM dbo.TTNhanVienCoBan";
                         database.loadDataGridView(dataGridView1, query);
                     }
                     else
@@ -191,6 +192,8 @@ namespace QuanLyNhanSu
                     MessageBox.Show("Hoàn Tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     //load lại dataGridView1
                     dataGridView1.DataSource = "";
+                    string query = "SELECT * FROM dbo.TTNhanVienCoBan";
+                    database.loadDataGridView(dataGridView1, query);
                 }
                 else
                 {
