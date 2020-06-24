@@ -48,25 +48,43 @@ namespace QuanLyNhanSu.UI
             string username = textBoxUsername.Text.TrimEnd();
             string pass = textBoxPassword.Text.Trim();
             string confirm = textBoxConfirm.Text.TrimEnd();
-            string email = textBoxEmail.Text.Trim();
+            string maNV = textBoxEmail.Text.Trim();
 
             bool check = database.Check(username, "SELECT Username FROM dbo.TaiKhoan");
+            bool checkNV = database.Check(maNV, "SELECT MaNV FROM dbo.HoSoNV");
+            bool checkTK = database.Check(maNV, "SELECT SDT_Email FROM dbo.TaiKhoan");
 
-            if(username.Length!=0 && pass.Length!=0 && confirm.Length!=0 && email.Length != 0)
+            if (username.Length!=0 && pass.Length!=0 && confirm.Length!=0 && maNV.Length != 0)
             {
                 if (check == false)
                 {
                     if (confirm == pass)
                     {
-                        string insert = "INSERT INTO dbo.TaiKhoan VALUES  ( '" + username + "' ,'" + pass + "' ,N'" + email + "' ,1)";
-                        database.ThucThiKetNoi(insert);
-                        DialogResult result;
-                        result = MessageBox.Show("Bạn muốn đăng nhập ngay không?", "Đăng Ký Thành Công", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (result == System.Windows.Forms.DialogResult.Yes)
+                        
+                        if (checkNV == true)
                         {
-                            FormLOGIN lg = new FormLOGIN();
-                            lg.Show();
-                            this.Hide();
+                            if (checkTK == false)
+                            {
+                                string insert = "INSERT INTO dbo.TaiKhoan VALUES  ( '" + username + "' ,'" + pass + "' ,N'" + maNV + "' ,1)";
+                                database.ThucThiKetNoi(insert);
+                                DialogResult result;
+                                result = MessageBox.Show("Bạn muốn đăng nhập ngay không?", "Đăng Ký Thành Công", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                if (result == System.Windows.Forms.DialogResult.Yes)
+                                {
+                                    FormLOGIN lg = new FormLOGIN();
+                                    lg.Show();
+                                    this.Hide();
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Bạn "+maNV+" đã được cấp tài khoản, không thể đăng ký!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                            }
+                            
+                        }
+                        else
+                        {
+                            MessageBox.Show("Bạn chưa được xác nhận là nhân viên của chúng tôi!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                         }
                        
                     }

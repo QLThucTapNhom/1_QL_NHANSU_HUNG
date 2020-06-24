@@ -20,32 +20,33 @@ namespace QuanLyNhanSu
 
         private void FormBacLuong_Load(object sender, EventArgs e)
         {
-            db.loadComboBox(comboBoxBacLuong, "SELECT MaLuong FROM dbo.Luong");
+            db.loadComboBox(cbbBacLuong, "SELECT MaLuong FROM dbo.Luong");
+            db.loadDataGridView(dgvBacLuong, "SELECT * FROM dbo.Luong");
         }
 
         private void comboBoxBacLuong_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string MaLuong = comboBoxBacLuong.Text.TrimEnd();
-            db.loadDataGridView(dataGridView1, "SELECT * FROM dbo.Luong WHERE MaLuong='" + MaLuong + "'");
+            //string MaLuong = comboBoxBacLuong.Text.TrimEnd();
+            //db.loadDataGridView(dataGridView1, "SELECT * FROM dbo.Luong WHERE MaLuong='" + MaLuong + "'");
         }
 
         private void buttonNew_Click(object sender, EventArgs e)
         {
-            comboBoxBacLuong.Text = "";
-            textBoxLuongCB.Text = "";
-            textBoxHSLuong.Text = "";
-            textBoxHSPhuCap.Text = "";
-            dataGridView1.DataSource = "";
+            cbbBacLuong.Text = "";
+            txtLuongCB.Text = "";
+            txtHSLuong.Text = "";
+            txtHSPhuCap.Text = "";
+            dgvBacLuong.DataSource = "";
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             try
             {
-                string MaLuong = comboBoxBacLuong.Text.Trim();
-                string LuongCB = textBoxLuongCB.Text.Trim();
-                string HSLuong = textBoxHSLuong.Text.Trim();
-                string HSPhuCap = textBoxHSPhuCap.Text.Trim();
+                string MaLuong = cbbBacLuong.Text.Trim();
+                string LuongCB = txtLuongCB.Text.Trim();
+                string HSLuong = txtHSLuong.Text.Trim();
+                string HSPhuCap = txtHSPhuCap.Text.Trim();
                 if (MaLuong.Length != 0 && LuongCB.Length != 0 && HSLuong.Length != 0 && HSPhuCap.Length != 0)
                 {
                     bool check = db.Check(MaLuong, "SELECT MaLuong FROM dbo.Luong");
@@ -54,9 +55,9 @@ namespace QuanLyNhanSu
                         string insert = "INSERT INTO dbo.Luong VALUES  ( N'" + MaLuong + "', N'" + LuongCB + "', N'" + HSLuong + "', N'" + HSPhuCap + "')";
                         db.ThucThiKetNoi(insert);
                         MessageBox.Show("Thêm Bậc Lương Thành Công!");
-                        db.loadDataGridView(dataGridView1, "SELECT * FROM dbo.Luong WHERE MaLuong='" + MaLuong + "'");
-                        comboBoxBacLuong.Items.Clear();
-                        db.loadComboBox(comboBoxBacLuong, "SELECT MaLuong FROM dbo.Luong");
+                        db.loadDataGridView(dgvBacLuong, "SELECT * FROM dbo.Luong");
+                        cbbBacLuong.Items.Clear();
+                        db.loadComboBox(cbbBacLuong, "SELECT MaLuong FROM dbo.Luong");
                     }
                     else
                     {
@@ -80,10 +81,10 @@ namespace QuanLyNhanSu
         {
             try
             {
-                string MaLuong = comboBoxBacLuong.Text.Trim();
-                string LuongCB = textBoxLuongCB.Text.Trim();
-                string HSLuong = textBoxHSLuong.Text.Trim();
-                string HSPhuCap = textBoxHSPhuCap.Text.Trim();
+                string MaLuong = cbbBacLuong.Text.Trim();
+                string LuongCB = txtLuongCB.Text.Trim();
+                string HSLuong = txtHSLuong.Text.Trim();
+                string HSPhuCap = txtHSPhuCap.Text.Trim();
                 if (MaLuong.Length != 0 && LuongCB.Length != 0 && HSLuong.Length != 0 && HSPhuCap.Length != 0)
                 {
                     bool check = db.Check(MaLuong, "SELECT MaLuong FROM dbo.Luong");
@@ -93,7 +94,7 @@ namespace QuanLyNhanSu
                             + "', HSPhuCap=N'" + HSPhuCap + "'";
                         db.ThucThiKetNoi(update);
                         MessageBox.Show("Sửa Lương Thành Công!");
-                        db.loadDataGridView(dataGridView1, "SELECT * FROM dbo.Luong WHERE MaLuong='" + MaLuong + "'");
+                        db.loadDataGridView(dgvBacLuong, "SELECT * FROM dbo.Luong");
                     }
                     else
                     {
@@ -116,7 +117,7 @@ namespace QuanLyNhanSu
         {
             try
             {
-                string MaLuong = comboBoxBacLuong.Text.TrimEnd();
+                string MaLuong = cbbBacLuong.Text.TrimEnd();
                 bool check = db.Check(MaLuong, "SELECT MaLuong from dbo.Luong");
                 if (check == true)
                 {
@@ -125,9 +126,10 @@ namespace QuanLyNhanSu
                     db.ThucThiKetNoi(del);
                     MessageBox.Show("Xóa hoàn tất!");
                     //Tải lại datagridview và combobox Bậc lương
-                    dataGridView1.DataSource = "";
-                    comboBoxBacLuong.Items.Clear();
-                    db.loadComboBox(comboBoxBacLuong, "SELECT MaLuong FROM dbo.Luong");
+                    dgvBacLuong.DataSource = "";
+                    cbbBacLuong.Items.Clear();
+                    db.loadComboBox(cbbBacLuong, "SELECT MaLuong FROM dbo.Luong");
+                    db.loadDataGridView(dgvBacLuong, "SELECT * FROM dbo.Luong");
 
 
                 }
@@ -163,7 +165,18 @@ namespace QuanLyNhanSu
         private void buttonDSach_Click(object sender, EventArgs e)
         {
 
-            db.loadDataGridView(dataGridView1, "select * from dbo.luong");
+            db.loadDataGridView(dgvBacLuong, "select * from dbo.luong");
+        }
+
+        private void dgvBacLuong_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i;
+            i = dgvBacLuong.CurrentRow.Index;
+            cbbBacLuong.Text = dgvBacLuong.Rows[i].Cells[0].Value.ToString();
+            txtLuongCB.Text = dgvBacLuong.Rows[i].Cells[1].Value.ToString();
+            txtHSLuong.Text = dgvBacLuong.Rows[i].Cells[2].Value.ToString();
+            txtHSPhuCap.Text = dgvBacLuong.Rows[i].Cells[3].Value.ToString();
+         
         }
     }
 }

@@ -25,42 +25,43 @@ namespace QuanLyNhanSu
 
         private void buttonNew_Click(object sender, EventArgs e)
         {
-            comboBoxMaPB.Text = "";
-            textBoxChucNangPB.Text = "";
-            textBoxTenPB.Text = "";
-            textBoxChucNangPB.Text = "";
-            textBoxDCPhong.Text = "";
-            textBoxGhiChu.Text = "";
-            comboBoxMaTruongPhong.Text = "";
-            textBoxSDTPB.Text = "";
-            dataGridView.DataSource = "";
+            cbbMaPB.Text = "";
+            txtChucNangPB.Text = "";
+            txtTenPB.Text = "";
+            txtChucNangPB.Text = "";
+            txtDCPhong.Text = "";
+            txtGhiChu.Text = "";
+            cbbMaTruongPhong.Text = "";
+            txtSDTPB.Text = "";
+            dgvPhongBan.DataSource = "";
         }
 
         private void FormPhongBan_Load(object sender, EventArgs e)
         {
-            db.loadComboBox(comboBoxMaPB, "SELECT MaPB FROM dbo.PhongBan");
-            db.loadComboBox(comboBoxMaTruongPhong, "SELECT MaNV FROM dbo.HoSoNV");
+            db.loadComboBox(cbbMaPB, "SELECT MaPB FROM dbo.PhongBan");
+            db.loadComboBox(cbbMaTruongPhong, "SELECT MaNV FROM dbo.HoSoNV");
+            db.loadDataGridView(dgvPhongBan, "SELECT * FROM dbo.PhongBan");
 
         }
 
         private void comboBoxMaPB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string MaPB = comboBoxMaPB.SelectedItem.ToString();
-            db.loadDataGridView(dataGridView, "SELECT * FROM dbo.PhongBan WHERE MaPB=N'"+MaPB+"'");
+            //string MaPB = cbbMaPB.SelectedItem.ToString();
+            //db.loadDataGridView(dgvPhongBan, "SELECT * FROM dbo.PhongBan WHERE MaPB=N'"+MaPB+"'");
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             try
             {
-                string MaPB = comboBoxMaPB.Text.Trim();
-                string TenPB = textBoxTenPB.Text.Trim();
-                string ChucNang = textBoxChucNangPB.Text.Trim();
-                string NgayThanhLap = dateTimePickerNgayTL.Value.ToShortDateString();
-                string SDT_Fax = textBoxSDTPB.Text.Trim();
-                string DiaChiPB = textBoxDCPhong.Text.Trim();
-                string GhiChu = textBoxGhiChu.Text.Trim();
-                string MaTruongPhong = comboBoxMaTruongPhong.Text.Trim();
+                string MaPB = cbbMaPB.Text.Trim();
+                string TenPB = txtTenPB.Text.Trim();
+                string ChucNang = txtChucNangPB.Text.Trim();
+                string NgayThanhLap = dtpNgayTL.Value.ToShortDateString();
+                string SDT_Fax = txtSDTPB.Text.Trim();
+                string DiaChiPB = txtDCPhong.Text.Trim();
+                string GhiChu = txtGhiChu.Text.Trim();
+                string MaTruongPhong = cbbMaTruongPhong.Text.Trim();
                 if (MaPB.Length != 0 && TenPB.Length != 0 && ChucNang.Length != 0 && SDT_Fax.Length != 0 && DiaChiPB.Length != 0 && MaTruongPhong.Length != 0)
                 {
                     bool check = db.Check(MaPB, "SELECT MaPB FROM dbo.PhongBan");
@@ -77,7 +78,7 @@ namespace QuanLyNhanSu
                         db.ThucThiKetNoi(updtruongphongpb);
 
                         MessageBox.Show("Hoàn Tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        db.loadDataGridView(dataGridView, "SELECT * FROM dbo.PhongBan WHERE MaPB='" + MaPB + "'");
+                        db.loadDataGridView(dgvPhongBan, "SELECT * FROM dbo.PhongBan");
                     }
                     else
                     {
@@ -100,14 +101,14 @@ namespace QuanLyNhanSu
         {
             try
             {
-                string MaPB = comboBoxMaPB.Text.Trim();
-                string TenPB = textBoxTenPB.Text.Trim();
-                string ChucNang = textBoxChucNangPB.Text.Trim();
-                string NgayThanhLap = dateTimePickerNgayTL.Value.ToShortDateString();
-                string SDT_Fax = textBoxSDTPB.Text.Trim();
-                string DiaChiPB = textBoxDCPhong.Text.Trim();
-                string GhiChu = textBoxGhiChu.Text.Trim();
-                string MaTruongPhong = comboBoxMaTruongPhong.Text.Trim();
+                string MaPB = cbbMaPB.Text.Trim();
+                string TenPB = txtTenPB.Text.Trim();
+                string ChucNang = txtChucNangPB.Text.Trim();
+                string NgayThanhLap = dtpNgayTL.Value.ToShortDateString();
+                string SDT_Fax = txtSDTPB.Text.Trim();
+                string DiaChiPB = txtDCPhong.Text.Trim();
+                string GhiChu = txtGhiChu.Text.Trim();
+                string MaTruongPhong = cbbMaTruongPhong.Text.Trim();
                 if (MaPB.Length != 0 && TenPB.Length != 0 && ChucNang.Length != 0 && SDT_Fax.Length != 0 && DiaChiPB.Length != 0 && MaTruongPhong.Length != 0)
                 {
                     bool check = db.Check(MaPB, "SELECT MaPB FROM dbo.PhongBan");
@@ -118,7 +119,7 @@ namespace QuanLyNhanSu
                             + "' , DiaChiPB= N'" + DiaChiPB + "' ,GhiChu= N'" + GhiChu + "' ,MaTruongPhong = N'" + MaTruongPhong + "' WHERE MaPB=N'" + MaPB + "'";
                         db.ThucThiKetNoi(update);
                         MessageBox.Show("Hoàn Tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        db.loadDataGridView(dataGridView, "SELECT * FROM dbo.PhongBan WHERE MaPB='" + MaPB + "'");
+                        db.loadDataGridView(dgvPhongBan, "SELECT * FROM dbo.PhongBan");
                     }
                     else
                     {
@@ -141,7 +142,7 @@ namespace QuanLyNhanSu
         {
             try
             {
-                string MaPB = comboBoxMaPB.Text.Trim();
+                string MaPB = cbbMaPB.Text.Trim();
                 bool check = db.Check(MaPB, "SELECT MaPB FROM dbo.PhongBan");
                 if (check == true)
                 {
@@ -154,9 +155,10 @@ namespace QuanLyNhanSu
                     db.ThucThiKetNoi(del);
                     MessageBox.Show("Xóa Hoàn Tất!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Tải lại datagridview và combobox PB
-                    dataGridView.DataSource = "";
-                    comboBoxMaPB.Items.Clear();
-                    db.loadComboBox(comboBoxMaPB, "SELECT MaPB FROM dbo.PhongBan");
+                    dgvPhongBan.DataSource = "";
+                    cbbMaPB.Items.Clear();
+                    db.loadComboBox(cbbMaPB, "SELECT MaPB FROM dbo.PhongBan");
+                    db.loadDataGridView(dgvPhongBan, "SELECT * FROM dbo.PhongBan");
 
 
                 }
@@ -186,7 +188,27 @@ namespace QuanLyNhanSu
 
         private void buttonDSach_Click(object sender, EventArgs e)
         {
-            db.loadDataGridView(dataGridView, "select * from dbo.PhongBan");
+            db.loadDataGridView(dgvPhongBan, "select * from dbo.PhongBan");
+        }
+
+        private void textBoxDCPhong_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvPhongBan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i;
+            i = dgvPhongBan.CurrentRow.Index;
+            cbbMaPB.Text = dgvPhongBan.Rows[i].Cells[0].Value.ToString();
+            txtTenPB.Text = dgvPhongBan.Rows[i].Cells[1].Value.ToString();
+            txtChucNangPB.Text = dgvPhongBan.Rows[i].Cells[2].Value.ToString();
+            dtpNgayTL.Text = dgvPhongBan.Rows[i].Cells[3].Value.ToString();
+            txtSDTPB.Text = dgvPhongBan.Rows[i].Cells[4].Value.ToString();
+            txtDCPhong.Text = dgvPhongBan.Rows[i].Cells[5].Value.ToString();
+            txtGhiChu.Text = dgvPhongBan.Rows[i].Cells[6].Value.ToString();
+            cbbMaTruongPhong.Text = dgvPhongBan.Rows[i].Cells[7].Value.ToString();
+
         }
     }
 }

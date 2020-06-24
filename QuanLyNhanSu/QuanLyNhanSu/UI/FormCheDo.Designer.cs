@@ -31,19 +31,19 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBoxMaLuong1 = new System.Windows.Forms.TextBox();
-            this.textBoxGhiChu1 = new System.Windows.Forms.TextBox();
-            this.textBoxMaBHXH = new System.Windows.Forms.TextBox();
-            this.textBoxTenNV1 = new System.Windows.Forms.TextBox();
+            this.txtMaLuong1 = new System.Windows.Forms.TextBox();
+            this.txtGhiChu1 = new System.Windows.Forms.TextBox();
+            this.txtMaBHXH = new System.Windows.Forms.TextBox();
+            this.txtTenNV1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePickerNC = new System.Windows.Forms.DateTimePicker();
+            this.dtpNC = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBoxMaNV1 = new System.Windows.Forms.ComboBox();
+            this.cbbMaNV1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewBH = new System.Windows.Forms.DataGridView();
+            this.dgvBH = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.buttonDS1 = new System.Windows.Forms.Button();
             this.buttonNew1 = new System.Windows.Forms.Button();
@@ -57,28 +57,28 @@
             this.buttonDel2 = new System.Windows.Forms.Button();
             this.buttonUpdate2 = new System.Windows.Forms.Button();
             this.buttonAdd2 = new System.Windows.Forms.Button();
-            this.dataGridViewTS = new System.Windows.Forms.DataGridView();
+            this.dgvTS = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.comboBoxMaPB = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBoxGhiChu2 = new System.Windows.Forms.TextBox();
-            this.textBoxTenNV2 = new System.Windows.Forms.TextBox();
+            this.cbbMaPB = new System.Windows.Forms.ComboBox();
+            this.dtpNgayBD = new System.Windows.Forms.DateTimePicker();
+            this.txtGhiChu2 = new System.Windows.Forms.TextBox();
+            this.txtTenNV2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgayTL = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBoxMaNV2 = new System.Windows.Forms.ComboBox();
+            this.cbbMaNV2 = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBH)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTS)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,7 +96,7 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Controls.Add(this.dataGridViewBH);
+            this.tabPage1.Controls.Add(this.dgvBH);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -109,17 +109,17 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.textBoxMaLuong1);
-            this.groupBox1.Controls.Add(this.textBoxGhiChu1);
-            this.groupBox1.Controls.Add(this.textBoxMaBHXH);
-            this.groupBox1.Controls.Add(this.textBoxTenNV1);
+            this.groupBox1.Controls.Add(this.txtMaLuong1);
+            this.groupBox1.Controls.Add(this.txtGhiChu1);
+            this.groupBox1.Controls.Add(this.txtMaBHXH);
+            this.groupBox1.Controls.Add(this.txtTenNV1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.dateTimePickerNC);
+            this.groupBox1.Controls.Add(this.dtpNC);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.comboBoxMaNV1);
+            this.groupBox1.Controls.Add(this.cbbMaNV1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("UVN Ai Cap Nang", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(15, 0);
@@ -129,37 +129,37 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bảo Hiểm Xã Hội";
             // 
-            // textBoxMaLuong1
+            // txtMaLuong1
             // 
-            this.textBoxMaLuong1.Location = new System.Drawing.Point(105, 85);
-            this.textBoxMaLuong1.Multiline = true;
-            this.textBoxMaLuong1.Name = "textBoxMaLuong1";
-            this.textBoxMaLuong1.Size = new System.Drawing.Size(206, 23);
-            this.textBoxMaLuong1.TabIndex = 33;
+            this.txtMaLuong1.Location = new System.Drawing.Point(105, 85);
+            this.txtMaLuong1.Multiline = true;
+            this.txtMaLuong1.Name = "txtMaLuong1";
+            this.txtMaLuong1.Size = new System.Drawing.Size(206, 23);
+            this.txtMaLuong1.TabIndex = 33;
             // 
-            // textBoxGhiChu1
+            // txtGhiChu1
             // 
-            this.textBoxGhiChu1.Location = new System.Drawing.Point(427, 85);
-            this.textBoxGhiChu1.Multiline = true;
-            this.textBoxGhiChu1.Name = "textBoxGhiChu1";
-            this.textBoxGhiChu1.Size = new System.Drawing.Size(206, 23);
-            this.textBoxGhiChu1.TabIndex = 32;
+            this.txtGhiChu1.Location = new System.Drawing.Point(427, 85);
+            this.txtGhiChu1.Multiline = true;
+            this.txtGhiChu1.Name = "txtGhiChu1";
+            this.txtGhiChu1.Size = new System.Drawing.Size(206, 23);
+            this.txtGhiChu1.TabIndex = 32;
             // 
-            // textBoxMaBHXH
+            // txtMaBHXH
             // 
-            this.textBoxMaBHXH.Location = new System.Drawing.Point(427, 25);
-            this.textBoxMaBHXH.Multiline = true;
-            this.textBoxMaBHXH.Name = "textBoxMaBHXH";
-            this.textBoxMaBHXH.Size = new System.Drawing.Size(206, 23);
-            this.textBoxMaBHXH.TabIndex = 29;
+            this.txtMaBHXH.Location = new System.Drawing.Point(427, 25);
+            this.txtMaBHXH.Multiline = true;
+            this.txtMaBHXH.Name = "txtMaBHXH";
+            this.txtMaBHXH.Size = new System.Drawing.Size(206, 23);
+            this.txtMaBHXH.TabIndex = 29;
             // 
-            // textBoxTenNV1
+            // txtTenNV1
             // 
-            this.textBoxTenNV1.Location = new System.Drawing.Point(105, 55);
-            this.textBoxTenNV1.Multiline = true;
-            this.textBoxTenNV1.Name = "textBoxTenNV1";
-            this.textBoxTenNV1.Size = new System.Drawing.Size(206, 23);
-            this.textBoxTenNV1.TabIndex = 27;
+            this.txtTenNV1.Location = new System.Drawing.Point(105, 55);
+            this.txtTenNV1.Multiline = true;
+            this.txtTenNV1.Name = "txtTenNV1";
+            this.txtTenNV1.Size = new System.Drawing.Size(206, 23);
+            this.txtTenNV1.TabIndex = 27;
             // 
             // label4
             // 
@@ -179,12 +179,13 @@
             this.label6.TabIndex = 19;
             this.label6.Text = "Mã Lương";
             // 
-            // dateTimePickerNC
+            // dtpNC
             // 
-            this.dateTimePickerNC.Location = new System.Drawing.Point(427, 55);
-            this.dateTimePickerNC.Name = "dateTimePickerNC";
-            this.dateTimePickerNC.Size = new System.Drawing.Size(206, 23);
-            this.dateTimePickerNC.TabIndex = 18;
+            this.dtpNC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNC.Location = new System.Drawing.Point(427, 55);
+            this.dtpNC.Name = "dtpNC";
+            this.dtpNC.Size = new System.Drawing.Size(206, 23);
+            this.dtpNC.TabIndex = 18;
             // 
             // label5
             // 
@@ -213,14 +214,14 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Tên NV";
             // 
-            // comboBoxMaNV1
+            // cbbMaNV1
             // 
-            this.comboBoxMaNV1.FormattingEnabled = true;
-            this.comboBoxMaNV1.Location = new System.Drawing.Point(105, 25);
-            this.comboBoxMaNV1.Name = "comboBoxMaNV1";
-            this.comboBoxMaNV1.Size = new System.Drawing.Size(206, 23);
-            this.comboBoxMaNV1.TabIndex = 4;
-            this.comboBoxMaNV1.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaNV1_SelectedIndexChanged);
+            this.cbbMaNV1.FormattingEnabled = true;
+            this.cbbMaNV1.Location = new System.Drawing.Point(105, 25);
+            this.cbbMaNV1.Name = "cbbMaNV1";
+            this.cbbMaNV1.Size = new System.Drawing.Size(206, 23);
+            this.cbbMaNV1.TabIndex = 4;
+            this.cbbMaNV1.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaNV1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -231,16 +232,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã NV";
             // 
-            // dataGridViewBH
+            // dgvBH
             // 
-            this.dataGridViewBH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewBH.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewBH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBH.Location = new System.Drawing.Point(15, 129);
-            this.dataGridViewBH.Name = "dataGridViewBH";
-            this.dataGridViewBH.Size = new System.Drawing.Size(655, 157);
-            this.dataGridViewBH.TabIndex = 10;
-            this.dataGridViewBH.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBH_CellContentClick);
+            this.dgvBH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBH.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvBH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBH.Location = new System.Drawing.Point(15, 129);
+            this.dgvBH.Name = "dgvBH";
+            this.dgvBH.Size = new System.Drawing.Size(655, 157);
+            this.dgvBH.TabIndex = 10;
+            this.dgvBH.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBH_CellContentClick);
             // 
             // groupBox2
             // 
@@ -328,7 +329,7 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.groupBox4);
-            this.tabPage2.Controls.Add(this.dataGridViewTS);
+            this.tabPage2.Controls.Add(this.dgvTS);
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -421,30 +422,31 @@
             this.buttonAdd2.UseVisualStyleBackColor = true;
             this.buttonAdd2.Click += new System.EventHandler(this.buttonAdd2_Click);
             // 
-            // dataGridViewTS
+            // dgvTS
             // 
-            this.dataGridViewTS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewTS.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewTS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTS.Location = new System.Drawing.Point(15, 129);
-            this.dataGridViewTS.Name = "dataGridViewTS";
-            this.dataGridViewTS.Size = new System.Drawing.Size(655, 157);
-            this.dataGridViewTS.TabIndex = 13;
+            this.dgvTS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTS.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvTS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTS.Location = new System.Drawing.Point(15, 129);
+            this.dgvTS.Name = "dgvTS";
+            this.dgvTS.Size = new System.Drawing.Size(655, 157);
+            this.dgvTS.TabIndex = 13;
+            this.dgvTS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTS_CellContentClick);
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.comboBoxMaPB);
-            this.groupBox3.Controls.Add(this.dateTimePicker2);
-            this.groupBox3.Controls.Add(this.textBoxGhiChu2);
-            this.groupBox3.Controls.Add(this.textBoxTenNV2);
+            this.groupBox3.Controls.Add(this.cbbMaPB);
+            this.groupBox3.Controls.Add(this.dtpNgayBD);
+            this.groupBox3.Controls.Add(this.txtGhiChu2);
+            this.groupBox3.Controls.Add(this.txtTenNV2);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.dateTimePicker1);
+            this.groupBox3.Controls.Add(this.dtpNgayTL);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.comboBoxMaNV2);
+            this.groupBox3.Controls.Add(this.cbbMaNV2);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Font = new System.Drawing.Font("UVN Ai Cap Nang", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(15, 0);
@@ -455,36 +457,37 @@
             this.groupBox3.Text = "Chế Độ Thai Sản";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
-            // comboBoxMaPB
+            // cbbMaPB
             // 
-            this.comboBoxMaPB.FormattingEnabled = true;
-            this.comboBoxMaPB.Location = new System.Drawing.Point(105, 85);
-            this.comboBoxMaPB.Name = "comboBoxMaPB";
-            this.comboBoxMaPB.Size = new System.Drawing.Size(206, 23);
-            this.comboBoxMaPB.TabIndex = 34;
+            this.cbbMaPB.FormattingEnabled = true;
+            this.cbbMaPB.Location = new System.Drawing.Point(105, 85);
+            this.cbbMaPB.Name = "cbbMaPB";
+            this.cbbMaPB.Size = new System.Drawing.Size(206, 23);
+            this.cbbMaPB.TabIndex = 34;
             // 
-            // dateTimePicker2
+            // dtpNgayBD
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(427, 25);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(206, 23);
-            this.dateTimePicker2.TabIndex = 33;
+            this.dtpNgayBD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgayBD.Location = new System.Drawing.Point(427, 25);
+            this.dtpNgayBD.Name = "dtpNgayBD";
+            this.dtpNgayBD.Size = new System.Drawing.Size(206, 23);
+            this.dtpNgayBD.TabIndex = 33;
             // 
-            // textBoxGhiChu2
+            // txtGhiChu2
             // 
-            this.textBoxGhiChu2.Location = new System.Drawing.Point(427, 85);
-            this.textBoxGhiChu2.Multiline = true;
-            this.textBoxGhiChu2.Name = "textBoxGhiChu2";
-            this.textBoxGhiChu2.Size = new System.Drawing.Size(206, 23);
-            this.textBoxGhiChu2.TabIndex = 32;
+            this.txtGhiChu2.Location = new System.Drawing.Point(427, 85);
+            this.txtGhiChu2.Multiline = true;
+            this.txtGhiChu2.Name = "txtGhiChu2";
+            this.txtGhiChu2.Size = new System.Drawing.Size(206, 23);
+            this.txtGhiChu2.TabIndex = 32;
             // 
-            // textBoxTenNV2
+            // txtTenNV2
             // 
-            this.textBoxTenNV2.Location = new System.Drawing.Point(105, 55);
-            this.textBoxTenNV2.Multiline = true;
-            this.textBoxTenNV2.Name = "textBoxTenNV2";
-            this.textBoxTenNV2.Size = new System.Drawing.Size(206, 23);
-            this.textBoxTenNV2.TabIndex = 27;
+            this.txtTenNV2.Location = new System.Drawing.Point(105, 55);
+            this.txtTenNV2.Multiline = true;
+            this.txtTenNV2.Name = "txtTenNV2";
+            this.txtTenNV2.Size = new System.Drawing.Size(206, 23);
+            this.txtTenNV2.TabIndex = 27;
             // 
             // label7
             // 
@@ -504,12 +507,13 @@
             this.label8.TabIndex = 19;
             this.label8.Text = "Phòng Ban";
             // 
-            // dateTimePicker1
+            // dtpNgayTL
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(427, 55);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(206, 23);
-            this.dateTimePicker1.TabIndex = 18;
+            this.dtpNgayTL.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgayTL.Location = new System.Drawing.Point(427, 55);
+            this.dtpNgayTL.Name = "dtpNgayTL";
+            this.dtpNgayTL.Size = new System.Drawing.Size(206, 23);
+            this.dtpNgayTL.TabIndex = 18;
             // 
             // label9
             // 
@@ -538,14 +542,14 @@
             this.label11.TabIndex = 12;
             this.label11.Text = "Tên NV";
             // 
-            // comboBoxMaNV2
+            // cbbMaNV2
             // 
-            this.comboBoxMaNV2.FormattingEnabled = true;
-            this.comboBoxMaNV2.Location = new System.Drawing.Point(105, 25);
-            this.comboBoxMaNV2.Name = "comboBoxMaNV2";
-            this.comboBoxMaNV2.Size = new System.Drawing.Size(206, 23);
-            this.comboBoxMaNV2.TabIndex = 4;
-            this.comboBoxMaNV2.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaNV2_SelectedIndexChanged);
+            this.cbbMaNV2.FormattingEnabled = true;
+            this.cbbMaNV2.Location = new System.Drawing.Point(105, 25);
+            this.cbbMaNV2.Name = "cbbMaNV2";
+            this.cbbMaNV2.Size = new System.Drawing.Size(206, 23);
+            this.cbbMaNV2.TabIndex = 4;
+            this.cbbMaNV2.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaNV2_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -571,11 +575,11 @@
             this.tabPage1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBH)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTS)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -592,39 +596,39 @@
         private System.Windows.Forms.Button buttonDelete1;
         private System.Windows.Forms.Button buttonUpdate1;
         private System.Windows.Forms.Button buttonAdd1;
-        private System.Windows.Forms.DataGridView dataGridViewBH;
+        private System.Windows.Forms.DataGridView dgvBH;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBoxGhiChu1;
-        private System.Windows.Forms.TextBox textBoxMaBHXH;
-        private System.Windows.Forms.TextBox textBoxTenNV1;
+        private System.Windows.Forms.TextBox txtGhiChu1;
+        private System.Windows.Forms.TextBox txtMaBHXH;
+        private System.Windows.Forms.TextBox txtTenNV1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePickerNC;
+        private System.Windows.Forms.DateTimePicker dtpNC;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBoxMaNV1;
+        private System.Windows.Forms.ComboBox cbbMaNV1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button buttonReset2;
         private System.Windows.Forms.Button buttonDel2;
         private System.Windows.Forms.Button buttonUpdate2;
         private System.Windows.Forms.Button buttonAdd2;
-        private System.Windows.Forms.DataGridView dataGridViewTS;
+        private System.Windows.Forms.DataGridView dgvTS;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox textBoxGhiChu2;
-        private System.Windows.Forms.TextBox textBoxTenNV2;
+        private System.Windows.Forms.DateTimePicker dtpNgayBD;
+        private System.Windows.Forms.TextBox txtGhiChu2;
+        private System.Windows.Forms.TextBox txtTenNV2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpNgayTL;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBoxMaNV2;
+        private System.Windows.Forms.ComboBox cbbMaNV2;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBoxMaPB;
-        private System.Windows.Forms.TextBox textBoxMaLuong1;
+        private System.Windows.Forms.ComboBox cbbMaPB;
+        private System.Windows.Forms.TextBox txtMaLuong1;
         private System.Windows.Forms.Button buttonDS1;
         private System.Windows.Forms.Button buttonDS2;
     }
